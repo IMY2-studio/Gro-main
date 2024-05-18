@@ -152,7 +152,7 @@
   <div>
     <ul class="ticker--list animate-ticker flex leading-none">
       {%- for block in marquee_items -%}
-        {%- assign marquee = block.settings.text -%}
+        {%- assign marquee = block.settings.marquee_text -%}
         {%- if marquee != blank -%}
           <li class="h-full flex items-center">
             <span class="body-1 flex whitespace-nowrap">
@@ -164,7 +164,7 @@
         {%- endif -%}
       {%- endfor -%}
       {%- for block in marquee_items -%}
-        {%- assign marquee = block.settings.text -%}
+        {%- assign marquee = block.settings.marquee_text -%}
         {%- if marquee != blank -%}
           <li class="h-full flex items-center">
             <span class="body-1 flex whitespace-nowrap">
@@ -176,7 +176,7 @@
         {%- endif -%}
       {%- endfor -%}
       {%- for block in marquee_items -%}
-        {%- assign marquee = block.settings.text -%}
+        {%- assign marquee = block.settings.marquee_text -%}
         {%- if marquee != blank -%}
           <li class="h-full flex items-center">
             <span class="body-1 flex whitespace-nowrap">
