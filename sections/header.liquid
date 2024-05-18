@@ -54,14 +54,14 @@
     {% if template == 'index' %}
       :class="
         headerMenuOverlay ?
-          'text-white fill-white  bg-green lg:bg-transparent border-b-green lg:border-b-transparent border-b stroke-white'
+          'text-white fill-white  bg-white lg:bg-transparent border-b-green lg:border-b-transparent border-b stroke-white'
         : 'text-white fill-white lg:fill-green  stroke-white bg-green border-b-green-light border-b'
       "
 
     {% else %}
       :class="
         headerMenuOverlay ?
-          'text-white fill-white  bg-green lg:bg-transparent border-b stroke-white lg:text-green lg:stroke-green border-b-green lg:border-b-green-light'
+          'text-white fill-white  bg-white lg:bg-transparent border-b stroke-white lg:text-green lg:stroke-green border-b-green lg:border-b-green-light'
         : 'text-white fill-white lg:fill-green  stroke-white  bg-green border-b-green border-b'
       "
     {% endif %}
