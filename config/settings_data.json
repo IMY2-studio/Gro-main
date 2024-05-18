@@ -20,13 +20,44 @@
             "settings": {
               "menu": ""
             }
+          },
+          "marquee_text_q48eaa": {
+            "type": "marquee_text",
+            "settings": {
+              "marquee_text": "Mid Season Sale 25% OFF RRP* Storewide"
+            }
+          },
+          "marquee_text_iadWx9": {
+            "type": "marquee_text",
+            "settings": {
+              "marquee_text": "Up to 60% Off Clearance Items"
+            }
+          },
+          "marquee_text_WtUX3F": {
+            "type": "marquee_text",
+            "settings": {
+              "marquee_text": "Mid Season Sale 25% OFF RRP* Storewide"
+            }
+          },
+          "marquee_text_N6awhX": {
+            "type": "marquee_text",
+            "settings": {
+              "marquee_text": "Mid Season Sale 25% OFF RRP* Storewide"
+            }
           }
         },
         "block_order": [
           "d455ee20-4a2e-4527-9d49-c22687e2a1df",
-          "1587edcc-4352-400a-a95a-b1f09ef52a81"
+          "1587edcc-4352-400a-a95a-b1f09ef52a81",
+          "marquee_text_q48eaa",
+          "marquee_text_iadWx9",
+          "marquee_text_WtUX3F",
+          "marquee_text_N6awhX"
         ],
         "settings": {
+          "header_1_menu": "header-1",
+          "featured_collection_label": "Explore New Season Autumn Winter 2024",
+          "featured_collection": "all-products"
         }
       },
       "footer": {
