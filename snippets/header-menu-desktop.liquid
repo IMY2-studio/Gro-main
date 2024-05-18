@@ -8,7 +8,7 @@
           <a
             href="{{ link.url }}"
             data-link="{{ link.handle }}"
-            class="transition-opacity duration-150 ease-in-out delay-75 parent-link text-green"
+            class="transition-opacity duration-150 ease-in-out delay-75 parent-link text-green uppercase"
             data-count="{{ link.links.size }}"
             @mouseenter="setHoveredItem('{{ link.handle }}')"
             :class="{'opacity-60' : hoveredItem !== '' && hoveredItem !== '{{ link.handle }}'}"
@@ -20,7 +20,7 @@
           <a
             href="{{ link.url }}"
             data-link="{{ link.handle }}"
-            class="transition-opacity duration-150 ease-in-out delay-75 text-green"
+            class="transition-opacity duration-150 ease-in-out delay-75 text-green uppercase"
             @mouseenter="setHoveredItem('{{ link.handle }}')"
             :class="{'opacity-60' : hoveredItem !== '' && hoveredItem !== '{{ link.handle }}'}"
           >
