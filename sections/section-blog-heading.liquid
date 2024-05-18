@@ -1,0 +1,52 @@
+
+{%- if section.settings.heading != blank -%}
+    
+
+<section class="layout--grid bg-white text-green relative pt-[136px] lg:pt-[176px] pb-[80px] lg:pb-[120px]">
+    <div class="col-span-2 lg:col-span-6">
+
+        <h1 class="heading-1 mb-[4px]">
+            {{ section.settings.heading }} 
+        </h1>
+
+        {%- if section.settings.blurb != blank -%}
+
+        <div class="rte">
+            <p>
+                {{ section.settings.blurb }}
+            </p>
+        </div>
+            
+        {%- endif -%}
+
+        </div>
+    </section>
+
+{%- endif -%}
+
+
+{% schema %}
+    {
+        "name": "Blog Heading",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading Text",
+                "default": "Blog"
+            },
+            {
+                "type": "textarea",
+                "id": "blurb",
+                "label": "Blurb"
+            }
+        ],
+        "blocks": [],
+        "presets": [
+        {
+            "name": "Blog Heading",
+            "blocks": []
+        }
+    ]
+}
+{% endschema %}

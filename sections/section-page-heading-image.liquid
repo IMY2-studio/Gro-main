@@ -1,0 +1,62 @@
+
+{%- if section.settings.heading != blank -%}
+    
+
+    <section class="layout--grid bg-white text-green px-[16px] lg:px-[20px] relative pt-[136px] lg:pt-[176px] pb-[16px]">
+
+        <div class="col-span-2 lg:col-span-12 mb-[20px] lg:mb-[40px]">
+            <h1 class="heading-1">
+                {{ section.settings.heading }} 
+            </h1>
+
+
+            {%- if section.settings.text != blank -%}
+
+            <div class="rte">
+                {{ section.settings.text }}
+            </div>
+                
+            {%- endif -%}
+            
+        </div>
+
+        {%- if section.settings.image != blank -%}
+            
+            <div class="col-span-2 lg:col-span-8 mb-[40px] lg:mb-[84px]">
+                <div class="w-full relative aspect-[927/624] overflow-hidden">
+                    {{ section.settings.image | image_url: width: 927 | image_tag: loading: 'eager', class: 'w-full h-full object-cover object-center max-w-none' }}
+                </h1>
+            </div>
+
+        {%- endif -%}
+
+    </section>
+
+{%- endif -%}
+
+
+{% schema %}
+    {
+        "name": "Page Heading + Image",
+        "class": "page-section-hi",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading Text",
+                "default": "Locations"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Hero Image"
+            }
+        ],
+        "presets": [
+        {
+            "name": "Page Heading + Image",
+            "blocks": []
+        }
+    ]
+}
+{% endschema %}

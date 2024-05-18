@@ -1,0 +1,97 @@
+
+<section class="layout--grid mb-[80px] lg:mb-[100px]">
+  <article class="col-span-2 lg:col-span-6 flex flex-col">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'heading_1' -%}
+          <h1 class="font-light font-sans leading-[1.11] text-[30px] lg:text-[36px] tracking-tight mb-[16px]">
+            {{ block.settings.heading }}
+          </h1>
+        {%- when 'heading_2' -%}
+
+          <h2 class="font-light font-sans leading-[1.11]  text-[30px] lg:text-[36px] tracking-tight mb-[16px]">
+            {{ block.settings.heading }}
+          </h2>
+
+        {%- when 'heading_3' -%}
+
+
+          <h3 class="font-light font-sans leading-[1.11] text-[24px] lg:text-[36px] tracking-tight mb-[16px]">
+            {{ block.settings.heading }}
+          </h3>
+
+
+        {%- when 'body' -%}
+          
+          <div class="rte space-y-[16px]  mb-[40px] lg:mb-[100px]">
+            {{ block.settings.text }}
+          </div>
+
+
+
+      {%- endcase -%}
+    {%- endfor -%}
+  </article>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.page.name",
+  "class": "page-section--main",
+  "settings": [],
+  "blocks": [
+            {
+                "type": "heading_1",
+                "name": "Heading 1",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading",
+                        "default": "Heading 1"
+                    }
+                ]
+            },
+            {
+                "type": "heading_2",
+                "name": "Heading 2",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading",
+                        "default": "Heading 2"
+                    }
+                ]
+            },
+            {
+                "type": "heading_3",
+                "name": "Heading 3",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading",
+                        "default": "Heading 3"
+                    }
+                ]
+            },
+            {
+                "type": "body",
+                "name": "Body Copy",
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+        ],
+  "presets": [
+    {
+      "name": "t:sections.page.presets.name"
+    }
+  ]
+}
+{% endschema %}

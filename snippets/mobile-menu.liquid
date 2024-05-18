@@ -1,0 +1,80 @@
+{% comment %} Mobile linked List {% endcomment %}
+
+<div class="mobile-main-menu--wrapper pt-[96px] w-full h-full px-[16px]">
+
+<ul class="main-menu-mobile flex flex-col flex-wrap space-y-[32px] relative z-40">
+  {% for link in menu.links %}
+    <li class="menu-item block {% if link.links %} has-dropdown{% endif %}">
+
+    {% if link.links.size > 0 %}
+
+    <button data-href="{{ link.url }}" data-link="{{ link.handle }}" @click.debounce="showMenuMobile($event)">
+      {{ link.title }}
+    </button>
+
+    {% else  %}
+
+      <a href="{{ link.url }}" 
+        data-link="{{ link.handle }}" 
+        class="body-smaller">
+
+        {{ link.title }}
+      </a>
+
+    {% endif %}
+
+    </li>
+  {% endfor %}
+</ul>
+
+</div>
+
+
+<div id="header-menus-drawer-mobile" class="fixed inset-x-0 top-0 h-screen bg-green layout--grid z-[999] pt-[120px] pb-[60px] lg:hidden overflow-y-scroll scrollbar-hide" style="transform: translateX(-100%);">
+
+{% for link in menu.links %}
+
+
+  <div class="dropdown-menu--wrapper-mobile col-span-2" data-menu-mobile="{{ link.handle }}" style="opacity: 0; display: none;">
+
+  <div class="mb-[32px] w-full col-span-2">
+    <button class="text-white body-smaller" data-link="{{ link.handle }}" @click.debounce="closeMenuMobile($event)">
+      Back
+    </button>
+  </div>
+
+  {% if link.links %}
+
+    <ul class="dropdown grid grid-cols-2 justify-center items-center gap-x-[12px] gap-y-[12px] flex-wrap">
+
+      {% for sublink in link.links %}
+        <li class="submenu-item w-full{% if sublink.links %} has-submenu{% endif %}">
+          <a href="{{ sublink.url }}">
+
+          {% comment %} Make this image the collection image {% endcomment %}
+
+          <div class="aspect-square w-full relative mb-[12px]">
+
+            {%- if sublink.type == 'collection_link' -%}
+
+              {%- if sublink.object.image != blank -%}
+                {{ sublink.object.image | image_url: width: 900 | image_tag: loading: 'lazy', class: 'w-full h-full relative absolute inset-0 object-cover' }}
+              {%- endif -%}
+            {%- endif -%}
+
+          </div>
+
+            <span class="body-smaller">
+              {{ sublink.title }}
+            </span>
+
+          </a>
+
+          {% comment %} No Grandchilderen as far as we know {% endcomment %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  </div>
+{% endfor %}
+</div>

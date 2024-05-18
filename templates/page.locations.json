@@ -1,0 +1,150 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "a07653f8-a9dc-4b19-80b5-e12ecf6c9cc8": {
+      "type": "section-page-heading",
+      "settings": {
+        "heading": "Locations",
+        "padding": false
+      }
+    },
+    "9e4f5734-0f67-4639-8395-a2e119556d92": {
+      "type": "section-loactions",
+      "blocks": {
+        "48eff39a-4677-4f6d-9f5c-46d4185d8efc": {
+          "type": "location",
+          "settings": {
+            "name": "Bondi Junction",
+            "state": "NSW",
+            "address": "<p><strong>Westfields Bondi Junction<br\/><\/strong>500 Oxford St, Store GRO-088 Level 5, Bondi Junction NSW 2022<br\/><strong>Phone<\/strong>: 0435 865 523<\/p>",
+            "special": "",
+            "ohlabelone": "Monday - Saturday",
+            "ohone": "9.30am - 6pm",
+            "ohlabelTWO": "Thursday",
+            "ohTWO": "9.30am - 9pm",
+            "ohlabelthree": "Sunday",
+            "ohthree": "10am - 6pm",
+            "ohlabelfour": "",
+            "ohfour": "",
+            "ohlabelfive": "",
+            "ohfive": "9.30am - 6pm",
+            "ohlabelsix": "",
+            "ohsix": "",
+            "ohlabelseven": "",
+            "ohseven": ""
+          }
+        },
+        "435bdf51-165e-492e-bba5-a8370a70e491": {
+          "type": "location",
+          "settings": {
+            "name": "Castle Towers",
+            "state": "NSW",
+            "address": "<p><strong>Castle Towers<br\/><\/strong>Level 1, Shop T12126-14 Castle Street, Castle Hill NSW 2154<br\/><strong>Phone<\/strong>: 0435 868 592<\/p>",
+            "special": "",
+            "ohlabelone": "Monday - Saturday",
+            "ohone": "9.30am - 6pm",
+            "ohlabelTWO": "Thursday",
+            "ohTWO": " 9am - 9pm",
+            "ohlabelthree": "Sunday",
+            "ohthree": "10am - 5pm",
+            "ohlabelfour": "",
+            "ohfour": "",
+            "ohlabelfive": "",
+            "ohfive": "9.30am - 6pm",
+            "ohlabelsix": "",
+            "ohsix": "",
+            "ohlabelseven": "",
+            "ohseven": ""
+          }
+        },
+        "69e85cbe-1fcd-4e96-b482-eb645b4ec808": {
+          "type": "location",
+          "settings": {
+            "name": "Hornsby",
+            "state": "NSW",
+            "address": "<p><strong>Westfield's Hornsby<br\/><\/strong> Level 3, Shop 3020<br\/> 236 Pacific Highway, Hornsby NSW 2077<br\/> <strong>Phone<\/strong>: 0413 972 746<\/p>",
+            "special": "",
+            "ohlabelone": "Monday - Friday",
+            "ohone": " 9am - 5.30pm",
+            "ohlabelTWO": "Thursday",
+            "ohTWO": "9am - 9pm",
+            "ohlabelthree": "Sunday",
+            "ohthree": "10am - 5pm",
+            "ohlabelfour": "",
+            "ohfour": "",
+            "ohlabelfive": "",
+            "ohfive": "9.30am - 6pm",
+            "ohlabelsix": "",
+            "ohsix": "",
+            "ohlabelseven": "",
+            "ohseven": ""
+          }
+        },
+        "defc31d4-866d-4724-9f24-25ba8544c7fc": {
+          "type": "location",
+          "settings": {
+            "name": "Warringah",
+            "state": "NSW",
+            "address": "<p><strong>Westfields Warringah Mall<\/strong><br\/>Westfield Warringah Mall Ground Level, shop 1510, Brookvale NSW 2100<br\/><strong>Phone<\/strong>: 0478 746 040<\/p>",
+            "special": "<p> <\/p>",
+            "ohlabelone": "Monday - Saturday",
+            "ohone": "9.30am - 6pm",
+            "ohlabelTWO": "Thursday",
+            "ohTWO": "9.30am - 9pm",
+            "ohlabelthree": "Sunday",
+            "ohthree": "10am - 6pm",
+            "ohlabelfour": "",
+            "ohfour": "",
+            "ohlabelfive": "",
+            "ohfive": "9.30am - 6pm",
+            "ohlabelsix": "",
+            "ohsix": "",
+            "ohlabelseven": "",
+            "ohseven": ""
+          }
+        },
+        "53f26f98-4d22-48c3-b97a-894ff78bc9b6": {
+          "type": "location",
+          "settings": {
+            "name": "Rouse Hill Town Centre",
+            "state": "NSW",
+            "address": "<p>Shop 88, 90 Civic Way, Rouse Hill NSW 2155<br\/><strong>Phone<\/strong>: 0421 752 118<\/p>",
+            "special": "",
+            "ohlabelone": "Monday - Saturday",
+            "ohone": "9am - 6pm",
+            "ohlabelTWO": "Sunday",
+            "ohTWO": "10am - 5pm",
+            "ohlabelthree": "",
+            "ohthree": "",
+            "ohlabelfour": "",
+            "ohfour": "",
+            "ohlabelfive": "",
+            "ohfive": "",
+            "ohlabelsix": "",
+            "ohsix": "",
+            "ohlabelseven": "",
+            "ohseven": ""
+          }
+        }
+      },
+      "block_order": [
+        "48eff39a-4677-4f6d-9f5c-46d4185d8efc",
+        "435bdf51-165e-492e-bba5-a8370a70e491",
+        "69e85cbe-1fcd-4e96-b482-eb645b4ec808",
+        "defc31d4-866d-4724-9f24-25ba8544c7fc",
+        "53f26f98-4d22-48c3-b97a-894ff78bc9b6"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a07653f8-a9dc-4b19-80b5-e12ecf6c9cc8",
+    "9e4f5734-0f67-4639-8395-a2e119556d92"
+  ]
+}

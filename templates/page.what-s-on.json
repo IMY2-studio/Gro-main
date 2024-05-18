@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "195f1522-1c39-4a63-8cc2-f69f10782153": {
+      "type": "section-whats-on",
+      "settings": {
+        "heading": "Event Title",
+        "date_time": "9.00am to 12.00pm \/ 12th June 2023",
+        "visible_text": "",
+        "reveal_text": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "195f1522-1c39-4a63-8cc2-f69f10782153"
+  ]
+}

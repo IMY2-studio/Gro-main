@@ -1,0 +1,38 @@
+
+
+{%- if card_product and card_product != empty -%}
+
+{%- assign lazy_load = lazy_load | default: 'lazy'  -%}
+
+  <a href="{{ card_product.url | within: collection }}" class="card-wrapper group">
+    <div class="card">
+
+
+
+          {%- if card_product.featured_media != blank -%}
+
+          <div class="relative w-full block aspect-square mb-[16px] overflow-hidden">
+
+            {{ card_product.featured_media | image_url: width: 600 | image_tag: loading: lazy_load, class: 'w-full h-full absolute inset-0 object-center z-10 lg:group-hover:scale-[1.1] transition-all object-cover' }}
+
+          </div>
+
+
+        {%- endif -%}
+
+
+        <div class="card-product-title--wrapper">
+
+        <h3 class="body-1 text-green">
+          {{ card_product.title }}
+        </h3>
+
+        <div class="price--wrapper">
+          {% render '_price-element', product: card_product %}
+        </div>
+        
+        </div>
+
+    </div>
+  </a>
+{%- endif -%}

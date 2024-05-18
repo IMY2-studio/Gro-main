@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "1583e7bb-d02b-4084-844b-a04c5967918b": {
+      "type": "section-heading-text",
+      "settings": {
+        "heading": "Careers at Gro Urban Oasis",
+        "blurb": "<p>To submit your details, please email your resume to <a href=\"mailto:info@gro-urbanoasis.com.au\" title=\"mailto:info@gro-urbanoasis.com.au\">info@gro-urbanoasis.com.au<\/a><\/p>"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "e95aa5c7-b50d-498d-99d0-025e41eb01eb": {
+      "type": "multicolumn",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "1583e7bb-d02b-4084-844b-a04c5967918b",
+    "main",
+    "e95aa5c7-b50d-498d-99d0-025e41eb01eb"
+  ]
+}

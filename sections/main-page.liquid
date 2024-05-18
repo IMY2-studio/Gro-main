@@ -1,0 +1,19 @@
+
+
+<div class="sr-only">
+  <h1 class="main-page-title page-title sr-only">
+    {{ page.title | escape }}
+  </h1>
+  <div class="rte">
+    {{ page.content }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": []
+}
+{% endschema %}

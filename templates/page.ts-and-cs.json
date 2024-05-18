@@ -1,0 +1,353 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "e7c85c1c-1f16-452e-ae84-ee17cfc3f812": {
+      "type": "section-page-heading",
+      "settings": {
+        "heading": "Terms & Conditions",
+        "padding": true
+      }
+    },
+    "fdf485cf-4368-49ce-9af9-7d4c151ddad9": {
+      "type": "page",
+      "blocks": {
+        "ef19ca93-ccb7-4f2b-8b1a-5ca9d9794953": {
+          "type": "heading_1",
+          "settings": {
+            "heading": "General"
+          }
+        },
+        "60fb9cb1-0264-4ba0-9898-416c492c2d6d": {
+          "type": "body",
+          "settings": {
+            "text": "<p>1.1 The Site is a shopping website provided by Eden Gardens PTY LTD trading as Gro Urban Oasis where you can browse, select and purchase products sold by Eden Gardens and products sold by Third Party Sellers (“Third Party Products”) (together the “Products”).<\/p><p>1.2 Additional specific terms apply purchases of Third Party Products using the Site. These are set out in more detail in clause 23 below.<\/p><p>1.3 Your access to and use of the Site, including your orders and purchases of Products through the Site, is governed by these terms and conditions and our Privacy Policy.<\/p>"
+          }
+        },
+        "b9c2835e-9b55-4799-82ec-797fb4197d78": {
+          "type": "heading_2",
+          "settings": {
+            "heading": "Compliance"
+          }
+        },
+        "3d4e7f5b-4ef3-47fc-937d-9c564166f41e": {
+          "type": "body",
+          "settings": {
+            "text": "<p>2.1 By using the Site to browse, select and purchase Products, you agree with us to be bound by, and comply with, these terms and conditions. In addition to these trading terms, there are terms and conditions that apply to the use of product reviews on the Site. You agree to comply with the product reviews terms of use. You can view the Product Reviews Terms of Use here.<\/p><p>2.2 You agree to comply with all relevant laws relating to your use of the Site and your placement of any order through the Site.<\/p><p>2.3 You agree not to use any data listed on the site for commercial purposes e.g. through price or information scraping.<\/p><p>2.4 You agree not to use the Site for any purpose that is fraudulent, unlawful or otherwise prohibited by these terms and conditions. You may access the Site for your own personal use but otherwise, neither the Site nor any material on it, may be altered, modified, reproduced, transmitted or distributed without our prior written consent.<\/p><p>2.5 While using this Site, you may not:<\/p><p>breach any laws, infringe a third party’s rights or act contrary to any relevant standards or codes or make any fraudulent enquiries, purchases or requests; use the Site in a manner or way, or post to or transmit to or via the Site any material which interferes with other users or other customers or defames, harasses, threatens, menaces or offends any person or which prevents any other person from using or enjoying the Site, or post any spam, unsolicited or bulk electronic communications;<\/p><p>use another person’s details without their permission or impersonate another person; post or transmit any obscene, indecent, inflammatory or pornographic material or any other material that may give rise to civil or criminal proceedings; tamper with or hinder the operation of the Site;knowingly transmit any viruses, worms, defects, trojan horses or similar disabling or malicious code to the Site; use any robot, spider, site search and retrieval application or another mechanism to retrieve or index any portion of the Site; modify, adapt, translate or reverse engineer any portion of the Site; remove any copyright, trademark or other proprietary rights notices contained in or on the Site;<\/p><p>create accounts by automated means or under false or fraudulent pretences; violate the security of any computer or other network or engage in illegal conduct; take any action that imposes or that would, in our reasonable opinion, result in an unreasonable or disproportionately large load on our infrastructure;<\/p><p>use the Site other than in accordance with these terms and conditions; use the Site if you are not able to form legally binding contracts, are under the age of 18 or are suspended from using the Site;<\/p><p>fail to pay for Products ordered using your login; transfer your login to another party without our consent; harvest or otherwise collect information about other customers, including email addresses, without their consent; or<\/p><p>attempt any of the above acts or engage or permit another person to do any of the above acts.<\/p>"
+          }
+        },
+        "d290bf44-038e-4345-9433-f53c8d8735fe": {
+          "type": "heading_2",
+          "settings": {
+            "heading": "Your Account"
+          }
+        },
+        "de59ac1e-e162-41de-98d0-6ee864939787": {
+          "type": "body",
+          "settings": {
+            "text": "<p>3.1 You must be 18 years or older to purchase Products through the Site. We reserve the right to refuse service, terminate accounts and\/or remove or edit content if we, acting reasonably, deem that you are working in breach of these terms and conditions or are using the Site in a fraudulent or improper manner. We also reserve the right to otherwise cancel orders in accordance with clause 10.1.<\/p><p>3.2 You: must ensure that only authorised users have access to your computer and ensure that your login and password that is used to access the Site and the details of your account are kept in a safe and secure manner;<\/p><p>must notify us through Customer Service on 02 94919900 during Contact Hours if you are or become aware that there is or has been an unauthorised use of your login and password or account, or any other security breach relating to your account;<\/p><p>must promptly advise us of any changes to your information provided to us as part of the customer registration process;<\/p><p>must provide us with your date of birth where a relevant law requires us to obtain or verify your date of birth before we agree to supply that Product to you;<\/p><p>are responsible and liable for any person that uses your login and password to order Product(s) through the Site;<\/p><p>agree that we may (on our own behalf in relation to Eden Garden Products and on behalf of the relevant Third Party Seller in relation to Third Party Products) charge you for all Products that have been ordered using your login and password through the Site; and<\/p><p>acknowledge that you will check the labels on the Products before consumption or use.<\/p>"
+          }
+        },
+        "167b3b9a-3c6e-4acc-a08f-3ada9f256c24": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Placing an Order for Products"
+          }
+        },
+        "300c3b44-c1f9-4f98-94cc-160c9265c204": {
+          "type": "body",
+          "settings": {
+            "text": "<p>4.1 You may purchase Products by selecting and submitting your order through the Site in accordance with these terms and conditions. Third Party Products offered through the Site are sold and fulfilled by Third Party Sellers. You agree that Gro Urban Oasis is not responsible for the sale or fulfilment of any Third Party Products.<\/p><p>4.2 Any order placed through this Site for a Product is an offer by you, in the case of Gro Urban Oasis Products, to us, and in the case of Third Party Products, to the relevant Third Party Seller, to purchase the particular Product for the price notified (including delivery and other charges, fees and taxes) at the time you place the order, on the terms and conditions set out in these Gro Urban Oasis Online Terms and Conditions.<\/p><p>4.3 We may ask you to provide additional details or require you to confirm your details to enable us to process any orders placed through the Site.<\/p><p>4.4 You agree to provide us with current, complete and accurate details in response to requests by us, to you, for information.<\/p><p><strong> <\/strong><\/p>"
+          }
+        },
+        "ef27b8ac-759e-4cb8-961b-932cc62aa440": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Acceptance or Rejection of an Order"
+          }
+        },
+        "236e3c00-e5e9-46d8-88ee-563eca795ee7": {
+          "type": "body",
+          "settings": {
+            "text": "<p>5.1 In certain circumstances, your order may be rejected, including but not limited to where the requested Product is not available or if there is an error in the price or the product description posted on the Site.<\/p><p>5.2 Each order placed for Gro Urban Oasis Products through the Site that we accept results in a separate binding agreement between you and us for the supply of those Gro Urban Oasis Products. For each order accepted by us, we will:<\/p><p>supply the Gro Urban Oasis Products in that order to you in accordance with these terms and conditions; and<\/p><p>send you an email confirmation of that order – though with the nature of the internet we cannot guarantee receipt. Please add info@edengardens.com.au to your contact address book to ensure emails are not sent to SPAM or blocked by your firewall<\/p><p>5.3 If we reject an order for Gro Urban Oasis Products placed through the Site, we will endeavour to notify you of that rejection at the time you place the order or within a reasonable time after you submit your order.<\/p><p>5.4 A Third Party Seller has discretion as to whether or not it will accept an order for a Third-Party Product. The Third Party Seller will endeavour to notify you of its acceptance or rejection of your order within 24 hours of your placement of that order. Once accepted by the Third Party Seller, that order will become a binding contract between you and the Third Party Seller. If the Third Party Seller does not accept your order within 5 business days of that date of your order, the order will be cancelled and any money paid by you for those Third Party Products in the cancelled order will be refunded by us.<\/p><p>5.5 You may not purchase any Products through this Site for the purpose of resale. In the interests of all our customers, we may refuse to supply if multiple orders are placed for large quantities of the same Product for the same billing or shipping address.<\/p>"
+          }
+        },
+        "58f90090-c358-492a-b6b1-baecf29c739d": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Restricted Products"
+          }
+        },
+        "04a8b119-49fd-41a6-b9ba-bc1eef1b1e07": {
+          "type": "body",
+          "settings": {
+            "text": "<p>6.1 You:<\/p><p>subject to certain limited exceptions specified by law, acknowledge that it is against the law to sell or supply of gardening chemicals to children under the age of 18<\/p><p>warrant that you are not obtaining gardening chemicals on behalf of a person that is not of the appropriate legal age referred to in (a) above, unless you are permitted to do so by law; and<\/p><p>may be required to provide proof of age upon delivery or collection of restricted items.<\/p><p>6.2 You must not use the Site to purchase a pre-paid service if:<\/p><p>you are purchasing the service on behalf of a corporation, business or other organisation; or<\/p><p>you are an individual and you will have five or more prepaid services as a result of this transaction.<\/p><p>If you fall into either of these categories, we are able to sell you a prepaid service in person at a Gro Urban Oasis store near you. You will have to meet additional identification requirements.<\/p><p> <\/p><p>6.3 Personalised Products<\/p><p>If you place an order for Personalised Products, the Personalised Product will be produced exactly as you have stated including treatment of upper and lower cases.<\/p><p>Any error in personalisation details on your part is your responsibility and the Personalised Product cannot be returned for replacement or refund and the Gro Urban Oasis Online Returns Policy or Third Party Seller’s Returns Policy (as applicable) does not apply to Personalised Products unless the Personalised Product is faulty.<\/p>"
+          }
+        },
+        "b33ad449-3cda-469f-86ff-d430594dfb02": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Delivery of Gro Urban Oasis Products"
+          }
+        },
+        "b9a350d5-2f3f-4935-981e-777ead99f821": {
+          "type": "body",
+          "settings": {
+            "text": "<p>7.1 We will only deliver Gro Urban Oasis Products ordered through the Site to a location where we provide delivery services. You may receive multiple deliveries for your order and these are described at the point of checkout. We or our carrier may need to contact you to arrange a delivery date for certain products. We only deliver to addresses in Australia.<\/p><p>7.2 You may obtain further information on the Site about our delivery timeframes and how we deliver certain Gro Urban Oasis Products. The Delivery Fee for your order depends on the type of product you order, particularly the size and weight, and your location<\/p><p>7.3 We will make every attempt to deliver Gro Urban Oasis Products by the estimated delivery timeframe, however, we will not be liable to you or any other person for any delay. In this instance, we will provide you with notice of such delay as soon as reasonably possible.<\/p><p>7.4 You agree to comply with certain delivery requirements specified below and such other requirements that we notify you when you place your order through the Site.<\/p><p>7.5 Unless you provide an express authorisation to leave a product at the delivery address if no one is present to accept delivery, an appropriate person must be present to accept the delivery of your order. If you authorise us or our carrier to leave a product at the delivery address when no one is present to accept delivery, you:accept the risk of theft or loss of the Gro Urban Oasis Product from the time it is delivered; and<\/p><p>acknowledge that, notwithstanding your authorisation, the person delivering the Gro Urban Oasis Product has discretion whether to leave the Gro Urban Oasis Product at the address.<\/p><p>7.6 We may require the person accepting the delivery of your order to: provide us with proof of that person’s identity (including photographic identification) and, where relevant, age. If the order has been paid by credit card, then we may also ask you to show us the credit card for us to conduct our verification checks; and<\/p><p>where relevant, provide us with proof that the consents referred to under the “Restricted Products” section of these terms and conditions have been obtained.<\/p><p>7.7 If there is no appropriate person (for example, above 18 years old for Restricted Products) at the Delivery Address to receive the order or you are unable to show us the credit card for us to conduct verification checks, then we will not deliver the Gro Urban Oasis Products you have ordered. In this instance, we will endeavour to contact you or you may contact us to arrange for delivery at a different time, and we may charge you an additional Delivery Fee for the redelivery.<\/p><p>7.8  You: acknowledge and agree that any person at the Delivery Address who receives the Gro Urban Oasis Products is authorised by you to receive your order; and<\/p><p>will ensure that, in the case of Restricted Products, the person authorised by you to receive your order is over the required age as prescribed by law or as otherwise set out in these terms and conditions.<\/p><p>7.9  We will not deliver a Restricted Product to a person who is unable to prove that he or she is over the required age as prescribed by law or as otherwise set out in these terms and conditions. In this instance, we will cancel the order and refund any amounts paid for that order under these terms and conditions (excluding the Delivery Fee).<\/p>"
+          }
+        },
+        "be997530-e1e8-4afb-9220-b354b599d4c5": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Delivery of Third Party Products"
+          }
+        },
+        "2775320f-7133-40bd-88c6-2f014e10f473": {
+          "type": "body",
+          "settings": {
+            "text": "<p>8.1 Third Party Products will be delivered by the Third Party Seller in accordance with the Third Party Seller’s shipping policy, which will be available on the relevant Third Party Seller’s page.<\/p>"
+          }
+        },
+        "ce051df8-a112-4587-8937-089017455a59": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Cancelling an order for Gro Urban Oasis Products or Third Party Products"
+          }
+        },
+        "f4b8af1a-8259-4b21-b595-983ba3b01703": {
+          "type": "body",
+          "settings": {
+            "text": "<p>9.1 We may cancel any part of an order for Gro Urban Oasis Products (including any orders that we have accepted) without any liability to you for that cancellation at any time if:<\/p><p>the Gro Urban Oasis Products in that order are not available; or<\/p><p>there is an error in the price or the product description posted on the Site for the Gro Urban Oasis Product; or<\/p><p>your order has been placed in breach of these terms and conditions; or<\/p><p>the Gro Urban Oasis Product(s) in that order have been recalled.<\/p><p>9.2 If we cancel any part of an order in accordance with:<\/p><p>Clause 9.1(a) or 9.1(b) (where the Gro Urban Oasis Product is unavailable or there is a pricing or product description error) or 9.1(d) (where the Gro Urban Oasis Product has been recalled), we will provide you with reasonable notice of that cancellation, and will not charge you for the cancelled part of the order. If any payment has been taken, then: (i) for a wholly cancelled order, the full payment amount, including the Delivery Fee and any other fees and charges; or (ii) for a partly cancelled order, the amount paid in respect of cancelled Gro Urban Oasis Products,<\/p><p>Clause 9.1(c) (where you are in breach of these terms and conditions), we will provide you with reasonable notice of that cancellation. Provided we are not also in breach of these terms and conditions, a cancellation fee of the lesser of $25 or the value of the payments made may apply. If any payment has been made in excess of $25, we will refund that excess amount to your original payment method or through an alternative means.<\/p><p>9.3 A Third Party Seller may cancel an order for Third Party Products if that Third Party Seller does not have sufficient stock on hand to fulfil that order or if the Third Party Products have been recalled. You will receive notification of any such cancellation by email.<\/p><p>9.4 You may cancel an order for Third Party Products at any time before it is accepted by the Third Party Seller by calling Customer Service on 0294979900 between 9am and 6pm (Sydney time) Monday to Friday. Any money paid by you for those Third Party Products will be refunded by us.<\/p><p> <\/p>"
+          }
+        },
+        "a894ca8d-5f96-4e61-89a1-4629a1d11c16": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Prices, Fees and Charges"
+          }
+        },
+        "d140c598-4062-41c6-b20e-37bdc475a361": {
+          "type": "body",
+          "settings": {
+            "text": "<p>10.1 We or the Third Party Seller will charge you, and you agree to pay the purchase price of each Product that is ordered, the Delivery Fee and any other fees and charges set out in these terms and conditions.<\/p><p>10.2 All prices and Delivery Fees on the Site are in Australian dollars (AU$). We reserve the right to alter prices and Delivery Fees for any reason at any time before you place your order. Product availability and Product prices may vary between Gro Urban Oasis stores, catalogues and those found on this Site.<\/p><p>10.3 Orders for certain Third Party Products may be fulfilled by entities outside of Australia. If you purchase any such Third Party Products from the Site, as an importer of those Products, you will be required, where their Customs value exceeds the threshold for GST-free imports ($1,000 as at August 2016), to make an import declaration to the Australian Customs and Border Protection Service and to pay the calculated duty, GST and other taxes and charges. You authorise the supplier to arrange for a third party to complete the Customs and Border Protection requirements. Third Party Products which are supplied by an overseas vendor will be marked as such on your order. Refer to www.customs.gov.au for up-to-date information about importing goods.<\/p><p>10.4 Neither Gro Urban Oasis nor a Third Party Seller will be liable or responsible for any failure to perform, or any delay in performance of, obligations under its contract with you where such failure or delay is caused by an event outside the reasonable control of Gro Urban Oasis or the Third Party Seller, as applicable.<\/p><p>10.5 The purchase price of each Product is shown on the product list on the Site at the time you place your order. The purchase price of a Product on the Site may not be the same or correspond to the prices in any of our stores for the same Product and we are not obliged to match any prices.<\/p>"
+          }
+        },
+        "heading_1_dQYjCG": {
+          "type": "heading_1",
+          "settings": {
+            "heading": "Promotion"
+          }
+        },
+        "body_j3A6HB": {
+          "type": "body",
+          "settings": {
+            "text": "<p><\/p><p>Special offers and promotional campaigns do not apply to services or gift cards and all special offers and promotional campaigns cannot be used in conjunctions with any other offers. Eden Gardens and Gro Urban Oasis retain the right to alter or terminate these terms and conditions at their discretion. All purchases are subject to availability, and standard return policies are in effect. <\/p>"
+          }
+        },
+        "768a6e93-a8c8-45ff-ad02-ad06a5c64d54": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Payment Methods"
+          }
+        },
+        "17f2066f-f9c6-457d-a565-5accdb20eaff": {
+          "type": "body",
+          "settings": {
+            "text": "<p>12.1 You may pay the fees and charges for an accepted order (excluding lay-by orders) with any of the following payment methods and such other payment methods as specified on the Site from time to time:<\/p><p>Visa;<\/p><p>MasterCard;<\/p><p>American Express;<\/p><p>Diners Club;<\/p><p>Debit cards displaying a Visa or Mastercard logo; and PayPal.<\/p><p>12.2 If we are unable to successfully process your nominated payment method (being the applicable debit card, credit card or PayPal payment) for an order that has been accepted by us or the relevant Third Party Seller, then we may cancel your order.<\/p><p>12.3 If you choose to pay by credit card, you authorise us to debit the amount that is payable from your nominated credit card for an accepted order.<\/p><p>12.4 You must not pay, or attempt to pay, for Products through any fraudulent or unlawful means.<\/p><p>12.5 We will provide you with a receipt at time of delivery which specifies the total fees and charges for the Products in the order.08.1 Third Party Products will be delivered by the Third Party Seller in accordance with the Third Party Seller’s shipping policy, which will be available on the relevant Third Party Seller’s page.<\/p><p> <\/p>"
+          }
+        },
+        "fdcf5bb5-3578-4870-8961-65bf46c283bf": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Damaged Products and Returns"
+          }
+        },
+        "8857b271-0781-4cd4-b210-e49d3db8a0d7": {
+          "type": "body",
+          "settings": {
+            "text": "<p>13.1 The Gro Urban Oasis Online Returns Policy applies to all purchases of Gro Urban Oasis Products using the Site and forms part of these terms and conditions. If you suspect that an Gro Urban Oasis Product is damaged on delivery, then you should refuse to take receipt of that Gro Urban Oasis Product and notify us by calling 02 9491 9900.<\/p><p>13.2 The relevant Third Party Seller’s Returns Policy applies to all purchases of Third Party Products using the Site and forms part of these terms and conditions. If you suspect that a Third Party Product is damaged on delivery, then you should refuse to take receipt of that Third Party Product and notify the relevant Third Party Seller using the contact details set out on their page.<\/p><p>13.3 If you consider that a Product was delivered to you in a damaged or defective condition, you should contact Gro Urban Oasis on 02 9491 9900 or follow the returns instructions supplied with the Product.<\/p><p> <\/p>"
+          }
+        },
+        "71be7c66-ecef-4e30-abb6-4259a15a6c20": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Liability"
+          }
+        },
+        "f7932f54-d6cd-4d32-b6f5-894de47b2d1e": {
+          "type": "body",
+          "settings": {
+            "text": "<p>14.1 Gro Urban Oasis Products and Third Party Products sold on this Site come with guarantees that cannot be excluded under the Australian Consumer Law. You are entitled to a replacement or refund for a major failure and compensation for any other reasonably foreseeable loss or damage. You are also entitled to have the goods repaired or replaced if the goods fail to be of acceptable quality and the failure does not amount to a major failure. You may also be entitled to remedies that cannot be excluded under the Australian Consumer Law if any services supplied by us or the relevant Third Party Seller (as applicable) fail to meet a consumer guarantee under the Australian Consumer Law.<\/p><p>14.2 Without excluding, restricting or modifying the rights and remedies to which you may be entitled under these consumer guarantee provisions of the Australian Consumer Law in relation to the sale of Gro Urban Oasis Products or our liabilities under those provisions:<\/p><p>where you purchase Third Party Products, we are not the seller and so we are not liable for breaches of the Australian Consumer Law provisions referred to in clause 20.1 in relation to such Third Party Products;<\/p><p>you acknowledge that the Site is provided \"as is\" and that we do not make any warranty or representation as to the suitability of the Site or a Product for any purpose;<\/p><p>we exclude all other implied terms and warranties, whether statutory or otherwise, relating to the Site or the subject matter of this agreement; and<\/p><p>we will not be liable to you for Indirect Loss arising from or connected to this agreement in contract, tort, under any statute or otherwise unless such loss arises as a result of our own negligence or willful misconduct.<\/p><p>14.3 Our liability to you for loss or damage of any kind arising out of this agreement or in connection with the relationship established by it is reduced to the extent (if any) that you cause or contribute to the loss or damage. This reduction applies whether our liability is in contract, tort (including negligence), under any statute or otherwise.<\/p><p> <\/p>"
+          }
+        },
+        "36c4488c-0062-47d9-95df-a732e965d469": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Termination"
+          }
+        },
+        "60fdc2a1-5e12-466d-a91a-f83cbc65fafe": {
+          "type": "body",
+          "settings": {
+            "text": "<p>15.1 We may immediately suspend, terminate or limit your access to and use of the Site and (where relevant) your account if you breach these terms and conditions and: the breach cannot be remedied; or<\/p><p>you fail to remedy the breach within 10 days of our notice to you of that breach; or if there is an emergency.<\/p><p>15.2 We may stop making the Site (or any part of it) available without prior notice. If so, any orders that we or the relevant Third Party Seller have accepted will not be affected unless the Products that have been ordered are no longer available or we are prevented from supplying the Products, in which case, we or the relevant Third Party Seller (as applicable) will notify you and we will refund to you all valid payments received by us for those Products.<\/p><p>15.3 You may cancel your account at any time for any reason provided that:<\/p><p>any outstanding matters are resolved (such as a suspension on your account); and you have paid all outstanding amounts owed by you.<\/p><p> <\/p>"
+          }
+        },
+        "4ea40af8-4324-4cce-956d-211294be9006": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Provision"
+          }
+        },
+        "9d60d3a4-51d3-4f2b-834b-59bb85bf7f2f": {
+          "type": "body",
+          "settings": {
+            "text": "<p>16.1 If the whole or any part of a provision of this agreement is void, unenforceable or illegal in a jurisdiction it is severed for that jurisdiction. The remainder of this agreement has full force and effect and the validity or enforceability of that provision in any other jurisdiction is not affected. This clause has no effect if the severance alters the basic nature of this agreement or is contrary to public policy.<\/p><p>16.2 This agreement is governed by the laws of New South Wales, Australia. Each party submits to the non-exclusive jurisdiction of the courts of that place. Any rights or remedies to which you are entitled under the Australian Consumer Law arise independently of these terms and conditions and this clause does not apply to any claim you may have under the Australian Consumer Law.<\/p><p>16.3 You alone, and not Gro Urban Oasis, are responsible for ensuring that your activities conducted on the Site are lawful. You must ensure that you comply with all applicable laws in Australia and other countries. You must also ensure that you strictly comply with these terms and conditions and the policies which form part of these terms and conditions.<\/p>"
+          }
+        },
+        "73995a0e-6b88-4440-945b-a0272d1c2f69": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Intellectual Property"
+          }
+        },
+        "f262361c-4ebd-4f05-a3bc-710abd2e310e": {
+          "type": "body",
+          "settings": {
+            "text": "<p>17.1 All right, title and interest in all Intellectual Property in all concepts, systems, written, graphic and other material relating to the Site and its contents is owned by, and will at all times remain the exclusive property of, us, our licensors and the providers of any other products and services accessible through the Site, and is protected by Australian and international law. Nothing in these terms and conditions will constitute any license of intellectual property rights to you.<\/p><p>17.2 You:<\/p><p>must not modify, copy, adapt, store in a retrieval system, reproduce, upload, post, transmit, sell, distribute in any way or communicate to the public any material on the Site without our prior written consent;<\/p><p>must not frame or embed in another website any of the material appearing on the Site without our prior written consent;<\/p><p>may store a reproduction of the content on the Site on your local computer for the sole purpose of viewing the content; and<\/p><p>may print hard copies of the content for the sole purpose of viewing and purchasing Products but not for any other use, including commercial use.<\/p><p>17.3 You must not use any of the marks or trademarks appearing on the Site or our name or the names of our related companies without our prior written consent. You must not use any of the other company, product and services marks on the Site that are owned by other third parties (including Third Party Sellers and our other suppliers) without obtaining the relevant third party owner’s consent.<\/p><p> <\/p>"
+          }
+        },
+        "258a023e-a135-4cf8-8e54-7d82c0fee607": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Risk of Loss"
+          }
+        },
+        "c4862118-57e4-4423-85bd-b16f9ff0f263": {
+          "type": "body",
+          "settings": {
+            "text": "<p>18.1 Risk and title to Gro Urban Oasis Products passes to you on the date and time of delivery by us or our nominee to the delivery address.<\/p><p>18.2 Risk and title to Third Party Products passes to you on the date and time of delivery by the Third Party Seller or its nominee to the delivery address. You acknowledge that at no point does Gro Urban Oasis have title to or risk in any Third Party Products sold on this Site.<\/p><p> <\/p>"
+          }
+        },
+        "63359b22-64a3-4373-9c39-9080c06ef791": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Product Descriptions"
+          }
+        },
+        "64456249-288f-4bb4-ac5f-1b4c356b9da9": {
+          "type": "body",
+          "settings": {
+            "text": "<p>We attempt to be as accurate as possible and use our best endeavours to ensure, but do not warrant, that any information provided by Third Party Sellers or our other suppliers, including in relation to Product descriptions (including descriptions of Third Party Products) or other content of this Site, is accurate, complete, reliable, current or error-free.<\/p>"
+          }
+        },
+        "e249a732-599e-4671-b16a-77178998babc": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Third Party Products"
+          }
+        },
+        "e63bfef9-6d42-4cb8-b0a6-b52a19e058a6": {
+          "type": "body",
+          "settings": {
+            "text": "<p>In addition to the above terms, the following terms apply to purchases by you of any Third Party Products from a Third Party Seller:<\/p><p>20.1 Neither Gro Urban Oasis nor any of its related companies will be liable to any person if a Third Party Seller is unable to or declines to supply a Third Party Product for any reason whatsoever.<\/p><p>20.2 If you have a dispute with one or more Third Party Sellers, you release us and our related entities from all claims, demands and damages (including any Indirect Loss) of every kind and nature, known or unknown, arising out of or in connection with such dispute(s).<\/p><p>20.3 You should contact the Third Party Seller through the contact information provided in your delivery package if you have any inquiries or customer service issues related to their Third Party Products, such as returns or warranty issues. You may also call the Gro Urban Oasis who will assist you in accordance with the Third Party Seller’s instructions. As payment agent, we will refund any money to you for returns of Third Party Products via the payment method used to collect payment, after we receive notice from the Third Party Seller to refund that payment.<\/p><p>20.4 Information contained in Third Party Product listings on the Site has been provided by the relevant Third Party Seller. Neither Gro Urban Oasis nor any of its related companies warrants that the information provided in Third Party Product listings is accurate, adequate or complete, and neither Gro Urban Oasis nor any of its related companies will be responsible or liable for any error in, or omission from, the information provided in any Third Party Product listings.<\/p><p>20.5 You will not hold Gro Urban Oasis or any of its related companies responsible for Third Party Sellers’ content, actions or inactions or the Third Party Products they list.<\/p><p>20.6 You acknowledge that the Site is a venue to allow users to offer, sell, and buy goods. We are not involved in the actual transaction between customers and Third Party Sellers. We have no control over and do not guarantee the quality, safety or legality of Third Party Products, the truth or accuracy of any Third Party Seller’s content or listings, the ability of Third Party Sellers to sell Third Party Products, or that a Third Party Seller will actually complete a transaction or return an item.<\/p><p>20.7 When you enter into a transaction in relation to Third Party Products you create a legally binding contract with the Third Party Seller. You must ensure that you comply with your obligations to that Third Party Seller and are aware of any laws relevant to you as a buyer. If a Third Party Seller breaches any obligation to you, you – not us – are responsible for enforcing any rights that you may have.<\/p><p>20.8 We cannot guarantee continuous or secure access to the Site, and its operation may be interfered with by numerous factors outside of our control. Accordingly, to the extent legally permitted and without excluding, restricting or modifying the rights and remedies to which you may be entitled under the consumer guarantees provisions of the Australian Consumer Law, we exclude all implied warranties, terms and conditions, whether statutory or otherwise, relating to the Site or the subject matter of these terms and conditions. We are not liable for any loss of money, goodwill or reputation, or any Indirect Loss arising, directly or indirectly, out of your use of or your inability to use the Site.<\/p><p>20.9 A reference to Gro Urban Oasis related entities in clauses 22.1 to 22.5 above does not apply to any related entity which is also a Third Party Seller.<\/p><p> <\/p>"
+          }
+        },
+        "330e13de-ae0a-4f31-a698-52be93d5e6ad": {
+          "type": "heading_3",
+          "settings": {
+            "heading": "Definitions"
+          }
+        },
+        "fcc6f366-409b-4ac2-bb20-e5ad2947be4e": {
+          "type": "body",
+          "settings": {
+            "text": "<p>Capitalised terms used are defined in these terms and conditions. In these terms:<\/p><p>21.1 Gro Urban Oasis Online Returns Policy means the returns policy detailed at www.edengardens.com.au<\/p><p>21.2 Gro Urban Oasis Product means any product offered for sale by Eden Gardens on the Site.<\/p><p>21.3 Classification Board means the Classification Board established under the Classification (Publications, Films and Computer Games) Act 1995 (Cth).<\/p><p>21.4 Delivery Address means the address specified by you during the customer registration process for the delivery of Products that we will supply to you under these terms and conditions.<\/p><p>21.5 Delivery Fee means the delivery fee notified to you at the time you place your order.<\/p><p>21.6 GST has the meaning it has in the A New Tax System (Goods and Services Tax) Act 1999 (Cwlth).<\/p><p>21.7 Indirect Loss means loss of profit, loss of revenue, loss of goodwill, loss of reputation, loss of anticipated savings, loss or corruption of data, loss of opportunity, loss of use and any other loss or damage not arising naturally and according to the usual course of things from the relevant breach, act or omission whether or not such loss or damage may reasonably be supposed to have been in the contemplation of the parties, at the time they made the contract, as the probable result of the relevant breach, act or omission.<\/p><p>21.8 Intellectual Property means all intellectual property rights including current and future registered and unregistered rights in respect of copyright, designs, circuit layouts, trade marks, trade secrets, know-how, confidential information, patents, invention and discoveries and all other intellectual property as defined in article 2 of the convention establishing the World Intellectual Property Organisation 1967.<\/p><p>21.9 Third Party Product means any product which is offered for sale by a Third Party Seller on the Site.<\/p><p>21.10 Third Party Seller’s Returns Policy means the returns policy which applies to a particular Third Party Seller, as set out on the Site.<\/p><p>21.11 Personalised Product means Products which have been personalised in accordance with the personalisation details provided by you.<\/p><p>21.12 Product means each good or service that is advertised on the Site and includes both Gro Urban Oasis Products and Third Party Products.<\/p><p>21.13 Site means the shopping site operated by Gro Urban Oasis and Eden Gardens branded by both.<\/p><p> <\/p>"
+          }
+        },
+        "heading_1_nRi6pV": {
+          "type": "heading_1",
+          "settings": {
+            "heading": "22. Eden Gardens – Green Unity Loyalty Program Competition"
+          }
+        },
+        "heading_1_68KdqD": {
+          "type": "heading_1",
+          "settings": {
+            "heading": "SCHEDULE"
+          }
+        },
+        "body_Np7cKn": {
+          "type": "body",
+          "settings": {
+            "text": "<p><strong> Promoter<\/strong><\/p><p>Eden Gardens & Garden Centres Pty Ltd (ABN 93 130 092 689) of 307 Lane Cove Road, Macquarie Park NSW 2113.<\/p><p><strong>Competition<\/strong><\/p><p>The competition\/promotion run by the Promotor known as ‘Eden Gardens – Green Unity Loyalty Program’ for the chance for an Entrant to one (1) of five (5) Prizes.<\/p><p><strong>Competition Period<\/strong><\/p><p>The Start Date until the End Date.<\/p><p><strong>Start Date<\/strong><\/p><p>9:00am (AEST) 15 February 2024.<\/p><p><strong>End Date<\/strong><\/p><p>11:59pm (AEST) 7 April 2024.<\/p><p><strong>Draw Date<\/strong><\/p><p>9 April 2024 at 307 Lane Cove Road, Macquarie Park NSW 2113.<\/p><p><strong>Prize<\/strong><\/p><p>Five (5) $1,000 gift cards to be used at any Store.<\/p><p><strong>Eligibility Criteria<\/strong><\/p><p>With the exception of the Ineligible Persons set out below, entry into the Competition is open to all natural persons who are resident in Australia over the age of eighteen (18) years old. To be an eligible Entrant a person must satisfy and comply with the Entry Procedure set out below.<\/p><p>The following persons (<strong>Ineligible Persons<\/strong>) are not eligible to enter the Competition:<\/p><p>(1)          Individuals<br\/>who are not resident in Australia.<\/p><p>(2)          Individuals<br\/>who are under the age of eighteen (18).<\/p><p>(3)          Businesses,<br\/>companies, sole traders, trusts\/trustees and superannuation funds.<\/p><p>(4)          Any person<br\/>acting as an agent on behalf of another person.<\/p><p>(5)          Employees,<br\/>directors, officers, volunteers, agents and contractors of the Promoter and the<br\/>Promoter’s associated and related bodies corporate (Related Parties).<\/p><p>(6)          Immediate<br\/>family members of the Related Parties, which includes spouses, ex-spouses,<br\/>de-facto spouses, children or stepchildren (whether natural or by adoption),<br\/>parents, stepparents, grandparents, step-grandparents, uncles, aunts, nieces,<br\/>nephews, brothers, sisters, stepbrothers, stepsisters or first cousins.<\/p><p>(7)           Any businesses, companies, sole traders or trusts\/trustees<br\/>who books and\/or holds an event at any Store and\/or The Gardens Restaurant & Terrace Bar, including but not limited to, weddings, corporate events,<br\/>private parties and photo shoots. The Promoter reserves the right to determine at its absolute discretion what constitutes an event at any Store and\/or The Gardens Restaurant & Terrace Bar.<\/p><p><strong>Entry Procedure  <\/strong>              <\/p><p>To enter the Competition and to be eligible to win<br\/>the Prize, an eligible person must do the following during the Competition Period:<\/p><p>(2)                 <br\/>Sign up to become (or be an<br\/>existing) member of the Green Unity Loyalty Program.<\/p><p>Upon satisfying the above Entry<br\/>Procedure and subject to these Terms and Conditions, an eligible person will be deemed to have obtained one (1) ticket (<strong>Entry Ticket<\/strong>) and be considered an<br\/>eligible <strong>Entrant<\/strong> in the Competition.<\/p><p>Note that per clause 3.3 of the Terms and Conditions, there is no limit to the maximum number of entries into the Competition per Entrant. <\/p><p><strong>Store(s) <\/strong><\/p><p>The following Eden Gardens or Gro Urban Oasis stores:<\/p><p>(1)          Macquarie<br\/>Park: 307 Lane Cove Road (cnr Fontenoy Road), Macquarie Park, NSW 2113,<br\/>Australia.<\/p><p>(2)          Bondi Junction: Westfields Bondi Junction 500 Oxford St, Bondi Junction NSW 2022.<\/p><p>(3)          Castle Towers: Level 1, Shop T1212 6-14 Castle Street, Castle Hill NSW 2154.<\/p><p>(4)          Hornsby: Westfield's Hornsby Level 3, Shop 3020 236 Pacific Highway, Hornsby NSW 2077.<\/p><p>(5)          Rouse Hill Town Centre: Coles Quad, Shop 88, 90 Civic Way, Rouse Hill NSW 2155.<\/p><p>(6)          Warringah: Westfield’s Shopping Centre Ground level, shop 1510 Brookvale Sydney 2100.<\/p>"
+          }
+        },
+        "body_EYNdEC": {
+          "type": "body",
+          "settings": {
+            "text": "<p><strong>1.\tTerms and conditions and permit number<\/strong><\/p><p><br\/>1.1\tAll information on how to enter the Competition and Prize information forms part of these Terms and Conditions.<\/p><p><br\/>1.2\tIn the event of any inconsistency between any information on the Competition or the Prize and these Terms and Conditions, these Terms and Conditions will prevail.<\/p><p><br\/>1.3\tParticipation in the Competition is deemed acceptance by the Entrant of these Terms and Conditions.<\/p><p><\/p><p><br\/><strong>2.\tCompetition Period<\/strong><\/p><p><br\/>2.1\tThe Competition is open for the Competition Period as set out in the Schedule.<\/p><p><br\/>2.2\tEntries outside of the Competition Period will not be accepted by the Promoter.<\/p><p><\/p><p><br\/><strong>3.\tEntry and eligibility<\/strong><\/p><p><br\/>3.1\tTo enter the Competition, a person must:<\/p><p><br\/>(a)\tmeet the Eligibility Criteria set out in the Schedule; and<\/p><p><br\/>(b)\tcomply with the Entry Procedure set out in the Schedule.<\/p><p><br\/>3.2\tAn entry into the Competition will only be deemed accepted at the time of receipt by the Promoter. All entries are final.<\/p><p><br\/>3.3\tThere is no limit to the amount of entries into the Competition that an Entrant can obtain.<\/p><p><br\/>3.4\tIncomplete or indecipherable entries into the Competition will be deemed to be invalid.<\/p><p><br\/>3.5\tEntrants must provide accurate, complete, and up-to-date information in entering the Competition, otherwise their entry into the Competition will be deemed to be invalid.<\/p><p><br\/>3.6\tEntrants who enter the Competition using a false name, an alias or who enter the Competition using multiple names, addresses or email addresses will be disqualified.<\/p><p><br\/>3.7\tEntrants may only use their receipt number for one (1) entry. Entrants who attempt to use their receipt number for multiple entries, or a false receipt number for their entry, will be disqualified.<\/p><p><br\/>3.8\tThe Promoter reserves the right to verify the validity of entries and Entrants, including requesting evidence as to the Entrant’s identity, age and address.<\/p><p><br\/>3.9\tAn entry into the Competition by the Entrant not transferable.<\/p><p><br\/>3.10\tAs a condition of entering the Competition, each Entrant licenses and grants the Promoter a non-exclusive, royalty-free, perpetual, worldwide, irrevocable, and sub-licensable right to use, reproduce, modify, adapt, publish and display their entry for any purpose, without compensation, restriction on use, attribution or liability.<\/p><p><\/p><p><br\/><strong>4.\tConduct of Entrants<\/strong><\/p><p><br\/>4.1\tAn Entrant must not tamper with the entry process for the Competition or engage in any unlawful or other improper misconduct calculated to jeopardies fair and proper conduct of the Competition or otherwise undermine the legitimate operations of the Competition.<\/p><p><br\/>4.2\tEntrants must disclose to the Promoter any information or thing which it becomes aware and which may generate negative publicity concerning the Competition and\/or the Promoter.<\/p><p><br\/>4.3\tThe Promoter reserves the right to disqualify an Entrant from the Competition if, in the opinion of the Promoter and at its absolute discretion, it deems the Entrants involvement in the Competition will, in any way, negatively or adversely impact the Competition and\/or the Promoter.<\/p><p><\/p><p><br\/><strong>5.\tPrize <\/strong><\/p><p><br\/>The Prize is not transferable and is not redeemable for cash.<\/p><p><\/p><p><br\/><strong>6.\tGame of chance<\/strong><\/p><p><br\/>The Competition is a game of chance and skill plays no part in determining the winning Entrant. Each valid entry will not be individually judged. Each entry has an equal chance of winning.<\/p><p><\/p><p><br\/><strong>7.\tCosts of Entrants<\/strong><\/p><p><br\/>Any direct or indirect costs associated with accessing and entering the Competition are the responsibility of the Entrant and are to be borne by the Entrant. <\/p><p><\/p><p><br\/><strong>8.\tWinning Entrant<\/strong><\/p><p><br\/>8.1\tThere will be up to five (5) winning Entrants for the Prize in the Competition. <\/p><p><br\/>8.2\tAn Entrant will be limited to winning one (1) Prize. Any subsequent ticket drawn in favour of an Entrant that has already won one (1) Prize will be deemed invalid.<\/p><p><br\/>8.3\tThe winning Entrants will be randomly drawn on the Draw Date.<\/p><p><br\/>8.4\tThe winning Entrant will be notified by email and telephone within two (2) days of the Draw Date.<\/p><p><br\/>8.5\tThe Promoter may require the winning Entrant to provide relevant evidence in order to claim the Prize, including proof of identity, age, address and hard copy of sales receipt.<\/p><p><br\/>8.6\tThe Promoter’s decision is final, and no correspondence will be had with Entrants regarding the winner.<\/p><p><br\/>8.7\tIn the event that a winning Entrant’s entry is deemed or found to be invalid, the Promoter may redraw or decide on another winning entry at its absolute discretion.<\/p><p><\/p><p><br\/><strong>9.\tClaiming and redeeming the Prize<\/strong><\/p><p><br\/>9.1\tThe redemption period during which the Prize may be claimed commences on the Draw Date and ends at 6pm on the thirtieth (30th) day from that date (Redemption Period). The Entrant will be reminded to claim the Prize via email seven (7) days after the Draw Date, which will be the final reminder to the Entrant.<\/p><p><br\/>9.2\tFor the purpose of clause 9.1 above, the Promoter will not consider any automatic email returns or replies received from the Entrant which indicates that the Entrant is not available during the Redemption Period as a means of claiming the Prize. <\/p><p><br\/>9.3\tIf the winning Entrant does not claim the Prize within the Redemption Period and provide a location for delivery of the Prize, the Prize will be deemed to be forfeited by the winning Entrant.<\/p><p><br\/>9.4\tIf the Prize remains unclaimed, a second draw for the Prize will take place on a date to be determined by the Promoter and at the same place and manner as the original draw, subject to any directions from a regulatory authority.<\/p><p><\/p><p><br\/><strong>10.\tPublicity<\/strong><\/p><p><br\/>10.1\tThe winning Entrant agrees to participate in all reasonable promotional activities in relation to the Competition as requested by the Promoter, which includes but is not limited to, being interviewed, photographed, or filmed. <\/p><p><br\/>10.2\tThe winning Entrant agrees to any interviews, photographs, film or other promotional material and their name, likeness, image and\/or voice being published on the Promoter’s website, the Promoter’s social media accounts and any print or digital media for the purpose of promoting the Competition and promoting the Promoter’s business and any goods and services supplied by the Promoter. <\/p><p><br\/>10.3\tThe winning Entrant agrees to grant the Promoter a perpetual and non-exclusive license to use such footage, photographs, and media in all media worldwide, including online social networking sites, and the winning Entrant will not be entitled to any fee for such use.<\/p><p><\/p><p><br\/><strong>11.\tNon-excludable guarantees<\/strong><\/p><p><br\/>Nothing in these Terms and Conditions limits, excludes, or modifies or purports to limit, exclude or modify the statutory consumer guarantees as provided under the Competition and Consumer Act 2010 (Cth) as well as any other implied warranties or similar consumer protection laws in the States and Territories of Australia.<\/p><p><\/p><p><br\/><strong>12.\tConsequential loss<\/strong><\/p><p><br\/>To the maximum extent permitted by law, the Promoter will not be liable for any special, indirect or consequential loss including but not limited to loss of profit (including anticipated profit), loss of benefit (including anticipated benefit), loss of revenue, loss of business, loss of goodwill, loss of opportunity, loss of savings (including anticipated savings), loss of reputation, loss of use (including both real and anticipatory) and\/ or loss or corruption of data, whether under statute, contract, equity, tort (including negligence), indemnity or otherwise.<\/p><p><\/p><p><br\/><strong>13.\tRisk<\/strong><\/p><p><br\/>Each Entrant participates in the Competition at their own risk.<\/p><p><\/p><p><br\/><strong>14.\tLiability<\/strong><\/p><p><br\/>14.1\tThe Prize may be subject to Terms and Conditions of the issuer or supplier of the Prize and the Promoter accepts no responsibility for those Terms and Conditions, which are the sole responsibility of the Entrant as and between the Entrant and the issuer or supplier of the Prize.<br\/>14.2\tIf the Competition is interfered with or is not capable of being conducted as reasonably anticipated due to any reason beyond the reasonable control of the Promoter, the Promoter reserves the right, in its sole discretion, to the fullest extent permitted by law to:<br\/>(a)\tdisqualify any Entrant; or<br\/>(b)\tto modify, suspend, terminate or cancel the Competition.<\/p><p><br\/>14.3\tTo the maximum extent permitted by law, the Promoter excludes all warranties, guarantees or representations (whether express or implied) except as expressly provided in these Terms and Conditions.<\/p><p><br\/>14.4\tExcept for any liability that cannot be excluded by law, the Promoter (including its officers, employees and agents) excludes all liability (including negligence), for any:<\/p><p><br\/>(a)\tpersonal injury; or <br\/>(b)\tany loss or damage (including loss of opportunity), <br\/>whether direct, indirect, special or consequential, arising in any way out of the Competition.<\/p><p><br\/>14.5\tExcept for any liability that cannot be excluded by law, the Promoter (including its officers, employees and agents) will not be liable to an Entrant for, and the Entrant indemnifies, waives and releases the Promoter in respect of all liability (including but not limited to all expenses, costs, damages, claims, losses) arising in any way out of or in connection with:<\/p><p><br\/>(a)\tany act or omission of the Entrant;<\/p><p><br\/>(b)\tany entry or Prize claim that is incomplete, incorrectly submitted, illegible, late, lost, altered, damaged, or misdirected (whether or not after receipt by the Promoter) due to any reason beyond the reasonable control of the Promoter;<\/p><p><br\/>(c)\tany costs (direct or indirect) associated with the Entrant entering into the Competition;<\/p><p><br\/>(d)\tany breach of these Terms and Conditions by the Entrant;<\/p><p><br\/>(e)\tany Force Majeure Event;<\/p><p><br\/>(f)\tthe winning Entrant being unable to use any or all aspects of the Prize;<\/p><p><br\/>(g)\tany personal injury or loss;<\/p><p><br\/>(h)\tclaiming the Prize;<\/p><p><br\/>(i)\tuse of the Prize in any way;<\/p><p><br\/>(j)\tany theft of the Prize;<\/p><p><br\/>(k)\tunauthorised access or third-party interference in the Competition;<\/p><p><br\/>(l)\tany variation in the value of the Prize that is stated in these Terms and Conditions; <\/p><p><br\/>(m)\tif the Competition is delayed, postponed or cancelled for any reason beyond the reasonable control of the Promoter;<\/p><p><br\/>(n)\tany reason beyond the reasonable control of the Promoter; <\/p><p><br\/>(o)\tany defect or problem with the Prize or the Prize being damaged, lost or stolen; and<\/p><p><br\/>(p)\tany tax, financial or legal liability incurred by a winning Entrant.<\/p><p><\/p><p><br\/><strong>15.\tIntellectual Property<\/strong><\/p><p><br\/>15.1\tAll entries into the Competition and any copyright subsisting in the entries become and remain the property of the Promoter who may publish or cause to be published any of the entries received. <\/p><p><br\/>15.2\tAll material provided by the Promoter in relation to the Competition or otherwise is the Promoter’s intellectual property (Promoter IP).<\/p><p><br\/>15.3\tEntrants must obtain prior written permission if an Entrant wishes to copy or reproduce the Promoter IP. <\/p><p><br\/>15.4\tModification of the Promoter IP is a violation of the Promoter’s intellectual property rights and is strictly prohibited. <\/p><p><br\/>15.5\tNothing contained in the Promoter IP should be construed as granting, by implication or otherwise, any license or right to use any of the Promoter IP without the Promoter’s express written permission.<\/p><p><\/p><p><br\/><strong>16.\tForce Majeure<\/strong><\/p><p><br\/>16.1\tFor the purpose of this clause 16, Force Majeure Event means events, circumstances, or causes beyond a party’s reasonable control including (but not limited to):<\/p><p><br\/>(a)\tstrikes, lockouts or other industrial action;<\/p><p><br\/>(b)\tcivil commotion, riot, invasion, cyber-attack, service attack, terrorist attack or threat of terrorist attack, war (whether declared or not) or threat or preparation for war;<\/p><p><br\/>(c)\tfire, explosion, storm, flood, earthquake, subsidence or other natural disaster;<\/p><p><br\/>(d)\tepidemic, pandemic, health emergencies, disease,<\/p><p><br\/>(e)\timpossibility of the use of railways, shipping, aircraft, motor transport or other means of public or private transport;<\/p><p><br\/>(f)\t interruption or failure of utility services (including the inability to use public, private telecommunications networks, servers, or third-party hosting platforms), and<\/p><p><br\/>(g)\tthe acts, decrees, legislation, regulations, or restrictions of any Government Agency.<\/p><p><br\/>16.2\tIf performance of the Competition, provision or use of the Prize (or any part of it), or any obligation under these Terms and Conditions is prevented, restricted, or interfered with by a Force Majeure Event, and if as a result the Promoter is unable to carry out its obligations or to provide the winning Entrant with the Prize, the Promoter may in its absolute discretion:<\/p><p><br\/>(a)\tcancel, terminate, modify or suspend the Competition and\/or; <\/p><p><br\/>(b)\tprovide an alternative prize or prizes to the same value as the original Prize.<\/p><p><br\/>16.3\tThe Promoter will use reasonable efforts under the circumstances to avoid or minimise any Force Majeure Event. <\/p><p><\/p><p><br\/><strong>17.\tPersonal information<\/strong><\/p><p><br\/>17.1\tThe Promoter collects personal information in order to conduct the Competition and may, for this purpose, collect, use and disclose such information to third parties, including but not limited to agents, contractors, service providers, Prize suppliers and as required, to regulatory authorities. The Entrants entry into the Competition is conditional on providing this information. <\/p><p><br\/>17.2\tThe Promoter will also use, handle and disclose Entrants personal information as set out in its Privacy Policy, which can be viewed at https:\/\/gro-urbanoasis.com.au\/pages\/privacy-policy. This includes the Promotor using the personal information for promotional, marketing, publicity, research and profiling purposes, including sending direct marketing to an Entrant. The Privacy Policy also includes information about how Entrants can opt-out, access, update or correct their personal information.<\/p><p><\/p><p><br\/><strong>18.\tDisqualification for breach<\/strong><\/p><p><br\/>The Promoter may, at any time and at its sole discretion, disqualify a person who has breached these Terms and Conditions, in which case the Entrant forfeits all rights to the Prize or participating in the Competition.<\/p><p><\/p><p><br\/><strong>19.\tNo Waiver<\/strong><\/p><p><br\/>Failure of the Promotor to enforce any of its rights does not constitute a waiver of those rights.<\/p><p><\/p><p><br\/><strong>20.\tAmendments <\/strong><\/p><p><br\/>These Terms and Conditions may be amended or replaced from time to time if required by any regulatory authority.<\/p><p><\/p><p><br\/><strong>21.\tJurisdiction<\/strong><\/p><p><br\/>These Terms and Conditions are governed by the laws New South Wales. Entrants submit to the jurisdiction of the courts of New South Wales.<\/p><p><\/p><p><br\/><strong>22.\tEntire agreement<\/strong><\/p><p><br\/>These Terms and Conditions represent the entire agreement between the Promoter and any Entrant (including any winning Entrant) and supersede any prior agreement, understanding or arrangement between the Promoter and any Entrant (including any winning Entrant), whether oral or in writing.<br\/><br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ef19ca93-ccb7-4f2b-8b1a-5ca9d9794953",
+        "60fb9cb1-0264-4ba0-9898-416c492c2d6d",
+        "b9c2835e-9b55-4799-82ec-797fb4197d78",
+        "3d4e7f5b-4ef3-47fc-937d-9c564166f41e",
+        "d290bf44-038e-4345-9433-f53c8d8735fe",
+        "de59ac1e-e162-41de-98d0-6ee864939787",
+        "167b3b9a-3c6e-4acc-a08f-3ada9f256c24",
+        "300c3b44-c1f9-4f98-94cc-160c9265c204",
+        "ef27b8ac-759e-4cb8-961b-932cc62aa440",
+        "236e3c00-e5e9-46d8-88ee-563eca795ee7",
+        "58f90090-c358-492a-b6b1-baecf29c739d",
+        "04a8b119-49fd-41a6-b9ba-bc1eef1b1e07",
+        "b33ad449-3cda-469f-86ff-d430594dfb02",
+        "b9a350d5-2f3f-4935-981e-777ead99f821",
+        "be997530-e1e8-4afb-9220-b354b599d4c5",
+        "2775320f-7133-40bd-88c6-2f014e10f473",
+        "ce051df8-a112-4587-8937-089017455a59",
+        "f4b8af1a-8259-4b21-b595-983ba3b01703",
+        "a894ca8d-5f96-4e61-89a1-4629a1d11c16",
+        "d140c598-4062-41c6-b20e-37bdc475a361",
+        "heading_1_dQYjCG",
+        "body_j3A6HB",
+        "768a6e93-a8c8-45ff-ad02-ad06a5c64d54",
+        "17f2066f-f9c6-457d-a565-5accdb20eaff",
+        "fdcf5bb5-3578-4870-8961-65bf46c283bf",
+        "8857b271-0781-4cd4-b210-e49d3db8a0d7",
+        "71be7c66-ecef-4e30-abb6-4259a15a6c20",
+        "f7932f54-d6cd-4d32-b6f5-894de47b2d1e",
+        "36c4488c-0062-47d9-95df-a732e965d469",
+        "60fdc2a1-5e12-466d-a91a-f83cbc65fafe",
+        "4ea40af8-4324-4cce-956d-211294be9006",
+        "9d60d3a4-51d3-4f2b-834b-59bb85bf7f2f",
+        "73995a0e-6b88-4440-945b-a0272d1c2f69",
+        "f262361c-4ebd-4f05-a3bc-710abd2e310e",
+        "258a023e-a135-4cf8-8e54-7d82c0fee607",
+        "c4862118-57e4-4423-85bd-b16f9ff0f263",
+        "63359b22-64a3-4373-9c39-9080c06ef791",
+        "64456249-288f-4bb4-ac5f-1b4c356b9da9",
+        "e249a732-599e-4671-b16a-77178998babc",
+        "e63bfef9-6d42-4cb8-b0a6-b52a19e058a6",
+        "330e13de-ae0a-4f31-a698-52be93d5e6ad",
+        "fcc6f366-409b-4ac2-bb20-e5ad2947be4e",
+        "heading_1_nRi6pV",
+        "heading_1_68KdqD",
+        "body_Np7cKn",
+        "body_EYNdEC"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e7c85c1c-1f16-452e-ae84-ee17cfc3f812",
+    "fdf485cf-4368-49ce-9af9-7d4c151ddad9"
+  ]
+}

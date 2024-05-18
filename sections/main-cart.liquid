@@ -1,0 +1,24 @@
+<section class="h-screen w-full p-5 flex items-center justify-center text-center bg-white">
+
+
+    <button
+        type="button"
+        title="Cart button"
+        @click="$dispatch('toggle-cart')"
+        class="button">
+        <span>View Cart</span>
+    </button>
+
+</section>
+
+{% schema %}
+  {
+    "name": "Cart Page",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Cart Page"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,45 @@
+{%- paginate blog.articles by 6 -%}
+
+<section class="layout--grid mb-[120px] lg:mb-[200px]">
+
+    <div class="col-span-2 lg:col-span-12">
+
+      <ul class="grid grid-cols-2 gap-x-[16px] lg:gap-x-[20px] gap-y-[32px]"  id="product-grid" data-next-url="{{paginate.next.url}}" data-id="{{ section.id }}">
+      {%- for article in blog.articles -%}
+        <li class="relative w-full grid__item">
+          {%- render 'article-card',
+            article: article,
+            show_excerpt: true 
+          -%}
+        </li>
+      {%- endfor -%}
+
+      </ul>
+    </div>
+
+</section>
+
+
+
+{%- if paginate.pages > 1 -%}
+      
+<div class="load-more flex justify-center items-center  mb-[120px] lg:mb-[240px]">
+  <a class="load-more_btn button body-1 text-center w-full max-w-[450px] lg:py-[28px]" onclick="loadMoreProducts()">Load More</a>
+  <div class="hidden w-8 h-8 ml-auto mr-auto border-4 border-black border-solid rounded-full load-more_spinner border-t-gray-200 animate-spin"></div>
+</div>
+
+{%- endif -%}
+
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Main Blog",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-blog.settings.header.content"
+    }
+  ]
+}
+{% endschema %}

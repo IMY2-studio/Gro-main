@@ -1,0 +1,63 @@
+
+<section class="mb-[120px] lg:mb-[200px]">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+
+        {%- when 'job' -%}
+
+            <article class="px-[16px] lg:px-[20px]">
+        <div class="grid grid-cols-2 lg:grid-cols-12 gap-x-[16px] lg:gap-x-[20px] border-b border-green-light {% if forloop.index0 == 0 %} border-t {% endif %} py-[25px]">
+              <div class="col-span-2 lg:col-span-8">
+
+                <div class="flex flex-col">
+
+                <h2 class="heading-1 mb-[20px]">
+                  {{ block.settings.title }}
+                </h2>
+
+
+                {%- if block.settings.text != blank -%}
+                  <div class="rte space-y-[20px]">
+                    {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+      {%- endcase -%}
+    {%- endfor -%}
+</section>
+
+{% schema %}
+{
+  "name": "Jobs list",
+  "settings": [],
+  "blocks": [
+            {
+                "type": "job",
+                "name": "Job",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Job Title",
+                        "default": "Job Title"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Description"
+                    }
+                ]
+            }
+        ],
+  "presets": [
+    {
+      "name": "Jobs list"
+    }
+  ]
+}
+{% endschema %}

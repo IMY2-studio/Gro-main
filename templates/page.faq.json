@@ -1,0 +1,274 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "6e0f91ce-fe1e-48c4-9941-7b28510f0f8a": {
+      "type": "section-page-heading",
+      "settings": {
+        "heading": "FAQ",
+        "padding": false
+      }
+    },
+    "ce204008-5703-450b-b953-443d700137ac": {
+      "type": "section-faqs",
+      "blocks": {
+        "a2b712c2-6eee-413f-8d43-da654502d165": {
+          "type": "faq",
+          "settings": {
+            "heading": "1. What shipping methods do you offer?",
+            "body": "<p>We have partnered  with multiple reliable couriers to ensure the prompt and secure delivery of your products, right to your doorstep. Our primary courier service is Australia Post, which enables us to provide efficient shipping options for regular orders.<br\/><br\/>For bulk items or larger shipments, we have our own dedicated delivery service. This allows us to handle bulk deliveries and ensure that your items are delivered safely and efficiently.<br\/><br\/>Please note that the specific shipping methods available may vary based on your location and the products you've chosen. During the checkout process, you will be presented with the available shipping options, along with their respective costs and estimated delivery times. <\/p>"
+          }
+        },
+        "5fa0d8de-3ceb-442a-ac45-5cd6cc8a6f3d": {
+          "type": "faq",
+          "settings": {
+            "heading": "2. Do you offer Same-Day-Delivery?",
+            "body": "<p>Currently, we do not provide Same-Day-Delivery service. However, we are excited to announce that we will be launching this option in the near future. We understand the importance of fast delivery for our customers, and we are actively working on implementing this service to better meet your needs. Stay tuned!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "a2b712c2-6eee-413f-8d43-da654502d165",
+        "5fa0d8de-3ceb-442a-ac45-5cd6cc8a6f3d"
+      ],
+      "settings": {
+        "heading": "Shipping"
+      }
+    },
+    "section_faqs_KKJidA": {
+      "type": "section-faqs",
+      "blocks": {
+        "faq_6KddAC": {
+          "type": "faq",
+          "settings": {
+            "heading": "1. What gift cards do you offer?",
+            "body": "<p>Online and in-store gift cards are exclusively valid for use via the respective retail stores, Gro Urban Oasis and Eden Gardens Macquarie Park. Please note, gift cards are not redeemable at The Gardens Restaurant and Terrace Bar.<br\/><br\/>While we currently do not offer ‘in-store’ gift cards for purchase online, we will happily exchange an online gift card for an ‘in-store’ gift card if you prefer to redeem them in person. During your visit in-store, simply present the online gift card to our team and they will gladly assist you with the exchange.<br\/><br\/>Alternatively, in-store gift cards can be purchased in-store. <\/p>"
+          }
+        },
+        "faq_wCLzUD": {
+          "type": "faq",
+          "settings": {
+            "heading": "2. How long are they valid for?",
+            "body": "<p>Gift cards are valid for 3 years from the date of purchase and cannot be replaced in the event of loss, theft, or damage, or if an incorrect email address is provided by the customer. Online and in-store retail gift cards are non-transferable and cannot be redeemed for cash.<br\/><br\/>Any remaining balance on the card can be used for future online purchases.<\/p>"
+          }
+        },
+        "faq_C6YJaD": {
+          "type": "faq",
+          "settings": {
+            "heading": "3. What is the return and exchange policy?",
+            "body": "<p>All transactions made with retail gift cards are considered final and no refunds or returns will be issued (consumer guarantee rights apply). Gro Urban Oasis reserves the right to modify these terms and conditions at any time without prior notice.<\/p>"
+          }
+        },
+        "faq_9hE7by": {
+          "type": "faq",
+          "settings": {
+            "heading": "4. What are the terms?",
+            "body": "<p>By purchasing a gift card, the cardholder agrees to adhere to all terms and conditions as outlined in the above points.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_6KddAC",
+        "faq_wCLzUD",
+        "faq_C6YJaD",
+        "faq_9hE7by"
+      ],
+      "settings": {
+        "heading": "Gift Cards"
+      }
+    },
+    "5a2e6e64-ad65-4e4a-a178-6e2adf74e302": {
+      "type": "section-faqs",
+      "blocks": {
+        "7d0f8d63-7a41-4244-ac17-8a298b86aac8": {
+          "type": "faq",
+          "settings": {
+            "heading": "1. How do I update or cancel my order?",
+            "body": "<p>We are dedicated to delivering your order as quickly as possible, and we strive to hustle and serve you promptly. Once your order is placed, making changes can be challenging, but if you act swiftly during our business hours, a timely phone call can work wonders. Reach us at (02) 9491 9900.<br\/><br\/>While we do respond to emails, please be aware that they may experience some lag in response time. For the fastest and most efficient communication, we encourage you to give us a call. Our team will be more than happy to assist you and provide the swiftest response to your queries or requests.<\/p>"
+          }
+        },
+        "c2e5d341-22ce-4746-a7db-f779dc32567f": {
+          "type": "faq",
+          "settings": {
+            "heading": "2. Can I change my shipping address?",
+            "body": "<p>If you've made an error with your shipping details, please don't hesitate to contact us via phone call at (02) 9491 9900 or if you prefer, email us with your order number and the new shipping address you'd like us to use. The more information you provide, the quicker we can attempt to update your shipping information.<br\/><br\/>While we always strive to process orders promptly, there are instances where we may not be able to modify your shipping address if the order has already been processed or shipped.<br\/><br\/>In the event that your order has already been shipped, we will take the initiative to reach out to the shipping carrier on your behalf. Our aim is to have your package intercepted and redirected to the correct address, ensuring a smooth delivery process.<\/p>"
+          }
+        },
+        "9fc9caf1-38b8-4439-971f-d61c7d9ee040": {
+          "type": "faq",
+          "settings": {
+            "heading": "3. Will my orders be saved in the cart aftering exiting the page?",
+            "body": "<p>At Gro Urban Oasis, we ensure a convenient shopping experience for our customers. When you add items to your shopping cart, the cart data is locally stored on your device. This means that even if you close your browser or leave the website, the items in your cart will be retained. You can return to your shopping cart at any time, and the state of your cart will remain unchanged.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7d0f8d63-7a41-4244-ac17-8a298b86aac8",
+        "c2e5d341-22ce-4746-a7db-f779dc32567f",
+        "9fc9caf1-38b8-4439-971f-d61c7d9ee040"
+      ],
+      "settings": {
+        "heading": "Updating Your Orders"
+      }
+    },
+    "84d8c257-e3c6-4043-8b9e-3dc733658efb": {
+      "type": "section-faqs",
+      "blocks": {
+        "6d3a2212-7364-4c19-9ce6-73b6aa2498d1": {
+          "type": "faq",
+          "settings": {
+            "heading": "1. What is your return and exchange policy?",
+            "body": "<p>We understand that sometimes you may change your mind about a purchase, and we are here to accommodate your needs. We offer a refund or exchange on most items within 30 days of the original purchase date.<br\/><br\/>To ensure a smooth return or exchange process, please ensure that the item meets our Returns <br\/><br\/>Policy criteria:<br\/>- The return is initiated within 30 days of the original purchase date (or by the end of January for items bought in November or December).<br\/>- The items are in their original condition and have not been worn.<br\/>- The items are not part of our clearance or discounted items category.<br\/>- The items are not listed as exclusions in our Returns Policy.<br\/>- You can provide acceptable proof of purchase for the items.<br\/><br\/>By following these simple guidelines, you can easily obtain a refund or exchange for your purchase. We encourage you to embrace the opportunity for change and begin the process hassle-free.<br\/><br\/>If you have any questions or need assistance with the return or exchange process, please don't hesitate to reach out to our customer support team. We are here to ensure your satisfaction and make the return or exchange experience as convenient as possible.<\/p>"
+          }
+        },
+        "7ffbdbe7-cf3e-445a-a564-a3e07a8ebd9e": {
+          "type": "faq",
+          "settings": {
+            "heading": "2. When can I expect my refund?",
+            "body": "<p>We are committed to ensuring a hassle-free refund process for our valued customers. Once your refund query has been approved, we will promptly initiate the refund back to the original method of payment you used for your purchase.<br\/><br\/>After processing the refund on our end, you will receive an email notification from Gro Urban Oasis, confirming the successful completion of the refund transaction. Please note that it may take approximately 1-2 business days for the refunded amount to reflect in the account associated with the card used during the initial transaction.<\/p>"
+          }
+        },
+        "9b12c63a-ef7a-4973-ad4b-c3f291707723": {
+          "type": "faq",
+          "settings": {
+            "heading": "3. I took the tags off, can I still return it?",
+            "body": "<p>Yes, you may still return the item as long as it adheres to our Return Policy guidelines. To ensure a successful return, please make sure the item meets the criteria specified in our Return Policy. This typically includes returning the item within the designated return period, ensuring it is in its original condition, and having acceptable proof of purchase<\/p>"
+          }
+        },
+        "faq_GBMjkm": {
+          "type": "faq",
+          "settings": {
+            "heading": "4. I ordered a product online, can I return in-store due to a change of mind?",
+            "body": "<p>If a customer decides to return goods in-store, we either offer them a) a store credit, or b) an exchange. In order to get a refund for an online purchase, you can do so by emailing orders@gro-urbanoasis.com.au <\/p>"
+          }
+        },
+        "faq_EtnMNx": {
+          "type": "faq",
+          "settings": {
+            "heading": "5. Do you accept returns on plants?",
+            "body": "<p>At Eden Gardens and Gro Urban Oasis, we stand behind the quality of our products and plants and provide a two-week guarantee on plants. If a plant deteriorates or dies within this period, and you have followed the care instructions, we will replace it.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "6d3a2212-7364-4c19-9ce6-73b6aa2498d1",
+        "7ffbdbe7-cf3e-445a-a564-a3e07a8ebd9e",
+        "9b12c63a-ef7a-4973-ad4b-c3f291707723",
+        "faq_GBMjkm",
+        "faq_EtnMNx"
+      ],
+      "settings": {
+        "heading": "Return and Exchange Policy"
+      }
+    },
+    "47636388-b6fb-4ee0-a679-fd825fbd0663": {
+      "type": "section-faqs",
+      "blocks": {
+        "dc25d610-9375-4441-a17d-f5f220fe8d43": {
+          "type": "faq",
+          "settings": {
+            "heading": "1. What materials and fabrics do you sell?",
+            "body": "<p>We prioritise ethical and sustainable practices in crafting our products. We carefully select a range of materials and fabrics that align with our values, making them vegan, safe, natural, sustainable, and eco-friendly.<br\/><br\/>We take pride in offering you high-quality products that are not only stylish but also environmentally conscious. To explore our diverse range of offerings,  visit our Collections section on our website. <\/p>"
+          }
+        },
+        "4667b490-e1ea-45e6-b42a-e6204b0d90f5": {
+          "type": "faq",
+          "settings": {
+            "heading": "2. Where are your products manufactured?",
+            "body": "<p>we take great pride in the meticulous craftsmanship and care that goes into creating our products. Each item is a beautiful fusion of local artistry from Australia and the exceptional craftsmanship of Asia. We believe in cherishing the unique cultural influences and skills that both regions bring to our creations.<br\/><br\/>Quality is at the heart of everything we do. We are committed to seeking out only the very best materials and manufacturing processes to ensure that our products meet the highest standards. From the initial concept to the final product, our team's passion and dedication shine through, resulting in creations that are truly exceptional.<\/p>"
+          }
+        },
+        "3e79a17c-9e9b-4eab-a923-547298b3be23": {
+          "type": "faq",
+          "settings": {
+            "heading": "3. How do the gift cards work?",
+            "body": "<p>Our gift cards offer the perfect gifting solution for any occasion. These prepaid single-load cards provide flexibility and convenience for the recipient to choose their favorite items from our store.<br\/><br\/>With E-Gift Cards, the process is seamless and efficient. Once purchased, the gift card will be sent directly to the recipient's email inbox. They can then use the card to shop at our online store and select the products they love the most.<br\/><br\/>Whether it's for a birthday, anniversary, holiday, or any other special event, our gift cards are sure to bring joy to your loved ones. Let them explore our diverse range of products and find something that suits their preferences and needs.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "dc25d610-9375-4441-a17d-f5f220fe8d43",
+        "4667b490-e1ea-45e6-b42a-e6204b0d90f5",
+        "3e79a17c-9e9b-4eab-a923-547298b3be23"
+      ],
+      "settings": {
+        "heading": "Product FAQs"
+      }
+    },
+    "4827513f-f9c8-4a23-b577-d360124754e0": {
+      "type": "section-faqs",
+      "blocks": {
+        "91c79438-3ca0-4c9c-8dae-dec021d9c726": {
+          "type": "faq",
+          "settings": {
+            "heading": "1. Where are you located?",
+            "body": "<p>Our main office is situated at 307 Lane Cove Road, Macquarie Park NSW 2113. We welcome you to visit our headquarters and take a look at our beautiful Eden Gardens. You may also visit the website: <a href=\"https:\/\/edengardens.com.au\/\" target=\"_blank\" title=\"Eden Gardens Macquarie Park.\"><em>Eden Gardens Macquarie Park<\/em><\/a>. (https:\/\/edengardens.com.au\/)<br\/><br\/>For your shopping convenience, we also have several store locations across different areas. Feel free to drop by and explore our products in person at the following stores:<br\/><br\/>1. Westfields Bondi Junction<br\/>   Address: 500 Oxford St. Bondi Junction NSW 2022<br\/>   Phone: 0435 865 523<br\/><br\/>2. Castle Towers<br\/>   Address: Shop T1212\/6-14 Castle St, Castle Hill NSW 2154<br\/>   Phone: 0435 868 592<br\/><br\/>3. Westfield Hornsby<br\/>   Address: 236 Pacific Hwy, Hornsby NSW 2077<br\/>   Phone: 0413 972 746<br\/><br\/>4. Westfield Warringah Mall<br\/>   Address: Westfield Warringah Mall Ground Level, shop 1510, Brookvale NSW 2100<br\/>   Phone: 0478 746 040<br\/><br\/>5. Rouse Hill Town Centre<br\/>   Address: 90 Civic Way, Rouse Hill NSW 2155<br\/>   Phone: 0421 752 118<\/p><p><br\/>For inquiries about online orders, please note that you may reach us for any inquiries at (02) 9491 9900.<\/p><p><br\/>Our dedicated teams at each store are ready to assist you and provide a personalised shopping experience. Whether you have questions about our products or need recommendations, we're here to help!<\/p>"
+          }
+        },
+        "ee34e152-4fa3-424c-99f1-3127fba60df2": {
+          "type": "faq",
+          "settings": {
+            "heading": "2. How do I contact your company if my question is not answered yet?",
+            "body": "<p>We are delighted to connect with you and provide assistance with any inquiries you may have. Feel free to reach out to us via email at info@gro-urbanoasis.com.au, and we will promptly respond to your questions and concerns.<br\/><br\/>Additionally, for real-time support during our working hours, you can give us a call at (02) 9491 9900. Our friendly customer support team is eager to assist you and ensure a smooth and pleasant experience.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "91c79438-3ca0-4c9c-8dae-dec021d9c726",
+        "ee34e152-4fa3-424c-99f1-3127fba60df2"
+      ],
+      "settings": {
+        "heading": "General FAQs"
+      }
+    },
+    "6dced292-ec22-42dd-90aa-81d1bd68f968": {
+      "type": "section-faqs",
+      "blocks": {
+        "219b33a5-9552-4a6b-9dd6-31a63b6fb762": {
+          "type": "faq",
+          "settings": {
+            "heading": "1. Do you have student discounts?",
+            "body": "<p>At this time, we do not currently offer student discounts. Nevertheless, we genuinely value your interest in our products and services, and we would love  to keep you informed about any upcoming discounts and promotions both in-store and online.<br\/><br\/>To ensure you receive timely updates and notifications, we encourage you to subscribe to our newsletter. By subscribing, you'll be among the first to know about any exciting deals or special offers that may become available in the future.<\/p>"
+          }
+        },
+        "f10f2060-1ee8-4b9d-81b1-c08ae5d2927c": {
+          "type": "faq",
+          "settings": {
+            "heading": "2. Can I use multiple disocunt codes?",
+            "body": "<p>Unfortunately, we can only accept one discount code per transaction. We understand that using multiple codes can be tempting, but our system is designed to process only one discount code at a time.  Should you have any further inquiries or need assistance, don't hesitate to contact us. We're here to help!<\/p>"
+          }
+        },
+        "24847069-12fa-4200-a9cd-39d5353dbb15": {
+          "type": "faq",
+          "settings": {
+            "heading": "3. I forgot to use my discount code. Can I still apply it to my order?",
+            "body": "<p>We understand how frustrating it can be to forget to apply a discount code to your order. Unfortunately, we are unable to apply discount codes retrospectively to completed orders. However, you can still use the same discount code for a different order, as long as it is used before the expiration date. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "219b33a5-9552-4a6b-9dd6-31a63b6fb762",
+        "f10f2060-1ee8-4b9d-81b1-c08ae5d2927c",
+        "24847069-12fa-4200-a9cd-39d5353dbb15"
+      ],
+      "settings": {
+        "heading": "Discounts & Promotions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "6e0f91ce-fe1e-48c4-9941-7b28510f0f8a",
+    "ce204008-5703-450b-b953-443d700137ac",
+    "section_faqs_KKJidA",
+    "5a2e6e64-ad65-4e4a-a178-6e2adf74e302",
+    "84d8c257-e3c6-4043-8b9e-3dc733658efb",
+    "47636388-b6fb-4ee0-a679-fd825fbd0663",
+    "4827513f-f9c8-4a23-b577-d360124754e0",
+    "6dced292-ec22-42dd-90aa-81d1bd68f968"
+  ]
+}

@@ -1,0 +1,133 @@
+<section class="bg-green text-white py-[20px] mb-[120px] lg:mb-[200px] relative wrapper-section--swiper-block"
+    x-data="featuredBlockSlider">
+
+    <div class="swiper" x-init="init($el)">
+
+    <div class="layout--grid absolute top-0 inset-x-0 z-30 hidden lg:grid">
+        <div class="flex justify-between col-span-2 lg:col-start-9 lg:col-end-13">
+
+            <div class="fraction-pagination-swiper--wrapper-block">
+                <p class="body-smaller inline">
+                <span class="number-block">1</span>
+                <span>of</span>
+                <span class="total-block">{{ section.blocks.size }}</span>
+                </p>
+            </div>
+
+
+
+            <div class="swiper-pagination-block"></div>
+        </div>
+    </div>
+
+        <div class="swiper-wrapper">
+
+        {%- for block in section.blocks -%}
+            {%- if block.type == 'feature' -%}
+            
+            {%- assign heading = block.settings.heading -%}
+            {%- assign text = block.settings.text -%}
+            {%- assign featured_image = block.settings.image -%}
+
+
+
+
+                    <div class="swiper-slide bg-green">
+                        <div class="layout--grid  bg-green">
+                        {%- if featured_image != blank -%}
+
+                            <div class="col-span-2 lg:col-span-6">
+                                {%- if block.settings.link != blank -%}
+                                    <a href="{{ block.settings.link }}">
+                                {%- endif -%}
+                                <div class="h-full w-full aspect-square relative">
+                                    {{ featured_image | image_url: width: 1440 | image_tag: loading: 'lazy', class: 'w-full h-full object-cover object-center max-w-none' }}
+                                </div>
+
+                                {%- if block.settings.link != blank -%}
+                                    </a>
+                                 {%- endif -%}
+
+                            </div>
+
+                        {%- endif -%}
+
+                            <div class="col-span-2 lg:col-start-9 lg:col-end-13 pt-[50px] pb-[20px] lg:py-[100px] h-full flex flex-col pr-[20px]">
+
+                                {%- if heading != blank -%}
+                                    <h3 class="heading-1 mb-[10px]">
+                                        {{ heading }}
+                                    </h3>
+                                {%- endif -%}
+
+                                {%- if text != blank -%}
+                                    <div class="body-1 space-y-[24px] rte mb-[24px]">
+                                        {{ text }}
+                                    </div>
+                                {%- endif -%}
+
+                                {%- if block.settings.link != blank -%}
+                                <div class="flex justify-start">
+                                    <a href="{{ block.settings.link }}" class="bg-transparent border-solid text-center rounded-full text-white border border-[rgba(255,255,255,0.2)] leading-[20px] text-base py-[6px] px-[20px] transition-all hover:bg-white hover:border-white hover:text-green">
+                                        Learn More
+                                    </a>
+                                </div>
+                            {%- endif -%}
+
+                                {% comment %} Wrap in conditional (button) {% endcomment %}
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+    </div>
+
+</section>
+
+
+
+{% schema %}
+    {
+        "name": "Featured block",
+        "settings": [],
+        "blocks": [
+            {
+                "type": "feature",
+                "name": "Feature",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading Text",
+                        "default": "Feature block headline"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "url",
+                        "id": "link",
+                        "label": "Link"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+        {
+            "name": "Featured block",
+            "blocks": []
+        }
+    ]
+}
+{% endschema %}

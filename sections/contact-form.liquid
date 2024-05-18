@@ -1,0 +1,248 @@
+<section class="layout--grid mb-[120px] lg:mb-[200px]">
+
+    {% comment %} title here {% endcomment %}
+
+      {% if section.blocks.size > 0 %}
+        <div class="col-span-2 lg:col-span-6 flex flex-col">
+          {% form 'contact', class: 'contact-form--form w-full flexf lex-col' %}
+            
+            {% if form.posted_successfully? %}
+              <div class="w-full">
+                <p class="body-smaller">{{ 'templates.contact.form.post_success' | t }}</p>
+              </div>
+            {% endif %}
+
+            {% if form.errors %}
+              <div class=" flex flex-col">
+                <p class="body-smaller">{{ 'templates.forms.post_error' | t }}</p>
+                  {% assign message = 'templates.contact.form.message' | t %}
+                  {% for field in form.errors %}
+                    {% if field == 'form' %}
+                      <p class="body-smaller">
+                        {{ form.errors.messages[field] }}
+                      </p>
+                    {% else %}
+                      <p class="body-smaller">
+                        {% assign field_name = field | replace: 'body', message %}
+                        {{ 'templates.forms.post_field_error_html' | t: field: field_name, error: form.errors.messages[field] }}
+                      </p>
+                    {% endif %}
+                  {% endfor %}
+              </div>
+            {% endif %}
+
+            <div class="w-full block space-y-[20px]">
+                {% for block in section.blocks %}
+                    <div class="flex flex-col" {{ block.shopify_attributes }}>
+
+                      {% if block.type == 'textfield' %}
+                      {% comment %} Text field {% endcomment %}
+                        {% if block.settings.label != blank %}
+                          {% assign label = block.settings.label %}
+                        {% else %}
+                          {% assign label = 'Option ' | append: forloop.index %}
+                        {% endif %}
+
+                        <div class="w-full flex flex-col">
+                          <label for="{{ label | replace: ' ', '_' }}" class="body-smaller">
+                            {{ label }} {% if block.settings.required %}<span class="">*</span>{% endif %}
+                          </label>
+  
+                          <input type="text" placeholder="{% if settings.use_placeholders %}{{ label }}{% if block.settings.required %}*{% endif %}{% endif %}" 
+                          name="contact[{{ label | replace: ' ', '_' }}]" id="{{ label | replace: ' ', '_' }}" 
+                          class="border border-green-light w-full rounded-[4px] p-[8px] body-smaller" 
+                          {% if block.settings.required %}required="required"{% endif %} />
+                        </div>
+
+
+                      {% elsif block.type == 'textarea' %}
+                      {% comment %} Textarea {% endcomment %}
+                        <div class="w-full flex flex-col">
+                            <label for="textarea{{ forloop.index }}" class="body-smaller text-green">
+                              {{ block.settings.label }} {% if block.settings.required %}<span class="">*</span>{% endif %}
+                            </label>
+    
+                            <textarea placeholder="{% if settings.use_placeholders %}{{ block.settings.label }}{% if block.settings.required %}*{% endif %}{% endif %}" id="textarea{{ forloop.index }}" rows="5" 
+                              class="border border-green-light w-full rounded-[4px] p-[8px] body-smaller resize-none" name="contact[body]" {% if block.settings.required %}required="required"{% endif %}></textarea>
+                        </div>
+
+                      {% elsif block.type == 'email' %}
+                      {% comment %} Email {% endcomment %}
+
+                        {% if block.settings.label != blank %}
+                          {% assign label = block.settings.label %}
+                        {% else %}
+                          {% assign label = 'Option ' | append: forloop.index %}
+                        {% endif %}
+                        <div class="w-full flex flex-col">
+                          <label for="contactFormEmail" class="body-smaller">
+                            {{ label }} <span class="">*</span>
+                          </label>
+  
+                          <input type="email" placeholder="{% if settings.use_placeholders %}{{ label }}*{% if block.settings.required %}*{% endif %}{% endif %}" id="contactFormEmail" class="border border-green-light w-full rounded-[4px] p-[8px] body-smaller" 
+                          name="contact[email]" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" required="required">
+
+                        </div>
+
+                      {% elsif block.type == 'submit' %}
+                        <button type="submit" class="button text-center items-center justify-start w-fit">
+                          {{ block.settings.label }}
+                        </button>
+                      {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+            <input type="hidden" name="challenge" value="false" />
+           
+          {% endform %}
+        </div>
+      {% endif %}
+
+</section>
+
+{% schema %}
+  {
+    "name": "Contact",
+    "max_blocks": 10,
+    "settings": [],
+    "blocks": [
+      {
+        "type": "checkbox",
+        "name": "Checkbox",
+        "settings": [
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Title",
+            "default": "Select all that apply"
+          },
+          {
+            "type": "checkbox",
+            "id": "required",
+            "label": "Field is required"
+          },
+          {
+            "type": "text",
+            "id": "options_1",
+            "label": "Option 1",
+            "default": "Option 1"
+          },
+          {
+            "type": "text",
+            "id": "options_2",
+            "label": "Option 2",
+            "default": "Option 2"
+          },
+          {
+            "type": "text",
+            "id": "options_3",
+            "label": "Option 3",
+            "default": "Option 3"
+          },
+          {
+            "type": "text",
+            "id": "options_4",
+            "label": "Option 4"
+          },
+          {
+            "type": "text",
+            "id": "options_5",
+            "label": "Option 5"
+          },
+          {
+            "type": "text",
+            "id": "options_6",
+            "label": "Option 6"
+          },
+          {
+            "type": "text",
+            "id": "options_7",
+            "label": "Option 7"
+          },
+          {
+            "type": "text",
+            "id": "options_8",
+            "label": "Option 8"
+          },
+          {
+            "type": "text",
+            "id": "options_9",
+            "label": "Option 9"
+          },
+          {
+            "type": "text",
+            "id": "options_10",
+            "label": "Option 10"
+          }
+        ]
+      },
+      {
+        "type": "email",
+        "name": "Email (required)",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "Email field must be included."
+          },
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Label",
+            "default": "Title"
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "name": "Submit (required)",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "Submit button field must be included."
+          },
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Label",
+            "default": "Title"
+          }
+        ]
+      },
+      {
+        "type": "textarea",
+        "name": "Text area",
+        "settings": [
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Title"
+          },
+          {
+            "type": "checkbox",
+            "id": "required",
+            "label": "Field is required"
+          }
+        ]
+      },
+      {
+        "type": "textfield",
+        "name": "Text field",
+        "settings": [
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Label",
+            "default": "Title"
+          },
+          {
+            "type": "checkbox",
+            "id": "required",
+            "label": "Field is required"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

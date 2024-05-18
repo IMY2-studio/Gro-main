@@ -1,0 +1,136 @@
+<div class="flex w-full fitlers" 
+  x-data="{
+    loading: false,
+    filtersActive: false
+  }"
+  @filter-updated.window="$nextTick(() => {
+    const queryString = new URLSearchParams(new FormData($refs.filter_form)).toString()
+    loading = true;
+    filtersActive = true;
+    fetch('/collections/{{ collection.handle }}?' + queryString)
+      .then(response => response.text())
+      .then(data => {
+        let html_div = document.createElement('div');
+        html_div.innerHTML = data;
+        let html_dom = html_div.querySelector('#ProductGridContainer').innerHTML;
+        document.querySelector('#ProductGridContainer').innerHTML = html_dom;
+        // update url without refreshing the page 
+        history.replaceState(null, null, '?' + queryString);
+      })
+      .catch(error => console.error('Error:', error))
+      .finally(() => {
+        loading = false 
+        filtersActive = true
+        });
+    
+  })">
+    <h4 class="sr-only">{{ 'products.facets.filter_by_label' | t }}</h4>
+
+    {% render 'loader' %}
+
+    <form class="filter-form" x-ref="filter_form">
+        {%- for filter in collection.filters -%}
+
+
+          {% comment %} was drop down {% endcomment %}
+          {% comment %} Now visually hidden label with info about active filters {% endcomment %}
+
+              <div class="sr-only">
+                <span class="sr-only">{{ filter.label }}</span>
+      
+                {%- if filter.active_values.size > 0 -%}
+                  <span class="sr-only">({{ filter.active_values.size }})</span>
+                {%- endif -%}
+              </div>
+
+
+      
+            <div class="hidden filter-group-display lg:block">
+              
+            
+            <div class="sr-only filter-group-display__header">
+                {%- if filter.active_values.size > 0 -%}
+                  <span class="sr-only filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
+                  <a href="{{ filter.url_to_remove }}" class="reset-btn">Reset</a>
+                {%- endif -%}
+              </div>
+      
+              {%- case filter.type -%}
+                {%- when 'boolean' or 'list' -%}
+                  <ul class="filter-group-display__list flex flex-col lg:flex-row space-y-[20px] lg:space-y-0 lg:space-x-[4px]">
+
+
+                  {%- for filter in collection.filters limit: 1 -%}
+
+                    {%- if filter.active_values.size > 0 -%}
+
+                    <li class="cursor-pointer filter-group-display__list-item w-fit">
+                      <a href="{{ collection.url }}" class="text-green bg-transparent border-solid leading-[1.06] px-[20px] text-center rounded-full pb-[10px] pt-[7px] flex items-center h-full lg:hover:bg-green lg:hover:text-white group">
+                        All
+                      </a>
+                    </li>
+
+                    {%- else -%}
+
+                    <li class="cursor-pointer filter-group-display__list-item w-fit">
+                      <a href="{{ collection.url }}" class="text-white bg-green border-solid leading-[1.06] px-[20px] text-center rounded-full pb-[10px] pt-[7px] flex items-center h-full lg:hover:bg-green lg:hover:text-white"
+
+                      :class="{
+                        '!border-transparent !bg-transparent !text-green' : filtersActive
+                      }">
+                        All
+                      </a>
+                  </li>
+
+                  {%- endif -%}
+
+                  {%- endfor -%}
+
+                    {%- for filter_value in filter.values -%}
+
+                      {% if filter_value.label != 'Out of stock' %}
+                      
+                        <li class="filter-group-display__list-item w-fit">
+
+                          <label class="body-smaller leading-none cursor-pointer group transition-all {% if filter_value.active %} bg-green border-green {% else %}  bg-transparent border-transparent {% endif %} border border-transparent lg:hover:border-green  lg:hover:bg-green border-solid leading-[1.06] px-[20px] text-center rounded-full pb-[10px] pt-[7px] flex items-center" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+
+                            <input type="radio"
+                              class="sr-only"
+                              @change="$dispatch('filter-updated')"
+                              name="{{ filter_value.param_name }}"
+                              value="{{ filter_value.value }}"
+                              id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                              {% if filter_value.active -%}checked{%- endif %}>
+
+                              <span class="body-smaller leading-none {% if filter_value.active %} text-white {% endif %} group-hover:text-white ">{{ filter_value.label }} </span>
+                          </label>
+
+                        </li>
+
+                      {% endif %}
+                    {%- endfor -%}
+                  </ul>
+      
+                  <div class="sr-only filter-group-display__submit">
+                    <button type="submit" class="">
+                      Apply
+                    </button>
+                  </div>
+
+              {%- endcase -%}
+            </div>
+
+        {%- endfor -%}  
+    </form>
+
+    {% comment %} Mobile Filters {% endcomment %}
+
+    <div class="rounded-full border border-green-light pl-[16px] pr-[36px] py-[7px] relative w-fit lg:hidden">
+      <span class="leading-none body-smaller">
+        Show: All
+      </span>
+
+      {% render 'icon-chevron', class: 'absolute right-[16px] top-1/2 -translate-y-1/2 ' %}
+    </div>
+      
+</div>

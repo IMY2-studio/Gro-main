@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "6987c47e-3b9c-4f1e-8ead-01e44881e9ae": {
+      "type": "section-page-heading-image",
+      "settings": {
+        "heading": "About Us",
+        "image": "shopify:\/\/shop_images\/Elegant_Cinematic_Wedding_Thumbnail_HD_169.png"
+      }
+    },
+    "1e7c9245-c25b-45b7-8a7f-6f2ca659a297": {
+      "type": "page",
+      "blocks": {
+        "ffaf8975-eb91-47c4-acfb-25d6c41bb46b": {
+          "type": "heading_2",
+          "settings": {
+            "heading": "Behind the brand"
+          }
+        },
+        "b61ef313-f790-404b-b7ff-69ef07cd6f83": {
+          "type": "body",
+          "settings": {
+            "text": "<p>Gro Urban Oasis is the seed of a fresh lifestyle concept, where simply living better comes to life through a range of inspirational products created by artisans and producers from across the globe.<\/p><p><br\/>We understand best practice sourcing and enduring quality that minimizes the impact on the planet, the Gro collection is created with wellbeing in mind.<\/p><p><br\/>A mostly exclusive assortment of ethically sourced homewares, eco friendly textiles, accessories for the garden, plants and more, be inspired to create your urban oasis and move towards living a more enhanced life.<\/p>"
+          }
+        },
+        "76bc2ac2-4686-4673-810f-b734451c0517": {
+          "type": "heading_2",
+          "settings": {
+            "heading": "Philosophy"
+          }
+        },
+        "9ad0d70c-ea9c-4f3d-a2b9-d7fecb1b26a3": {
+          "type": "body",
+          "settings": {
+            "text": "<p>Our team understand the holistic purpose of plants and are devoted to customer service and delighting customers.  We strive to be personable and offer products that are striking quality and value, and hope that the customer experience here is inspiring and informative.  We engage by contributing genuinely and without conditions in seeking to improve the quality of life of others through active participation with plants.<\/p>"
+          }
+        },
+        "e3c224a1-cb07-4b43-9911-40732515e30c": {
+          "type": "heading_2",
+          "settings": {
+            "heading": "Community"
+          }
+        },
+        "f3e7d066-a19a-41b0-82b6-7d8a9447bf04": {
+          "type": "body",
+          "settings": {
+            "text": "<p>Gro Urban Oasis and Eden Gardens are  actively involved in the community and encourages members of the public staff and suppliers to join in our endeavours. We hold <strong>four fundraising morning teas every year<\/strong> to support our chosen charities and these are run with the help of <strong>20 local community volunteers.<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ffaf8975-eb91-47c4-acfb-25d6c41bb46b",
+        "b61ef313-f790-404b-b7ff-69ef07cd6f83",
+        "76bc2ac2-4686-4673-810f-b734451c0517",
+        "9ad0d70c-ea9c-4f3d-a2b9-d7fecb1b26a3",
+        "e3c224a1-cb07-4b43-9911-40732515e30c",
+        "f3e7d066-a19a-41b0-82b6-7d8a9447bf04"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "6987c47e-3b9c-4f1e-8ead-01e44881e9ae",
+    "1e7c9245-c25b-45b7-8a7f-6f2ca659a297"
+  ]
+}

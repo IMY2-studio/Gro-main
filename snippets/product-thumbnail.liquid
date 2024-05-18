@@ -1,0 +1,29 @@
+{% comment %}
+    Renders a product thumbnail with a modal-opener
+
+    Accepts:
+    - media: {Object} Product Media object
+    - loop: {Boolean} Enable video looping (optional)
+    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+
+    Usage:
+    {% render 'product-thumbnail',
+      media: media,
+      position: forloop.index,
+      loop: section.settings.enable_video_looping,
+      modal_id: section.id
+    %}
+{% endcomment %}
+
+<noscript>
+  {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+    {% comment %} Product video media type {% endcomment %}
+
+  {%- else -%}
+    <div class="product__media media gradient global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
+   {% comment %} Replace with up to date image {% endcomment %}
+    </div>
+  {%- endif -%}
+</noscript>
+
+

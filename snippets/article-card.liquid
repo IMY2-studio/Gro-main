@@ -1,0 +1,45 @@
+
+
+{%- if article and article != empty -%}
+
+  <article class="" aria-labelledby="Article-{{ article.id }}">
+    <a href="{{ article.url }}">
+      <div class="flex flex-col space-y-[20px]">
+
+        {%- if article.image != blank -%}
+
+            <div class="relative w-full aspect-[690/460]">
+             {{ article.image | image_url: width: 900 | image_tag: loading: 'lazy' , class: 'object-cover object-center w-full h-full absolute inset-0'  }}
+            </div>
+
+        {%- endif -%}
+
+
+
+      <div class="">
+          <h3 class="text-green body-1 mb-[4px]">
+            <a href="{{ article.url }}" class="">
+              {{ article.title | truncate: 50 | escape }}
+            </a>
+          </h3>
+
+          {%- if show_excerpt -%}
+            {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+              <div class="rte">
+                <p class="text-green body-1 opacity-60">
+                  {%- if article.excerpt.size > 0 -%}
+                    {{ article.excerpt | strip_html | truncatewords: 30 }}
+                  {%- endif -%}
+                </p>
+              </div>
+            {%- endif -%}
+
+          {%- endif -%}
+ 
+      </div>
+    </a>
+  </article>
+{%- endif -%}
+
+
+{% comment %} Remove show badge and references to a badge {% endcomment %}

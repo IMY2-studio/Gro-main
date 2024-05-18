@@ -1,0 +1,66 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="fixed inset-0 overflow-hidden z-[999]"
+    x-cloak
+    x-data="{ 
+        showCartDrawer: false,
+        loading: false,
+        updateCart(){
+            // send fetch reqeust to update cart
+            fetch('/?view=cart')
+            .then(response => response.text())
+            .then(cartData => {
+                $refs.cart_content.innerHTML = cartData;
+
+                // This code is use to parse json object. for cart count
+                var el = document.createElement('div');
+                el.innerHTML = cartData;
+                var cartCount = JSON.parse(el.querySelector('[data-options]').innerHTML).item_count;
+                $dispatch('cart-count-updated', cartCount);
+                this.loading = false;
+
+            })
+        }
+     }"
+    x-show="showCartDrawer"
+    @cart-updated.window="updateCart;"
+    @toggle-cart.window="showCartDrawer = !showCartDrawer"
+     aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+     
+    <div class="absolute inset-0 overflow-hidden">
+      
+
+      <div class="fixed inset-y-0 right-0 max-w-full flex justify-end">
+
+      <div class="absolute inset-y-0 left-0 w-0 md:w-1/2 lg:w-[66%] bg-transparent" x-show="showCartDrawer" x-transition.opacity @click="showCartDrawer = false" aria-hidden="true"></div>
+
+        <div class="relative w-screen max-w-none md:max-w-1/2 lg:max-w-[34%] bg-green text-white" 
+            x-show="showCartDrawer"
+            x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700" 
+            x-transition:enter-start="translate-x-full opacity-0" 
+            x-transition:enter-end="translate-x-0 opacity-100" 
+            x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700" 
+            x-transition:leave-start="translate-x-0" 
+            x-transition:leave-end="translate-x-full opacity-0"
+            >
+
+
+            <button type="button" 
+                @click="showCartDrawer = false" 
+                class="absolute right-[20px] top-[20px] z-40">
+              <span class="sr-only">Close panel</span>
+
+              <span class="pointer-events-none">
+                  {% render 'icon-close-cart' %}
+                </span>
+            </button>
+          
+          {% render 'loader' %}
+
+          <div class="h-full flex flex-col bg-green overflow-y-scroll" x-ref="cart_content">
+            {% render 'cart-form' %}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  

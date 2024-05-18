@@ -1,0 +1,54 @@
+
+<div class="collection-hero--wrapper layout--grid w-full min-h-[456px] md:min-h-[unset] py-[120px] px-[16px] lg:px-[20px] mt-[56px]">
+  <div class="flex flex-col items-start justify-center w-full col-span-2 collection-hero__inner lg:col-span-6">
+    <div class="">
+
+      <h1 class="heading-1">
+        <span class="sr-only">{{ 'sections.collection_template.title' | t }}: </span>
+        {{- collection.title | escape -}}
+      </h1>
+
+      {%- if collection.description != blank -%}
+        <div class="collection-hero--description">
+          {{ collection.description }}
+        </div>
+
+      {%- endif -%}
+
+      {%- if collection.products.size  > 0 -%}
+        <p class="body-smaller mt-[24px]">
+          {{ collection.products_count | append: ' products' }}
+        </p>
+      {%- endif -%}
+
+
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": true,
+      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+    }
+  ]
+}
+{% endschema %}

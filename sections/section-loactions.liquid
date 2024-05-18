@@ -1,0 +1,333 @@
+{%- assign last_block = false -%}
+
+<section class="flex flex-col mb-[120px] lg:mb-[200px]">
+    {%- for block in section.blocks -%}
+        {%- if block.type == 'location' -%}
+
+
+          {% comment %} assignments {% endcomment %}
+            
+        {%- liquid
+
+            assign name = block.settings.name 
+            assign state = block.settings.state 
+            assign address = block.settings.address 
+            assign special = block.settings.special 
+            assign ohlabelone = block.settings.ohlabelone 
+            assign ohone = block.settings.ohone 
+            assign ohlabelTWO = block.settings.ohlabelTWO 
+            assign ohTWO = block.settings.ohTWO 
+            assign ohlabelthree = block.settings.ohlabelthree 
+            assign ohthree = block.settings.ohthree 
+            assign ohlabelfour = block.settings.ohlabelfour 
+            assign ohfour = block.settings.ohfour 
+            assign ohlabelfive = block.settings.ohlabelfive 
+            assign ohfive = block.settings.ohfive 
+            assign ohlabelsix = block.settings.ohlabelsix 
+            assign ohsix = block.settings.ohsix 
+            assign ohlabelseven = block.settings.ohlabelseven 
+            assign ohseven = block.settings.ohseven 
+
+
+            if forloop.last 
+                assign last_block = true 
+            endif -%}
+
+            <div class="px-[16px] lg:px-[20px]">
+
+            <div class="grid grid-cols-2 lg:grid-cols-12 gap-x-[16px] lg:gap-x-[20px] space-y-[20px] pt-[24px] pb-[28px] border-t border-solid border-green-light {% if last_block %} border-b {% endif %}">
+
+                {% comment %} Code {% endcomment %}
+
+                <div class="col-span-2 lg:col-span-12">
+
+                    {%- if name != blank -%}
+                        <h2 class="heading-1">
+                            {{ name }}
+                        </h2>
+                    {%- endif -%}
+
+                    {%- if state != blank -%}
+                        <p class="heading-1 opacity-60">
+                            {{ state }}
+                        </p>
+                    {%- endif -%}
+
+                </div>
+
+                {%- if address != blank -%}
+                    
+                    <div class="col-span-2 lg:col-span-12">
+                        <div class="rte">
+                            {{ address }}
+                        </div>
+                    </div>
+
+                {%- endif -%}
+
+                    <div class="col-span-2 lg:col-span-6 xl:col-span-4">
+                        <ul class="flex flex-col w-full">
+                            {%- if ohlabelone != blank -%}
+                                <li class="grid grid-cols-2 gap-x-[16px] lg:gap-x-[20px]">
+                                    {%- if ohlabelone != blank -%}
+                                        <span class="body-1">
+                                            {{ ohlabelone }}
+                                        </span>
+                                    {%- endif -%}
+
+                                    {%- if ohone != blank -%}
+                                        <span class="body-1">
+                                            {{ ohone }}
+                                        </span>
+                                    {%- endif -%}
+                                </li>
+                            {%- endif -%}
+
+                            {%- if ohlabelTWO != blank -%}
+                                <li class="grid grid-cols-2 gap-x-[16px] lg:gap-x-[20px]">
+                                    {%- if ohlabelTWO != blank -%}
+                                        <span class="body-1">
+                                            {{ ohlabelTWO }}
+                                        </span>
+                                    {%- endif -%}
+
+                                    {%- if ohTWO != blank -%}
+                                        <span class="body-1">
+                                            {{ ohTWO }}
+                                        </span>
+                                    {%- endif -%}
+                                </li>
+                            {%- endif -%}
+
+
+                            {%- if ohlabelthree != blank -%}
+                                <li class="grid grid-cols-2 gap-x-[16px] lg:gap-x-[20px]">
+                                    {%- if ohlabelthree != blank -%}
+                                        <span class="body-1">
+                                            {{ ohlabelthree }}
+                                        </span>
+                                    {%- endif -%}
+
+                                    {%- if ohthree != blank -%}
+                                        <span class="body-1">
+                                            {{ ohthree }}
+                                        </span>
+                                    {%- endif -%}
+                                </li>
+                            {%- endif -%}
+
+
+                            {%- if ohlabelfour != blank -%}
+                                <li class="grid grid-cols-2 gap-x-[16px] lg:gap-x-[20px]">
+                                    {%- if ohlabelfour != blank -%}
+                                        <span class="body-1">
+                                            {{ ohlabelfour }}
+                                        </span>
+                                    {%- endif -%}
+
+                                    {%- if ohfour != blank -%}
+                                        <span class="body-1">
+                                            {{ ohfour }}
+                                        </span>
+                                    {%- endif -%}
+                                </li>
+                            {%- endif -%}
+
+                            {%- if ohlabelfive != blank -%}
+                                <li class="grid grid-cols-2 gap-x-[16px] lg:gap-x-[20px]">
+                                    {%- if ohlabelfive != blank -%}
+                                        <span class="body-1">
+                                            {{ ohlabelfive }}
+                                        </span>
+                                    {%- endif -%}
+
+                                    {%- if ohfive != blank -%}
+                                        <span class="body-1">
+                                            {{ ohfive }}
+                                        </span>
+                                    {%- endif -%}
+                                </li>
+                            {%- endif -%}
+
+                            {%- if ohlabelsix != blank -%}
+                                <li class="grid grid-cols-2 gap-x-[16px] lg:gap-x-[20px]">
+                                    {%- if ohlabelsix != blank -%}
+                                        <span class="body-1">
+                                            {{ ohlabelsix }}
+                                        </span>
+                                    {%- endif -%}
+
+                                    {%- if ohsix != blank -%}
+                                        <span class="body-1">
+                                            {{ ohsix }}
+                                        </span>
+                                    {%- endif -%}
+                                </li>
+                            {%- endif -%}
+
+                            {%- if ohlabelseven != blank -%}
+                                <li class="grid grid-cols-2 gap-x-[16px] lg:gap-x-[20px]">
+                                    {%- if ohlabelseven != blank -%}
+                                        <span class="body-1">
+                                            {{ ohlabelseven }}
+                                        </span>
+                                    {%- endif -%}
+
+                                    {%- if ohseven != blank -%}
+                                        <span class="body-1">
+                                            {{ ohseven }}
+                                        </span>
+                                    {%- endif -%}
+                                </li>
+                            {%- endif -%}
+                            
+                        </ul>
+                    </div>
+
+                    {%- if special != blank -%}
+
+
+                        <div class="col-span-2 lg:col-span-5 lg:col-start-7 xl:col-start-5 xl:col-span-4">
+                            <div class="rte">
+                                {{ special }}
+                            </div>
+                        </div>
+                        
+                    {%- endif -%}
+
+                </div>
+
+            </div>
+
+        {%- endif -%}
+
+        {%- endfor -%}
+</section>
+
+
+{% schema %}
+    {
+        "name": "Locations",
+        "settings": [],
+        "blocks": [
+            {
+                "type": "location",
+                "name": "Location",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "name",
+                        "label": "Location Name",
+                        "default": "Bondi Junction"
+                    },
+                    {
+                        "type": "text",
+                        "id": "state",
+                        "label": "State Name",
+                        "default": "NSW"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "address",
+                        "label": "Address"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "special",
+                        "label": "Special"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohlabelone",
+                        "label": "Opening hours 1 label",
+                        "default": "Monday to Sunday"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohone",
+                        "label": "Opening hours 1",
+                        "default": "9.30am - 6pm"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohlabelTWO",
+                        "label": "Opening hours 2 label",
+                        "default": "Monday to Sunday"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohTWO",
+                        "label": "Opening hours 2",
+                        "default": "9.30am - 6pm"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohlabelthree",
+                        "label": "Opening hours 3 label",
+                        "default": "Monday to Sunday"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohthree",
+                        "label": "Opening hours 3",
+                        "default": "9.30am - 6pm"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohlabelfour",
+                        "label": "Opening hours 4",
+                        "default": "Monday to Sunday"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohfour",
+                        "label": "Opening hours 4",
+                        "default": "9.30am - 6pm"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohlabelfive",
+                        "label": "Opening hours 5 label",
+                        "default": "Monday to Sunday"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohfive",
+                        "label": "Opening hours 5",
+                        "default": "9.30am - 6pm"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohlabelsix",
+                        "label": "Opening hours 1 label",
+                        "default": "Monday to Sunday"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohsix",
+                        "label": "Opening hours 6",
+                        "default": "9.30am - 6pm"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohlabelseven",
+                        "label": "Opening hours 7 label",
+                        "default": "9.30am - 6pm"
+                    },
+                    {
+                        "type": "text",
+                        "id": "ohseven",
+                        "label": "Opening hours 7",
+                        "default": "9.30am - 6pm"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+        {
+            "name": "Locations",
+            "blocks": []
+        }
+    ]
+}
+{% endschema %}

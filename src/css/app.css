@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base{
+
+    @font-face {
+        font-family: 'FoundersGrotesk';
+        src: url('./founders-grotesk-light.woff2') format('woff2'),
+        url('./founders-grotesk-light.otf') format("opentype");
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        font-display: swap;
+    }
+
+    .layout--grid {
+        @apply grid grid-cols-2 lg:grid-cols-12 gap-x-[16px] lg:gap-x-[20px] px-[16px] lg:px-[20px];
+    }
+
+    .heading-1 {
+        @apply font-light font-sans leading-[1.11] text-[30px] lg:text-[36px];
+    }
+
+    /* NOTE heading 2 is the same in Figma */
+
+    .body-1 {
+        @apply font-light font-sans leading-[1.2] text-[16px] lg:text-[20px];
+    }
+
+    .body-smaller {
+        @apply font-light font-sans leading-[1.25] text-[16px];
+    }
+
+    .button {
+        @apply bg-transparent border border-[rgba(9,35,36,0.2)] border-solid leading-[1.06] px-[52px] text-center rounded-full py-[14px] transition-all hover:bg-green hover:text-white;
+    }
+}
+
+
+
+
+/* Helpers and resets */
+
+[x-cloak] { display: none !important; }
+
+
+button svg {
+    @apply pointer-events-none;
+}
+
+
+input[type="number"],
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+button, input, optgroup, select, textarea {
+    @apply bg-transparent;
+}
+
+
+input[type=button],
+a {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+form,
+input {
+    @apply focus:outline-none;
+}
+
+
+[type="text"] {
+    @apply focus:outline-none;
+}
+
+
+a,button {
+    @apply cursor-pointer;
+}
+
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='number'],
+input[type='date'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='search'],
+input[type='tel'],
+input[type='time'],
+input[type='week'],
+input[multiple],
+textarea,
+select {
+    @apply focus:outline-none;
+}
+
+/* Search button */
+
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/* Swiper resets */
+
+.swiper-pagination-bullet {
+    @apply border-[0.5px] transition-all border-green hover:bg-current;
+}
+
+
+.swiper-pagination-bullet {
+    @apply border-[0.5px] border-green;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply border-green;
+}
+
+
+.swiper-pagination-block .swiper-pagination-bullet {
+    @apply border-white;
+}
+
+.swiper-pagination-block .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply border-white;
+}
+
+/* Event swiper overides */
+
+.swiper-pagination {
+    @apply !relative !bottom-[unset] !top-[unset] !left-[unset] !right-[unset];
+}
+
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    @apply !w-fit;
+}
+
+
+/* Product Collapsible */
+
+[data-cpllapse="1"] {
+    @apply border-t border-t-green-light;
+}
+
+.product-qty__wrapper button:hover svg * {
+    @apply lg:!fill-white transition-all;
+}
+
+/* Text styles */
+
+.rte {
+    @apply font-light font-sans prose-p:text-[16px] lg:prose-p:text-[20px] prose-li:text-[16px] lg:prose-li:text-[20px] leading-[1.2] prose-ul:list-disc prose-ol:list-decimal prose-ul:pl-[20px] prose-ol:pl-[20px] prose-h1:text-[30px] prose-h1:lg:text-[36px] prose-h1:tracking-tight prose-h1:mb-[4px] prose-h2:text-[30px] prose-h2:lg:text-[36px] prose-h2:tracking-tight prose-h2:mb-[4px] prose-h3:text-[24px] prose-h3:lg:text-[28px] prose-h3:tracking-tight prose-h3:mb-[4px] prose-a:underline prose-a:underline-offset-[5px] prose-a:decoration-1 prose-headings:mb-[16px];
+}
+
+.rte img {
+    @apply my-[60px];
+}
+
+.rte-article {
+    @apply font-light font-sans prose-p:text-[16px] lg:prose-p:text-[20px] prose-li:text-[16px] lg:prose-li:text-[20px] leading-[1.2] prose-ul:list-disc prose-ol:list-decimal prose-ul:pl-[20px] prose-ol:pl-[20px] prose-h1:text-[30px] prose-h1:lg:text-[36px] prose-h1:tracking-tight prose-h1:mb-[4px] prose-h2:text-[30px] prose-h2:lg:text-[36px] prose-h2:tracking-tight prose-h2:mb-[4px] prose-h3:text-[24px] prose-h3:lg:text-[28px] prose-h3:tracking-tight prose-h3:mb-[4px] prose-h2:mt-[40px] lg:prose-h2:mt-[100px] prose-h3:mt-[40px] lg:prose-h3:mt-[100px] prose-ul:mt-[20px] prose-ol:mt-[20px] prose-a:underline prose-a:underline-offset-[5px] prose-a:decoration-1;
+}
+
+/* Page by Page styles */
+
+.main-template-faq {
+    @apply pb-[80px] lg:pb-[140px]
+}
+
+/* Header buttons */
+
+
+body.menu-drawer-open header .main-menu button:not(button.active),
+body.menu-drawer-open header .main-menu a {
+    @apply !opacity-60;
+}
+
+button.active {
+    @apply opacity-100;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+
+.metafield-rich_text_field {
+    @apply font-light font-sans prose-p:text-[16px] lg:prose-p:text-[20px] prose-li:text-[16px] lg:prose-li:text-[20px] leading-[1.2] prose-ul:list-disc prose-ol:list-decimal prose-ul:pl-[20px] prose-ol:pl-[20px] prose-h1:text-[30px] prose-h1:lg:text-[36px] prose-h1:tracking-tight prose-h1:mb-[4px] prose-h2:text-[30px] prose-h2:lg:text-[36px] prose-h2:tracking-tight prose-h2:mb-[4px] prose-h3:text-[24px] prose-h3:lg:text-[28px] prose-h3:tracking-tight prose-h3:mb-[4px] prose-a:underline prose-a:underline-offset-[5px] prose-a:decoration-1 space-y-[24px];
+}
+
+.footer-template-frequently-asked-questions {
+    @apply mt-[80px] lg:mt-[160px];
+}

@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "31f252dc-1022-4692-b6d3-810db972f4ad": {
+      "type": "section-page-heading",
+      "settings": {
+        "heading": "What's on",
+        "padding": false
+      }
+    },
+    "705c0752-7239-4c30-ab2b-2eaee80f7eef": {
+      "type": "main-events",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "31f252dc-1022-4692-b6d3-810db972f4ad",
+    "705c0752-7239-4c30-ab2b-2eaee80f7eef"
+  ]
+}

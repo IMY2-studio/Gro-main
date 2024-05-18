@@ -1,0 +1,43 @@
+
+{%- paginate blog.articles by 6 -%}
+
+<section class="px-[16px] lg:px-[20px] mb-[120px] lg:mb-[200px] flex flex-col">
+
+      <ul class="flex flex-col w-full" id="product-grid" data-next-url="{{paginate.next.url}}">
+      {%- for article in blog.articles -%}
+        <li class="relative w-full grid__item">
+          {%- render 'article-events-card',
+            article: article,
+            show_excerpt: true ,
+            index: forloop.index0
+          -%}
+        </li>
+      {%- endfor -%}
+
+      </ul>
+</section>
+
+   {%- if paginate.pages > 1 -%}
+      
+      <div class="load-more flex justify-center items-center  mb-[120px] lg:mb-[240px]">
+        <a class="load-more_btn button body-1 text-center w-full max-w-[450px] lg:py-[28px]" onclick="loadMoreProducts()">Load More</a>
+        <div class="hidden w-8 h-8 ml-auto mr-auto border-4 border-black border-solid rounded-full load-more_spinner border-t-gray-200 animate-spin"></div>
+      </div>
+  
+      {%- endif -%}
+
+{%- endpaginate -%}
+
+{% schema %}
+{
+    "name": "Events Grid",
+    "settings": [],
+    "blocks": [],
+    "presets": [
+        {
+            "name": "Events Grid",
+            "blocks": []
+        }
+    ]
+}
+{% endschema %}

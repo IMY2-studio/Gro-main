@@ -1,0 +1,83 @@
+
+{%- if article and article != empty -%}
+
+  <article 
+class="w-full border-b border-green-light {% if index == 0 %} border-t {% endif %}" 
+    aria-labelledby="Article-{{ article.id }}" 
+    x-data="{
+        expandedEvent: false
+    }">
+
+      <div class="grid grid-cols-2 lg:grid-cols-12 gap-x-[16px] lg:gap-x-[20px] py-[16px] lg:py-[28px]">
+
+        {% comment %} Image goes here {% endcomment %}
+
+        <div class="col-span-2 lg:col-start-11 lg:col-end-13 lg:row-start-1">
+            <div class="aspect-[216/140] w-[66%] lg:w-full relative overflow-hidden mb-[16px] lg:mb-0">
+                {{ article.image | image_url: width: 900 | image_tag: loading: 'lazy' , class: 'object-cover object-center w-full h-full absolute inset-0' }}
+            </div>
+        </div>
+        
+        <div class="col-span-2 lg:col-span-8  lg:row-start-1">
+            <div class="flex flex-col w-full items-start">
+
+            <h3 class="text-green heading-1 mb-[4px]">
+                {{ article.title | truncate: 50 | escape }}
+            </h3>
+
+
+            {%- if article.metafields.custom.event_date_time != blank -%}
+                
+                <p class="heading-1 opacity-60">
+                    {{ article.metafields.custom.event_date_time }}
+                </p>
+
+            {%- endif -%}
+
+            {% comment %} datetime goes here {% endcomment %}
+            
+
+                {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                <div class="rte mt-[20px] mb-[24px]">
+                    <p class="text-green body-1">
+                    {%- if article.excerpt.size > 0 -%}
+                        {{ article.excerpt  }}
+                    {%- endif -%}
+                    </p>
+                </div>
+                {%- endif -%}
+
+                {%- if article.content.size > 0 -%}
+
+                <div class=""
+                x-data="{
+                    expandText: expandedEvent ? 'Show Less' : 'Show More'
+                }">
+
+                    <div class="reveal--text  rte space-y-[24px]"
+                        x-show="expandedEvent" 
+                        x-collapse 
+                        x-cloak>
+                        {{ article.content }}
+                    </div>
+
+
+                    <button class="show-more--button body-smaller mt-[20px]"
+                        x-on:click="expandedEvent = !expandedEvent"
+                        x-text="expandedEvent ? 'Show Less' : 'Show More' ">
+                    </button>
+
+                </div>
+                    
+                {%- endif -%}
+
+
+                </div>
+            </div>
+ 
+      </div>
+  </article>
+{%- endif -%}
+
+
+{% comment %} Remove show badge and references to a badge {% endcomment %}

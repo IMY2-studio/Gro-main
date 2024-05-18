@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "57d65b36-6ca3-438d-a5fa-8df42a12d706": {
+      "type": "section-blog-heading",
+      "settings": {
+        "heading": "{{ blog.title }}",
+        "blurb": ""
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "57d65b36-6ca3-438d-a5fa-8df42a12d706",
+    "main"
+  ]
+}

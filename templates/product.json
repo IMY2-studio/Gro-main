@@ -1,0 +1,126 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "label": "Product details",
+            "text": "<p>{{ product.metafields.custom.product_details | metafield_tag }}<\/p>",
+            "product_description": false
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "label": "Dimensions",
+            "text": "<p>{{ product.metafields.custom.dimensions | metafield_tag }}<\/p>",
+            "product_description": false
+          }
+        },
+        "4e2f20d9-28c4-4a32-a484-92b020648cd1": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "label": "Reviews",
+            "text": "{{ product.metafields.custom.reviews | metafield_tag }}",
+            "product_description": false
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "label": "Product Reviews",
+            "text": "{{ product.metafields.custom.reviews | metafield_tag }}",
+            "product_description": false
+          }
+        },
+        "bbee981b-a630-439a-8dd7-25acfa153e74": {
+          "type": "collapsible_tab",
+          "settings": {
+            "label": "Material Composition",
+            "text": "<p>{{ product.metafields.custom.product_material_composition.value }}<\/p>",
+            "product_description": false
+          }
+        },
+        "217e8014-d1d6-470a-bbe0-f214c85a0c02": {
+          "type": "collapsible_tab",
+          "settings": {
+            "label": "Colour",
+            "text": "<p>{{ product.metafields.custom.product_colour.value }}<\/p>",
+            "product_description": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "caption",
+        "price",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "4e2f20d9-28c4-4a32-a484-92b020648cd1",
+        "collapsible-row-2",
+        "bbee981b-a630-439a-8dd7-25acfa153e74",
+        "217e8014-d1d6-470a-bbe0-f214c85a0c02"
+      ],
+      "settings": {
+      }
+    },
+    "3e51000b-0813-4650-aa25-97eaf8cb99bd": {
+      "type": "section-related-products",
+      "blocks": {
+        "1ead3c35-b64f-4648-9852-cca8f4db67f3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Related Products"
+          }
+        }
+      },
+      "block_order": [
+        "1ead3c35-b64f-4648-9852-cca8f4db67f3"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "3e51000b-0813-4650-aa25-97eaf8cb99bd"
+  ]
+}

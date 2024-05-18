@@ -1,0 +1,51 @@
+
+<section class="px-[16px] lg:px-[20px] py-[200px]">
+  <div id="vbrite--events" data-shop="eden-gro" data-id="522" data-calendar="true"></div>
+  
+  <div id="vbrite--events" data-shop="eden-gro" data-id="522" data-category=""></div>
+</section>
+
+
+{% schema %}
+    {
+        "name": "What's On",
+        "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Event Heading",
+                    "default": "Event Title"
+                },
+                {
+                    "type": "text",
+                    "id": "date_time",
+                    "label": "Date Time",
+                    "default": "9.00am to 12.00pm / 12th June 2023"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Event Image"
+                },
+                {
+                    "type": "richtext",
+                    "id": "visible_text",
+                    "label": "Visible Text"
+                },
+                {
+                    "type": "richtext",
+                    "id": "reveal_text",
+                    "label": "Text to be revealed",
+                    "info": "This text shows when a customer clicks 'Read More'"
+                }
+                
+        ],
+        "blocks": [],
+        "presets": [
+            {
+                "name": "What's On",
+                "blocks": []
+            }
+        ]
+    }
+{% endschema %}

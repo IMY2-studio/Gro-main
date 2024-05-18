@@ -1,0 +1,81 @@
+<section class="w-full overflow-hidden border-y border-y-green-light mb-[120px] lg:mb-[200px] ticker">
+
+<ul class="ticker--list animate-ticker flex leading-none py-[24px]">
+        {%- for block in section.blocks -%}
+            {%- if block.type == 'text' -%}
+            
+            {%- assign marquee = block.settings.text -%}
+                    {%- if marquee != blank -%}
+                        <li class="h-full flex items-center">
+                            <span class="body-1 flex whitespace-nowrap">
+                                {{ marquee }}
+                            </span>
+
+                                <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]">
+
+                            </div>
+                        </li>
+                    {%- endif -%}
+            {%- endif -%}
+        {%- endfor -%}
+        
+        {%- for block in section.blocks -%}
+            {%- if block.type == 'text' -%}
+            
+            {%- assign marquee = block.settings.text -%}
+                    {%- if marquee != blank -%}
+                        <li class="h-full flex items-center">
+                             <span class="body-1 flex whitespace-nowrap">
+                                {{ marquee }}
+                            </span>
+
+                                <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]">
+                        </li>
+                    {%- endif -%}
+            {%- endif -%}
+        {%- endfor -%}
+        {%- for block in section.blocks -%}
+            {%- if block.type == 'text' -%}
+            
+            {%- assign marquee = block.settings.text -%}
+                    {%- if marquee != blank -%}
+                        <li class="h-full flex items-center">
+                             <span class="body-1 flex whitespace-nowrap">
+                                {{ marquee }}
+                            </span>
+
+                                <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]">
+                        </li>
+                    {%- endif -%}
+            {%- endif -%}
+        {%- endfor -%}
+    </ul>
+</section>
+
+
+{% schema %}
+    {
+        "name": "Marquee",
+        "settings": [],
+        "blocks": [
+            {
+                "type": "text",
+                "name": "Text",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "Marquee Text",
+                        "default": "Australian owned"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+        {
+            "name": "Marquee",
+            "blocks": []
+        }
+    ]
+}
+{% endschema %}

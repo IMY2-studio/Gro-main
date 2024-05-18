@@ -1,0 +1,106 @@
+{
+  "current": {
+    "predictive_search_show_price": true,
+    "favicon": "shopify:\/\/shop_images\/favi_742baedc-3113-431d-8209-743dcb1e69f5.png",
+    "checkout_accent_color": "#092324",
+    "checkout_button_color": "#092324",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "d455ee20-4a2e-4527-9d49-c22687e2a1df": {
+            "type": "link_list",
+            "settings": {
+              "menu": "new-main-menu"
+            }
+          },
+          "1587edcc-4352-400a-a95a-b1f09ef52a81": {
+            "type": "link_list",
+            "disabled": true,
+            "settings": {
+              "menu": ""
+            }
+          }
+        },
+        "block_order": [
+          "d455ee20-4a2e-4527-9d49-c22687e2a1df",
+          "1587edcc-4352-400a-a95a-b1f09ef52a81"
+        ],
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "menu": "new-footer-menu"
+            }
+          },
+          "a2f1f4e4-c7e7-4629-8163-bd71374dfb45": {
+            "type": "link_list",
+            "settings": {
+              "menu": "new-footer-faq"
+            }
+          },
+          "e2fc6c9a-14b1-41e3-a6c9-9a7cfa679166": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer-socials"
+            }
+          },
+          "19223c10-a0cd-492f-940b-e251451d79fd": {
+            "type": "newsletter",
+            "disabled": true,
+            "settings": {
+              "heading": "Subscribe to our newsletter",
+              "newsletter_button_text": "",
+              "newsletter_input_placeholder": "Subscribe to our newsletter"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "a2f1f4e4-c7e7-4629-8163-bd71374dfb45",
+          "e2fc6c9a-14b1-41e3-a6c9-9a7cfa679166",
+          "19223c10-a0cd-492f-940b-e251451d79fd"
+        ],
+        "custom_css": [
+
+        ],
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "13070091535480640111": {
+        "type": "shopify:\/\/apps\/attrac\/blocks\/app-embed\/b783956d-47a9-4434-91ad-4ec960bd74b0",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "3824936769257688723": {
+        "type": "shopify:\/\/apps\/sami-product-labels-badges\/blocks\/app-embed-block\/b9b44663-5d51-4be1-8104-faedd68da8c5",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "4526402582171286672": {
+        "type": "shopify:\/\/apps\/selly-promotion-pricing\/blocks\/app-embed-block\/351afe80-738d-4417-9b66-e345ff249052",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
+  }
+}

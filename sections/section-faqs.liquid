@@ -1,0 +1,106 @@
+
+<section class="layout--grid pt-[60px] mb-[40px]">
+    {%- if section.settings.heading != blank -%}
+
+        <div class="col-span-2 lg:col-span-8 border-b border-b-green-light">
+            <h2 class="heading-1 mb-[16px]">
+                {{ section.settings.heading  }}
+            </h2>
+        </div>
+
+    {%- endif -%}
+
+    {%- for block in section.blocks -%}
+        {%- if block.type == 'faq' -%}
+
+        {% comment %} <div class="col-span-2 lg:col-span-8 border-b"></div> {% endcomment %}
+
+
+            {% comment %} Accordians {% endcomment %}
+
+            <div class="col-span-2 lg:col-span-8 w-full border-b border-b-green-light flex flex-col"
+            x-data="{
+                        expanded: false
+                    }">
+
+
+                <div class="flex justify-between items-center py-[16px]  cursor-pointer"
+                x-on:click="expanded = !expanded">
+                {%- if block.settings.heading != blank -%}
+                    
+                    <span class="body-1">
+                    {{ block.settings.heading }}
+                    </span>
+
+                    <button class="w-[20px] h-[20px] relative">
+                    <span x-show="!expanded" x-cloak>
+                        {% render 'icon-plus' %}
+                    </span>
+
+                    <span  x-show="expanded">
+                        {% render 'icon-minus' %}
+                    </span>
+                    
+                    </button>
+
+                {%- endif -%}
+                </div>
+
+                <div class="" x-show="expanded" x-collapse x-cloak>
+                {%- if block.settings.body != blank -%}
+
+                <div class="w-full prose-p:body-1 pb-[12px]">
+                    {{ block.settings.body }}
+                </div>
+
+                {%- endif -%}
+
+                </div>
+
+
+            </div>
+
+        {%- endif -%}
+    {%- endfor -%}
+</section>
+
+
+{% schema %}
+    {
+        "name": "Faqs",
+        "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Section Heading",
+                    "default": "Returns & Exchanges"
+                }
+        ],
+        "blocks": [
+            {
+                "type": "faq",
+                "name": "FAQ",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "FAQ Heading",
+                        "default": "Another heading goes here"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "body",
+                        "label": "FAQ Body",
+                        "default": "<p>Lorem ipsum dolor sit amet consectetur. Maecenas volutpat lobortis praesent in enim ac duis sed.</p>"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Faqs",
+                "blocks": []
+            }
+        ]
+    }
+{% endschema %}

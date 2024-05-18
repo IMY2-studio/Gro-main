@@ -1,0 +1,33 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "1bd60dbc-29c0-4c01-b275-aa73beb2be98": {
+      "type": "section-heading-text",
+      "settings": {
+        "heading": "Workshops at Gro Urban Oasis",
+        "blurb": "<p><\/p><p>Workshop Gift Cards-<\/p><p>If you have a gift card for one of our workshops, please select a date and time and email us at info@gro-urbanoasis.com.au with your gift card number and we will confirm your booking.<\/p><p><\/p><p>See full list of workshops <a href=\"https:\/\/www.eventbrite.com\/cc\/gro-urban-oasis-workshops-2765549?utm-campaign=social&utm-content=creatorshare&utm-medium=discovery&utm-term=odclsxcollection&utm-source=cp&aff=escb\" title=\"https:\/\/www.eventbrite.com\/cc\/gro-urban-oasis-workshops-2765549?utm-campaign=social&utm-content=creatorshare&utm-medium=discovery&utm-term=odclsxcollection&utm-source=cp&aff=escb\">here<\/a><\/p>"
+      }
+    },
+    "fd49fd9e-46ac-4d5d-8f8e-644034c71faf": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class='sk-eventbrite-event' data-embed-id='221687'><\/div><script src='https:\/\/widgets.sociablekit.com\/eventbrite-events\/widget.js' async defer><\/script>"
+      }
+    },
+    "b2e3681f-a95c-464b-8eee-855484c912ee": {
+      "type": "section-text",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1bd60dbc-29c0-4c01-b275-aa73beb2be98",
+    "fd49fd9e-46ac-4d5d-8f8e-644034c71faf",
+    "b2e3681f-a95c-464b-8eee-855484c912ee"
+  ]
+}

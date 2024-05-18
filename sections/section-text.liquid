@@ -1,0 +1,59 @@
+
+<section class="layout--grid mb-[120px] lg:mb-[160px]">
+    <div class="flex flex-col col-span-2 lg:col-span-6">
+        {%- for block in section.blocks -%}
+            {%- if block.type == 'heading' -%}
+                <h2 class="heading-1 mb-[8px]">
+                    {{ block.settings.heading }}
+                </h2>
+            {%- endif -%}
+
+            {%- if block.type == 'text' -%}
+                <div class="rte">
+                        {{ block.settings.text }}
+                </div>
+            {%- endif -%}
+
+
+          {%- endfor -%}
+    </div>
+</section>
+
+
+{% schema %}
+    {
+        "name": "Text Block",
+        "settings": [],
+        "blocks": [
+            {
+                "type": "heading",
+                "name": "Heading",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading Text",
+                        "default": "Your Urban Oasis"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "name": "Text",
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+        {
+            "name": "Text Block",
+            "blocks": []
+        }
+    ]
+}
+{% endschema %}

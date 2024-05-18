@@ -1,0 +1,214 @@
+
+
+
+
+<footer class="border-t border-t-green-light footer-template-{{ page.handle }}">
+  <div class="layout--grid pb-[8px] pt-[20px] gap-y-[40px] lg:gap-y-0" id="footer-inner--section">
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'newsletter' -%}
+
+          {%- comment -%} Form Wrapper {%- endcomment -%}
+
+          <div class="col-span-2 lg:col-span-3">
+
+
+          {%- form 'customer', id: 'ContactFooter', class: '' -%}
+
+            {%- comment -%} Inner form wrapper {%- endcomment -%}
+
+            {%- if form.posted_successfully? -%}
+
+              <div class="">
+
+              <p class="">Thanks for subscribing!</p>
+
+            </div>
+
+            {%- else -%}
+
+
+            <div class="flex w-full">
+
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <input
+              id="NewsletterForm--{{ section.id }}"
+              type="email"
+              name="contact[email]"
+              class="border p-[10px] focus:outline-none body-1 w-full placeholder:opacity-100 placeholder:text-green"
+              value="{{ form.email }}"
+              aria-required="true"
+              autocorrect="off"
+              autocapitalize="off"
+              autocomplete="email"
+              {% if form.errors %}
+                autofocus
+                aria-invalid="true"
+                aria-describedby="ContactFooter-error"
+              {% elsif form.posted_successfully? %}
+                aria-describedby="ContactFooter-success"
+              {% endif %}
+              placeholder="{{ block.settings.newsletter_input_placeholder | default: 'Email Address' }}"
+              required>
+
+                <label class="sr-only" for="NewsletterForm--{{ section.id }}">
+                  {{ block.settings.heading }}
+                </label>
+
+                {%- if block.settings.newsletter_button_text != blank -%}
+                  
+                  <button type="submit" class="sr-only focus:outline-none focus:border-none" name="commit" id="Subscribe" aria-label="{{ block.settings.newsletter_button_text }}">
+                    {{ block.settings.newsletter_button_text }}
+                  </button>
+
+                {%- endif -%}
+
+              </div>
+
+              <div class="">
+
+                {%- comment -%} messages wrapper {%- endcomment -%}
+
+                {%- if form.errors -%}
+
+                  <small class=""id="ContactFooter-error">
+
+                    {{ form.errors.translated_fields['email'] | capitalize }} 
+                    {{ form.errors.messages['email'] }}</small>
+
+                  </small>
+
+                {%- endif -%}
+            
+
+                {%- if form.posted_successfully? -%}
+                  <h3 class=""id="ContactFooter-success" tabindex="-1" autofocus>
+                    {{ 'newsletter.success' | t  }}
+                  </h3>
+                {%- endif -%}
+
+              </div>
+
+            {%- endif -%}
+
+          {%- endform -%}
+
+          </div>
+
+
+          
+          {%- when 'link_list' -%}
+
+
+            {%- if block.settings.menu != blank -%}
+
+    
+
+            <nav class="col-span-1 lg:col-span-3" {{ block.shopify_attributes }}>
+                <ul class="flex flex-col" role="list">
+                  {%- for link in block.settings.menu.links -%}
+
+
+                    <li class="w-fit">
+                      <a class="w-fit cursor-pointer  body-1  group" 
+                          href="{{ link.url }}" 
+                          {% if link.url contains '#' %} title="Link"{%- endif -%} 
+                        {% if block.settings.menu.handle contains "footer-socials" %} target="blank" {% endif %}
+                          class="">
+                        <span class="w-fit cursor-pointer  body-1 transition-all lg:group-hover:opacity-80">
+                          {{ link.title }}
+                        </span>
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+            </nav>
+        {%- endif -%}
+
+
+          {%- endcase -%}
+        {%- endfor -%}
+
+
+
+
+      <div class="col-span-2 lg:cols-span-12 mt-[40px] lg:mt-[50px]">
+        <span class="body-1">
+          {{ "now" | date: "%Y" | prepend: '© ' }}
+        </span>
+      </div>
+
+  </div>
+</footer>
+
+
+</div>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "class": "site--footer",
+    "blocks": [
+      {
+        "type": "link_list",
+        "name": "Footer Menu",
+        "settings": [
+          {
+            "type": "link_list",
+            "id": "menu",
+            "default": "footer",
+            "label": "Menu",
+            "info": "Select a menu created in admin > online store > navigation"
+          }
+        ]
+      },
+      {
+        "type": "newsletter",
+        "name": "Newsletter",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "default": "Stay connected",
+            "label": "Newsletter Label (Hidden)"
+          },
+          {
+            "type": "text",
+            "id": "newsletter_button_text",
+            "default": "Submit",
+            "label": "Newsletter Submit Button Text"
+          },
+          {
+            "type": "text",
+            "id": "newsletter_input_placeholder",
+            "default": "Subscribe to our Newsletter",
+            "label": "Newsletter Input Placeholder Text"
+          }
+        ]
+      },
+      {
+        "type": "address",
+        "name": "Address",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "detail",
+            "label": "Address and Contact Info",
+            "default": "<p></p>"
+          }
+        ]
+      }
+    ],
+    "settings": [],
+    "default": {
+      "blocks": [
+        {
+          "type": "link_list"
+        }
+      ]
+    }
+  }
+{% endschema %}

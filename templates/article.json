@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "6dcf4675-4c06-491b-8690-05d17716ab74": {
+      "type": "section-page-heading-image",
+      "settings": {
+        "heading": "{{ article.title }}",
+        "image": "{{ article.image }}"
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "content"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "6dcf4675-4c06-491b-8690-05d17716ab74",
+    "main"
+  ]
+}
