@@ -11,7 +11,7 @@
       {% for link in section.settings.header_1_menu.links %}
         {% if link.links != blank %}
           <li class="nav__item block relative">
-            <a class="text-fluid-nav" href="{{ link.url }}">{{ link.title }}</a>
+            <a class="block w-fit uppercase" href="{{ link.url }}">{{ link.title }}</a>
             <ul class="nav__item-submenu absolute bg-white border py-3 px-4 min-w-[160px] top-16 left-1/2 transform -translate-x-1/2">
               {% for sublink in linklists[link.handle].links %}
                 <li>
