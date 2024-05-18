@@ -6,7 +6,30 @@
 <header
   class="fixed inset-x-0 top-0 z-50"
 >
-  <div class="bg-[#F1F1F1] w-full h-10 block relative z-10 px-5">Test</div>
+  <div class="bg-[#F1F1F1] w-full h-10 block relative z-10 px-5">
+    <ul class="header__menu-nav hidden md:flex gap-5">
+      {% for link in section.settings['header-1-menu'].links %}
+        {% if link.links != blank %}
+          <li class="nav__item block relative">
+            <a class="text-fluid-nav" href="{{ link.url }}">{{ link.title }}</a>
+            <ul class="nav__item-submenu absolute bg-white border py-3 px-4 min-w-[160px] top-16 left-1/2 transform -translate-x-1/2">
+              {% for sublink in linklists[link.handle].links %}
+                <li>
+                  <a class="block py-1 hover:opacity-75 " href="{{ sublink.url }}">
+                    {{ sublink.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+          <li>
+            <a class="text-fluid-nav nav__item block" href="{{ link.url }}"> {{ link.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
   <div
     id="site-layout-header"
     x-data="
