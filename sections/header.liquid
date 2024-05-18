@@ -39,77 +39,78 @@
     "
   {% endif %}
 >
-  <div class="bg-[#F1F1F1] w-full h-10 block">Test</div>
-
-  <div
-    class="items-center transition-all opacity-0 layout--grid lg:items-start xl:items-center"
-    :class=" { '!opacity-100' : isPageReady }"
-  >
-    <div class="col-span-1 flex justify-start py-[8px]">
-      <a href="/" class="relative z-30 block h-full w-fit">
-        {%- if header_logo != blank -%}
-          {{
-            header_logo
-            | image_url: width: 74
-            | image_tag: loading: 'eager', class: 'header-logo w-auto h-[40px] hidden'
-          }}
-        {%- endif -%}
-        {% render 'icon-logo' %}
-      </a>
-    </div>
-
-    {%- if section.blocks.size > 0 -%}
-      <button
-        class="absolute -translate-x-1/2 -translate-y-1/2 body-1 left-1/2 top-1/2 lg:hidden"
-        @click="mobileMenuDrawerOpen = !mobileMenuDrawerOpen"
-        x-text="mobileMenuDrawerOpen ? 'Close' : 'Menu'"
-      ></button>
-
-      {%- for block in header_menus -%}
-        <div class="items-center justify-center hidden w-full h-full md:col-span-8 lg:col-span-9 xl:col-span-10 lg:flex md:flex-wrap">
-          <nav class="flex items-center justify-center w-full h-full">
-            {%- render 'header-menu-desktop', block: block, section: section, menu: block.settings.menu -%}
-          </nav>
-        </div>
-      {%- endfor -%}
-    {%- endif -%}
-
-    {% comment %} Mobile menu {% endcomment %}
-
-    {% comment %} Mobile Menu button {% endcomment %}
-
-    {% comment %} <nav class="" x-data></nav> {% endcomment %}
-
+  <div>
+    <div class="bg-[#F1F1F1] w-full h-10 block">Test</div>
     <div
-      class="relative z-30 col-span-1 lg:col-start-12 lg:col-end-13"
-      x-data="{ cart_count: {{ cart.item_count }} }"
-      @cart-count-updated.window="cart_count = $event.detail"
+      class="items-center transition-all opacity-0 layout--grid lg:items-start xl:items-center"
+      :class=" { '!opacity-100' : isPageReady }"
     >
-      <nav>
-        <ul class="flex items-center justify-end gap-x-[17px]">
-          {% comment %} Search Goes here {% endcomment %}
+      <div class="col-span-1 flex justify-start py-[8px]">
+        <a href="/" class="relative z-30 block h-full w-fit">
+          {%- if header_logo != blank -%}
+            {{
+              header_logo
+              | image_url: width: 74
+              | image_tag: loading: 'eager', class: 'header-logo w-auto h-[40px] hidden'
+            }}
+          {%- endif -%}
+          {% render 'icon-logo' %}
+        </a>
+      </div>
 
-          <li class="cursor-pointer search-button" @click="openSearchDrawer($event)">
-            {% render 'icon-search' %}
-          </li>
+      {%- if section.blocks.size > 0 -%}
+        <button
+          class="absolute -translate-x-1/2 -translate-y-1/2 body-1 left-1/2 top-1/2 lg:hidden"
+          @click="mobileMenuDrawerOpen = !mobileMenuDrawerOpen"
+          x-text="mobileMenuDrawerOpen ? 'Close' : 'Menu'"
+        ></button>
 
-          <li>
-            <button type="button" title="Cart button" @click="$dispatch('toggle-cart')" class="relative">
-              <span class="sr-only">{{ 'templates.cart.cart' | t | append: ' ' }}</span>
+        {%- for block in header_menus -%}
+          <div class="items-center justify-center hidden w-full h-full md:col-span-8 lg:col-span-9 xl:col-span-10 lg:flex md:flex-wrap">
+            <nav class="flex items-center justify-center w-full h-full">
+              {%- render 'header-menu-desktop', block: block, section: section, menu: block.settings.menu -%}
+            </nav>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
 
-              {% render 'icon-cart' %}
+      {% comment %} Mobile menu {% endcomment %}
 
-              {% comment %} Will most likely need later {% endcomment %}
+      {% comment %} Mobile Menu button {% endcomment %}
 
-              <span class=" aspect-square absolute -top-[7px] -right-[8px] border-white bg-white border-solid overflow-hidden rounded-full w-[10px] h-[10px] flex justify-center items-center">
-                <span class="text-[8px] text-green text-center font-sans leading-none font-bold" x-text="cart_count">
-                  {{ cart.item_count }}
+      {% comment %} <nav class="" x-data></nav> {% endcomment %}
+
+      <div
+        class="relative z-30 col-span-1 lg:col-start-12 lg:col-end-13"
+        x-data="{ cart_count: {{ cart.item_count }} }"
+        @cart-count-updated.window="cart_count = $event.detail"
+      >
+        <nav>
+          <ul class="flex items-center justify-end gap-x-[17px]">
+            {% comment %} Search Goes here {% endcomment %}
+
+            <li class="cursor-pointer search-button" @click="openSearchDrawer($event)">
+              {% render 'icon-search' %}
+            </li>
+
+            <li>
+              <button type="button" title="Cart button" @click="$dispatch('toggle-cart')" class="relative">
+                <span class="sr-only">{{ 'templates.cart.cart' | t | append: ' ' }}</span>
+
+                {% render 'icon-cart' %}
+
+                {% comment %} Will most likely need later {% endcomment %}
+
+                <span class=" aspect-square absolute -top-[7px] -right-[8px] border-white bg-white border-solid overflow-hidden rounded-full w-[10px] h-[10px] flex justify-center items-center">
+                  <span class="text-[8px] text-green text-center font-sans leading-none font-bold" x-text="cart_count">
+                    {{ cart.item_count }}
+                  </span>
                 </span>
-              </span>
-            </button>
-          </li>
-        </ul>
-      </nav>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 </header>
