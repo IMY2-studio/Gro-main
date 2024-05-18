@@ -114,7 +114,10 @@
           <ul class="flex items-center justify-end gap-x-[17px]">
             {% comment %} Search Goes here {% endcomment %}
 
-            <li class="cursor-pointer search-button" @click="openSearchDrawer($event)">
+            <li
+              class="cursor-pointer search-button rounded-full border-green border border-opacity-20 w-10 h-10 flex items-center justify-center"
+              @click="openSearchDrawer($event)"
+            >
               {% render 'icon-search' %}
             </li>
 
