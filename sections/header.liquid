@@ -1,142 +1,150 @@
 {%- liquid
-
-  assign header_menus = section.blocks | where: "type", "link_list"
+  assign header_menus = section.blocks | where: 'type', 'link_list'
   assign header_logo = section.settings.header_logo
-
 -%}
 
-
-<header 
+<header
   id="site-layout-header"
-  x-data="{
-    buttonText: mobileMenuDrawerOpen === true ? 'Close' : 'Menu',
-    hoveredItem: '',
+  x-data="
+    {
+      buttonText: mobileMenuDrawerOpen === true ? 'Close' : 'Menu',
+      hoveredItem: '',
 
-    setHoveredItem(slug) {
-      if(this.hoveredItem == '') {
-        this.hoveredItem = slug;
-      } else {
-        this.hoveredItem = ''
-        setTimeout(() => {
+      setHoveredItem(slug) {
+        if(this.hoveredItem == '') {
           this.hoveredItem = slug;
-        },200)
+        } else {
+          this.hoveredItem = ''
+          setTimeout(() => {
+            this.hoveredItem = slug;
+          },200)
+        }
       }
     }
-  }"
+  "
   @mouseleave="setHoveredItem('')"
   class="fixed inset-x-0 top-0 z-50 transition-all lg:hover:text-white lg:hover:border-b-green lg:hover:bg-green lg:hover:fill-white lg:hover:stroke-white"
-
   {% if template == 'index' %}
-
-  :class="headerMenuOverlay ? 
-    'text-white fill-white  bg-green lg:bg-transparent border-b-green lg:border-b-transparent border-b stroke-white'
-  : 'text-white fill-white lg:fill-green  stroke-white bg-green border-b-green-light border-b' "
+    :class="
+      headerMenuOverlay ?
+        'text-white fill-white  bg-green lg:bg-transparent border-b-green lg:border-b-transparent border-b stroke-white'
+      : 'text-white fill-white lg:fill-green  stroke-white bg-green border-b-green-light border-b'
+    "
 
   {% else %}
-  
-  :class="headerMenuOverlay ? 
-  'text-white fill-white  bg-green lg:bg-transparent border-b stroke-white lg:text-green lg:stroke-green border-b-green lg:border-b-green-light'
-: 'text-white fill-white lg:fill-green  stroke-white  bg-green border-b-green border-b' "
+    :class="
+      headerMenuOverlay ?
+        'text-white fill-white  bg-green lg:bg-transparent border-b stroke-white lg:text-green lg:stroke-green border-b-green lg:border-b-green-light'
+      : 'text-white fill-white lg:fill-green  stroke-white  bg-green border-b-green border-b'
+    "
+  {% endif %}
+>
+  <div class="bg-[#F1F1F1] w-full h-10"></div>
 
-  {% endif %}>
-
-  <div 
+  <div
     class="items-center transition-all opacity-0 layout--grid lg:items-start xl:items-center"
     :class=" { '!opacity-100' : isPageReady }"
   >
-
     <div class="col-span-1 flex justify-start py-[8px]">
       <a href="/" class="relative z-30 block h-full w-fit">
         {%- if header_logo != blank -%}
-          {{ header_logo | image_url: width: 74 | image_tag: loading: 'eager', class: 'header-logo w-auto h-[40px] hidden' }}
+          {{
+            header_logo
+            | image_url: width: 74
+            | image_tag: loading: 'eager', class: 'header-logo w-auto h-[40px] hidden'
+          }}
         {%- endif -%}
         {% render 'icon-logo' %}
       </a>
+    </div>
 
-      </div>
+    {%- if section.blocks.size > 0 -%}
+      <button
+        class="absolute -translate-x-1/2 -translate-y-1/2 body-1 left-1/2 top-1/2 lg:hidden"
+        @click="mobileMenuDrawerOpen = !mobileMenuDrawerOpen"
+        x-text="mobileMenuDrawerOpen ? 'Close' : 'Menu'"
+      ></button>
 
-      {%- if section.blocks.size > 0 -%}
-        <button class="absolute -translate-x-1/2 -translate-y-1/2 body-1 left-1/2 top-1/2 lg:hidden"
-          @click="mobileMenuDrawerOpen = !mobileMenuDrawerOpen"
-          x-text="mobileMenuDrawerOpen ? 'Close' : 'Menu'">
-        </button>
-
-        {%- for block in header_menus -%}
-          <div class="items-center justify-center hidden w-full h-full md:col-span-8 lg:col-span-9 xl:col-span-10 lg:flex md:flex-wrap">
-            <nav class="flex items-center justify-center w-full h-full">
-              {%- render 'header-menu-desktop', block: block, section: section, menu: block.settings.menu -%}
-            </nav>
-          </div>
-        {%- endfor -%}
-      {%- endif -%}
-
+      {%- for block in header_menus -%}
+        <div class="items-center justify-center hidden w-full h-full md:col-span-8 lg:col-span-9 xl:col-span-10 lg:flex md:flex-wrap">
+          <nav class="flex items-center justify-center w-full h-full">
+            {%- render 'header-menu-desktop', block: block, section: section, menu: block.settings.menu -%}
+          </nav>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
 
     {% comment %} Mobile menu {% endcomment %}
 
-
     {% comment %} Mobile Menu button {% endcomment %}
-    
+
     {% comment %} <nav class="" x-data></nav> {% endcomment %}
 
-    <div class="relative z-30 col-span-1 lg:col-start-12 lg:col-end-13" x-data="{ cart_count: {{ cart.item_count }} }" @cart-count-updated.window="cart_count = $event.detail">
+    <div
+      class="relative z-30 col-span-1 lg:col-start-12 lg:col-end-13"
+      x-data="{ cart_count: {{ cart.item_count }} }"
+      @cart-count-updated.window="cart_count = $event.detail"
+    >
       <nav>
         <ul class="flex items-center justify-end gap-x-[17px]">
+          {% comment %} Search Goes here {% endcomment %}
 
-
-            {% comment %} Search Goes here {% endcomment %}
-
-            <li class="cursor-pointer search-button" @click="openSearchDrawer($event)">
-              {% render 'icon-search' %}
-            </li>
+          <li class="cursor-pointer search-button" @click="openSearchDrawer($event)">
+            {% render 'icon-search' %}
+          </li>
 
           <li>
             <button type="button" title="Cart button" @click="$dispatch('toggle-cart')" class="relative">
-              <span class="sr-only">{{ 'templates.cart.cart' | t  | append: ' ' }}</span>
+              <span class="sr-only">{{ 'templates.cart.cart' | t | append: ' ' }}</span>
 
               {% render 'icon-cart' %}
-
 
               {% comment %} Will most likely need later {% endcomment %}
 
               <span class=" aspect-square absolute -top-[7px] -right-[8px] border-white bg-white border-solid overflow-hidden rounded-full w-[10px] h-[10px] flex justify-center items-center">
-                <span class="text-[8px] text-green text-center font-sans leading-none font-bold" x-text="cart_count" >
-                {{ cart.item_count }}
+                <span class="text-[8px] text-green text-center font-sans leading-none font-bold" x-text="cart_count">
+                  {{ cart.item_count }}
                 </span>
               </span>
-
             </button>
           </li>
         </ul>
       </nav>
     </div>
-
   </div>
 </header>
 
-
 {% comment %} Mobile Menu Drawer {% endcomment %}
 
-<div class="fixed inset-0 z-40 w-full h-full overflow-x-hidden overflow-y-scroll text-white lg:hidden bg-green" 
-    x-show="mobileMenuDrawerOpen" 
-    x-cloak
-    x-transition:enter="transition ease-out duration-300"
-    x-transition:enter-start="opacity-0 translate-x-full"
-    x-transition:enter-end="opacity-100 translate-x-0"
-    x-transition:leave="transition ease-in duration-300"
-    x-transition:leave-start="opacity-100 translate-x-0"
-    x-transition:leave-end="opacity-0 translate-x-full ">
-
-
-    {%- for block in header_menus -%}
-      {%- render 'mobile-menu', block: block, section: section, menu: block.settings.menu -%}
-    {%- endfor -%}
-
+<div
+  class="fixed inset-0 z-40 w-full h-full overflow-x-hidden overflow-y-scroll text-white lg:hidden bg-green"
+  x-show="mobileMenuDrawerOpen"
+  x-cloak
+  x-transition:enter="transition ease-out duration-300"
+  x-transition:enter-start="opacity-0 translate-x-full"
+  x-transition:enter-end="opacity-100 translate-x-0"
+  x-transition:leave="transition ease-in duration-300"
+  x-transition:leave-start="opacity-100 translate-x-0"
+  x-transition:leave-end="opacity-0 translate-x-full "
+>
+  {%- for block in header_menus -%}
+    {%- render 'mobile-menu', block: block, section: section, menu: block.settings.menu -%}
+  {%- endfor -%}
 </div>
 
 {% comment %} Header search {% endcomment %}
 
-<div id="header-search-bar" class="header--search-bar w-full fixed top-0 inset-x-0 bg-green min-h-[76px] text-white layout--grid pb-[12px] pt-[21px] items-center z-[66] fill-white" style="transform: translateY(-100%);">
-  <form action="{{ routes.search_url }}" method="get" role="search" class="relative w-full col-span-2 border-b search border-b-white/20 lg:col-start-10 lg:col-end-13 focus:outline-none">
+<div
+  id="header-search-bar"
+  class="header--search-bar w-full fixed top-0 inset-x-0 bg-green min-h-[76px] text-white layout--grid pb-[12px] pt-[21px] items-center z-[66] fill-white"
+  style="transform: translateY(-100%);"
+>
+  <form
+    action="{{ routes.search_url }}"
+    method="get"
+    role="search"
+    class="relative w-full col-span-2 border-b search border-b-white/20 lg:col-start-10 lg:col-end-13 focus:outline-none"
+  >
     <div class="flex w-full field">
       <input
         class="search__input  pb-[4px] pl-[26px] lg:pl-0  w-full lg:text-[16px] lg:mt-[-4px]"
@@ -149,8 +157,11 @@
       <label class="sr-only" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
       <input name="options[prefix]" type="hidden" value="last">
 
-
-      <button type="submit" class="absolute left-0 lg:-left-[8px] lg:-translate-x-full " aria-label="{{ 'general.search.search' | t }}">
+      <button
+        type="submit"
+        class="absolute left-0 lg:-left-[8px] lg:-translate-x-full "
+        aria-label="{{ 'general.search.search' | t }}"
+      >
         {% render 'icon-search' %}
       </button>
     </div>
@@ -158,11 +169,8 @@
     <button class="absolute top-0 right-0" type="button" @click="closeSearchDrawer">
       {% render 'icon-close-search' %}
     </button>
-
-    
   </form>
 </div>
-
 
 <script type="application/ld+json">
   {
@@ -189,8 +197,7 @@
 </script>
 
 {%- if request.page_type == 'index' -%}
-  
-{% assign potential_action_target = shop.url | append: routes.search_url | append: "?q={search_term_string}" %}
+  {% assign potential_action_target = shop.url | append: routes.search_url | append: '?q={search_term_string}' %}
 
   <script type="application/ld+json">
     {
@@ -208,29 +215,29 @@
 {%- endif -%}
 
 {% schema %}
-  {
-    "name": "Header",
-    "class": "site--header",
-    "blocks": [
-      {
-        "type": "link_list",
-        "name": "Header Menu",
-        "settings": [
-          {
-            "type": "link_list",
-            "id": "menu",
-            "label": "Menu",
-            "info": "Select a menu created in admin > online store > navigation"
-          }
-        ]
-      }
-    ],
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "header_logo",
-        "label": "Header Logo"
-      }
-    ]
-  }
+{
+  "name": "Header",
+  "class": "site--header",
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "Header Menu",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu",
+          "info": "Select a menu created in admin > online store > navigation"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "header_logo",
+      "label": "Header Logo"
+    }
+  ]
+}
 {% endschema %}
