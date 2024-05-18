@@ -4,43 +4,45 @@
 -%}
 
 <header
-  id="site-layout-header"
-  x-data="
-    {
-      buttonText: mobileMenuDrawerOpen === true ? 'Close' : 'Menu',
-      hoveredItem: '',
+  class="fixed inset-x-0 top-0 z-50"
+>
+  <div class="bg-[#F1F1F1] w-full h-10 block">Test</div>
+  <div
+    id="site-layout-header"
+    x-data="
+      {
+        buttonText: mobileMenuDrawerOpen === true ? 'Close' : 'Menu',
+        hoveredItem: '',
 
-      setHoveredItem(slug) {
-        if(this.hoveredItem == '') {
-          this.hoveredItem = slug;
-        } else {
-          this.hoveredItem = ''
-          setTimeout(() => {
+        setHoveredItem(slug) {
+          if(this.hoveredItem == '') {
             this.hoveredItem = slug;
-          },200)
+          } else {
+            this.hoveredItem = ''
+            setTimeout(() => {
+              this.hoveredItem = slug;
+            },200)
+          }
         }
       }
-    }
-  "
-  @mouseleave="setHoveredItem('')"
-  class="fixed inset-x-0 top-0 z-50 transition-all lg:hover:text-white lg:hover:border-b-green lg:hover:bg-green lg:hover:fill-white lg:hover:stroke-white"
-  {% if template == 'index' %}
-    :class="
-      headerMenuOverlay ?
-        'text-white fill-white  bg-green lg:bg-transparent border-b-green lg:border-b-transparent border-b stroke-white'
-      : 'text-white fill-white lg:fill-green  stroke-white bg-green border-b-green-light border-b'
     "
+    @mouseleave="setHoveredItem('')"
+    class="transition-all lg:hover:text-white lg:hover:border-b-green lg:hover:bg-green lg:hover:fill-white lg:hover:stroke-white"
+    {% if template == 'index' %}
+      :class="
+        headerMenuOverlay ?
+          'text-white fill-white  bg-green lg:bg-transparent border-b-green lg:border-b-transparent border-b stroke-white'
+        : 'text-white fill-white lg:fill-green  stroke-white bg-green border-b-green-light border-b'
+      "
 
-  {% else %}
-    :class="
-      headerMenuOverlay ?
-        'text-white fill-white  bg-green lg:bg-transparent border-b stroke-white lg:text-green lg:stroke-green border-b-green lg:border-b-green-light'
-      : 'text-white fill-white lg:fill-green  stroke-white  bg-green border-b-green border-b'
-    "
-  {% endif %}
->
-  <div>
-    <div class="bg-[#F1F1F1] w-full h-10 block">Test</div>
+    {% else %}
+      :class="
+        headerMenuOverlay ?
+          'text-white fill-white  bg-green lg:bg-transparent border-b stroke-white lg:text-green lg:stroke-green border-b-green lg:border-b-green-light'
+        : 'text-white fill-white lg:fill-green  stroke-white  bg-green border-b-green border-b'
+      "
+    {% endif %}
+  >
     <div
       class="items-center transition-all opacity-0 layout--grid lg:items-start xl:items-center"
       :class=" { '!opacity-100' : isPageReady }"
