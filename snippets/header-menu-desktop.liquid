@@ -1,6 +1,6 @@
 <div class="relative">
   <ul
-    class="main-menu flex justify-center flex-wrap md:gap-x-[12px] md:gap-y-[12px] xl:gap-x-[24px] relative z-40 bg-green"
+    class="main-menu flex justify-center flex-wrap md:gap-x-[12px] md:gap-y-[12px] xl:gap-x-[24px] relative z-40"
   >
     {% for link in menu.links %}
       <li class="menu-item block {% if link.links %} has-dropdown{% endif %}">
@@ -8,7 +8,7 @@
           <a
             href="{{ link.url }}"
             data-link="{{ link.handle }}"
-            class="transition-opacity duration-150 ease-in-out delay-75 parent-link"
+            class="transition-opacity duration-150 ease-in-out delay-75 parent-link text-green uppercase"
             data-count="{{ link.links.size }}"
             @mouseenter="setHoveredItem('{{ link.handle }}')"
             :class="{'opacity-60' : hoveredItem !== '' && hoveredItem !== '{{ link.handle }}'}"
@@ -20,7 +20,7 @@
           <a
             href="{{ link.url }}"
             data-link="{{ link.handle }}"
-            class="transition-opacity duration-150 ease-in-out delay-75"
+            class="transition-opacity duration-150 ease-in-out delay-75 text-green uppercase"
             @mouseenter="setHoveredItem('{{ link.handle }}')"
             :class="{'opacity-60' : hoveredItem !== '' && hoveredItem !== '{{ link.handle }}'}"
           >
@@ -31,7 +31,7 @@
     {% endfor %}
   </ul>
 
-  <div class="hidden lg:block fixed z-[2] bg-green w-full h-[55px] top-0 left-0"></div>
+  <div class="hidden lg:block fixed z-[2] bg-white w-full h-[55px] top-0 left-0"></div>
 
   {% for link in menu.links %}
     {%- if link.links.size == 4 -%}
@@ -54,7 +54,7 @@
     <div
       x-show="{% if link.links.size > 0 %}true{% else %}false{% endif %}"
       :class="{'!translate-y-0 !opacity-100 !pointer-events-auto' : hoveredItem == '{{ link.handle }}'}"
-      class="find-me duration-500 transition-all fixed inset-x-0 pointer-events-none translate-y-[-100%] top-[55px] opacity-0 bg-green z-[1] pt-[35px] pb-[60px]"
+      class="find-me duration-500 transition-all fixed inset-x-0 pointer-events-none translate-y-[-100%] top-[55px] opacity-0 bg-white z-[1] pt-[35px] pb-[60px]"
     >
       <div
         class="{{ span_class }} dropdown-menu--wrapper z-30 lg:max-w-[900px] lg:mx-auto"
@@ -80,7 +80,7 @@
                       {%- endif -%}
                     </div>
 
-                    <span class="body-smaller">
+                    <span class="body-smaller text-green">
                       {{ sublink.title }}
                     </span>
                   </a>
@@ -107,7 +107,7 @@
                           {%- endif -%}
                         {%- endif -%}
                       </div>
-                      <span class="body-smaller">
+                      <span class="body-smaller text-green">
                         {{ sublink.title }}
                       </span>
                     </a>
@@ -134,7 +134,7 @@
                         {%- endif -%}
                       {%- endif -%}
                     </div>
-                    <span class="body-smaller">
+                    <span class="body-smaller text-green">
                       {{ sublink.title }}
                     </span>
                   </a>

@@ -1,12 +1,13 @@
 {%- liquid
   assign header_menus = section.blocks | where: 'type', 'link_list'
   assign header_logo = section.settings.header_logo
+  assign marquee_items = section.blocks | where: 'type', 'marquee_text'
 -%}
 
 <header
   class="fixed inset-x-0 top-0 z-50"
 >
-  <div class="bg-[#F1F1F1] w-full py-2 block relative z-10 px-5">
+  <div class="bg-[#F1F1F1] w-full py-2 relative z-10 px-5 flex items-center justify-between">
     <ul class="header__menu-nav hidden md:flex gap-5">
       {% for link in section.settings.header_1_menu.links %}
         {% if link.links != blank %}
@@ -29,6 +30,14 @@
         {% endif %}
       {% endfor %}
     </ul>
+
+    <a href="{{ section.settings.featured_collection.url }}" class="uppercase flex items-center gap-x-2">
+      <span>{{- section.settings.featured_collection_label -}}</span>
+      <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9628 6.62502L5.72658 1.3888L6.25832 0.857055L12.3949 6.99363L6.25832 13.1302L5.72658 12.5985L10.948 7.37702L0.124966 7.37702L0.124966 6.62502L10.9628 6.62502Z" fill="#092324"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9628 6.62502L5.72658 1.3888L6.25832 0.857055L12.3949 6.99363L6.25832 13.1302L5.72658 12.5985L10.948 7.37702L0.124966 7.37702L0.124966 6.62502L10.9628 6.62502Z" fill="black" fill-opacity="0.2"/>
+      </svg>
+    </a>
   </div>
   <div
     id="site-layout-header"
@@ -50,19 +59,19 @@
       }
     "
     @mouseleave="setHoveredItem('')"
-    class="transition-all lg:hover:text-white lg:hover:border-b-green lg:hover:bg-green lg:hover:fill-white lg:hover:stroke-white"
+    class="py-3"
     {% if template == 'index' %}
       :class="
         headerMenuOverlay ?
           'text-white fill-white  bg-white lg:bg-transparent border-b-green lg:border-b-transparent border-b stroke-white'
-        : 'text-white fill-white lg:fill-green  stroke-white bg-green border-b-green-light border-b'
+        : 'text-white fill-white lg:fill-green  stroke-white bg-white border-b-green-light border-b'
       "
 
     {% else %}
       :class="
         headerMenuOverlay ?
           'text-white fill-white  bg-white lg:bg-transparent border-b stroke-white lg:text-green lg:stroke-green border-b-green lg:border-b-green-light'
-        : 'text-white fill-white lg:fill-green  stroke-white  bg-green border-b-green border-b'
+        : 'text-white fill-white lg:fill-green  stroke-white  bg-white border-b-green border-b'
       "
     {% endif %}
   >
@@ -111,26 +120,28 @@
         @cart-count-updated.window="cart_count = $event.detail"
       >
         <nav>
-          <ul class="flex items-center justify-end gap-x-[17px]">
+          <ul class="flex items-center justify-end gap-x-2">
             {% comment %} Search Goes here {% endcomment %}
 
-            <li class="cursor-pointer search-button" @click="openSearchDrawer($event)">
+            <li
+              class="cursor-pointer search-button rounded-full border-green border border-opacity-20 w-10 h-10 flex items-center justify-center min-w-10"
+              @click="openSearchDrawer($event)"
+            >
               {% render 'icon-search' %}
             </li>
 
             <li>
-              <button type="button" title="Cart button" @click="$dispatch('toggle-cart')" class="relative">
+              <button
+                type="button"
+                title="Cart button"
+                @click="$dispatch('toggle-cart')"
+                class="relative rounded-full border-green border border-opacity-20 w-10 h-10 flex items-center justify-center min-w-10"
+              >
                 <span class="sr-only">{{ 'templates.cart.cart' | t | append: ' ' }}</span>
 
                 {% render 'icon-cart' %}
 
                 {% comment %} Will most likely need later {% endcomment %}
-
-                <span class=" aspect-square absolute -top-[7px] -right-[8px] border-white bg-white border-solid overflow-hidden rounded-full w-[10px] h-[10px] flex justify-center items-center">
-                  <span class="text-[8px] text-green text-center font-sans leading-none font-bold" x-text="cart_count">
-                    {{ cart.item_count }}
-                  </span>
-                </span>
               </button>
             </li>
           </ul>
@@ -138,12 +149,52 @@
       </div>
     </div>
   </div>
+  <div class="bg-green py-2.5">
+    <ul class="ticker--list animate-ticker flex leading-none">
+      {%- for block in marquee_items -%}
+        {%- assign marquee = block.settings.marquee_text -%}
+        {%- if marquee != blank -%}
+          <li class="h-full flex items-center">
+            <span class="body-1 flex whitespace-nowrap text-white">
+              {{ marquee }}
+            </span>
+
+            <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]"></div>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+      {%- for block in marquee_items -%}
+        {%- assign marquee = block.settings.marquee_text -%}
+        {%- if marquee != blank -%}
+          <li class="h-full flex items-center">
+            <span class="body-1 flex whitespace-nowrap text-white">
+              {{ marquee }}
+            </span>
+
+            <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]"></div>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+      {%- for block in marquee_items -%}
+        {%- assign marquee = block.settings.marquee_text -%}
+        {%- if marquee != blank -%}
+          <li class="h-full flex items-center">
+            <span class="body-1 flex whitespace-nowrap text-white">
+              {{ marquee }}
+            </span>
+
+            <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]"></div>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
 </header>
 
 {% comment %} Mobile Menu Drawer {% endcomment %}
 
 <div
-  class="fixed inset-0 z-40 w-full h-full overflow-x-hidden overflow-y-scroll text-white lg:hidden bg-green"
+  class="fixed inset-0 z-40 w-full h-full overflow-x-hidden overflow-y-scroll text-white lg:hidden bg-white"
   x-show="mobileMenuDrawerOpen"
   x-cloak
   x-transition:enter="transition ease-out duration-300"
@@ -162,7 +213,7 @@
 
 <div
   id="header-search-bar"
-  class="header--search-bar w-full fixed top-0 inset-x-0 bg-green min-h-[76px] text-white layout--grid pb-[12px] pt-[21px] items-center z-[66] fill-white"
+  class="header--search-bar w-full fixed top-0 inset-x-0 bg-white min-h-[76px] text-white layout--grid pb-[12px] pt-[21px] items-center z-[66] fill-white"
   style="transform: translateY(-100%);"
 >
   <form
@@ -256,6 +307,17 @@
           "info": "Select a menu created in admin > online store > navigation"
         }
       ]
+    },
+    {
+      "type": "marquee_text",
+      "name": "Marquee Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "marquee_text",
+          "label": "Marquee Text"
+        }
+      ]
     }
   ],
   "settings": [
@@ -263,6 +325,17 @@
       "type": "link_list",
       "id": "header_1_menu",
       "label": "Top Menu"
+    },
+    {
+      "type": "text",
+      "id": "featured_collection_label",
+      "label": "Featured Collection Label",
+      "default": "Explore New Season Autumn Winter 2024"
+    },
+    {
+      "type": "collection",
+      "id": "featured_collection",
+      "label": "Featured Collection"
     },
     {
       "type": "image_picker",
