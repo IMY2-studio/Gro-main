@@ -6,9 +6,9 @@
 <header
   class="fixed inset-x-0 top-0 z-50"
 >
-  <div class="bg-[#F1F1F1] w-full h-10 block relative z-10 px-5">
+  <div class="bg-[#F1F1F1] w-full py-5 block relative z-10 px-5">
     <ul class="header__menu-nav hidden md:flex gap-5">
-      {% for link in section.settings['header-1-menu'].links %}
+      {% for link in section.settings.header_1_menu.links %}
         {% if link.links != blank %}
           <li class="nav__item block relative">
             <a class="text-fluid-nav" href="{{ link.url }}">{{ link.title }}</a>
