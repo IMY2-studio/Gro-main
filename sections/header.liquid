@@ -150,7 +150,7 @@
     </div>
   </div>
   <div>
-    <ul class="ticker--list animate-ticker flex leading-none">
+    <ul class="ticker--list animate-ticker flex leading-none bg-green">
       {%- for block in marquee_items -%}
         {%- assign marquee = block.settings.marquee_text -%}
         {%- if marquee != blank -%}
@@ -159,7 +159,7 @@
               {{ marquee }}
             </span>
 
-            <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]"></div>
+            <div class="block bg-white rounded-full w-[4px] h-[4px] mx-[24px]"></div>
           </li>
         {%- endif -%}
       {%- endfor -%}
@@ -171,7 +171,7 @@
               {{ marquee }}
             </span>
 
-            <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]"></div>
+            <div class="block bg-white rounded-full w-[4px] h-[4px] mx-[24px]"></div>
           </li>
         {%- endif -%}
       {%- endfor -%}
@@ -183,7 +183,7 @@
               {{ marquee }}
             </span>
 
-            <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]"></div>
+            <div class="block bg-white rounded-full w-[4px] h-[4px] mx-[24px]"></div>
           </li>
         {%- endif -%}
       {%- endfor -%}
