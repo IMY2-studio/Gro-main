@@ -119,18 +119,17 @@
             </li>
 
             <li>
-              <button type="button" title="Cart button" @click="$dispatch('toggle-cart')" class="relative">
+              <button
+                type="button"
+                title="Cart button"
+                @click="$dispatch('toggle-cart')"
+                class="relative rounded-full border-green border border-opacity-20"
+              >
                 <span class="sr-only">{{ 'templates.cart.cart' | t | append: ' ' }}</span>
 
                 {% render 'icon-cart' %}
 
                 {% comment %} Will most likely need later {% endcomment %}
-
-                <span class=" aspect-square absolute -top-[7px] -right-[8px] border-white bg-white border-solid overflow-hidden rounded-full w-[10px] h-[10px] flex justify-center items-center">
-                  <span class="text-[8px] text-green text-center font-sans leading-none font-bold" x-text="cart_count">
-                    {{ cart.item_count }}
-                  </span>
-                </span>
               </button>
             </li>
           </ul>
