@@ -1,6 +1,7 @@
 {%- liquid
   assign header_menus = section.blocks | where: 'type', 'link_list'
   assign header_logo = section.settings.header_logo
+  assign marquee_items = section.blocks | where: 'type', 'marquee_text'
 -%}
 
 <header
