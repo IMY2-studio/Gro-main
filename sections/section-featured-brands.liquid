@@ -1,0 +1,39 @@
+{% schema %}
+{
+  "name": "Featured Categories",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading Text",
+          "default": "Featured Categories"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Category",
+          "info": "Choose the collection (Category) you'd like to feature"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Brands",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}
