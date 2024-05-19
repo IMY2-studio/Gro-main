@@ -736,6 +736,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
 .mb-\[120px\] {
   margin-bottom: 120px;
 }
@@ -2322,6 +2326,10 @@ select {
 .before\:mr-5::before {
   content: var(--tw-content);
   margin-right: 1.25rem;
+}
+.before\:mr-6::before {
+  content: var(--tw-content);
+  margin-right: 1.5rem;
 }
 .before\:block::before {
   content: var(--tw-content);
