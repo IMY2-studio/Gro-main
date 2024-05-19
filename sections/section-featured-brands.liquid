@@ -4,9 +4,11 @@
 
 <section>
   {%- for block in brand_blocks -%}
-    <h2 class="heading-1 mb-[16px]">
-      {{ block.settings.collection.title }}
-    </h2>
+    <div>
+      <h2 class="heading-1 mb-[16px]">
+        {{ block.settings.collection.title }}
+      </h2>
+    </div>
   {%- endfor -%}
 </section>
 {% schema %}
