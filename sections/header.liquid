@@ -154,7 +154,7 @@
       {%- for block in marquee_items -%}
         {%- assign marquee = block.settings.marquee_text -%}
         {%- if marquee != blank -%}
-          <li class="h-full flex items-center before:block before:w-5 before:h-5 before:bg-white before:content-['']">
+          <li class="h-full flex items-center before:block before:w-2.5 before:h-2.5 before:bg-white before:content-[''] before:rounded-full">
             <span class="body-1 flex whitespace-nowrap text-white">
               {{ marquee }}
             </span>

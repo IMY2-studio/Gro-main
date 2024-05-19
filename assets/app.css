@@ -2319,9 +2319,29 @@ select {
   content: var(--tw-content);
   height: 1.25rem;
 }
+.before\:h-2\.5::before {
+  content: var(--tw-content);
+  height: 0.625rem;
+}
+.before\:h-2::before {
+  content: var(--tw-content);
+  height: 0.5rem;
+}
 .before\:w-5::before {
   content: var(--tw-content);
   width: 1.25rem;
+}
+.before\:w-2\.5::before {
+  content: var(--tw-content);
+  width: 0.625rem;
+}
+.before\:w-2::before {
+  content: var(--tw-content);
+  width: 0.5rem;
+}
+.before\:rounded-full::before {
+  content: var(--tw-content);
+  border-radius: 9999px;
 }
 .before\:bg-white::before {
   content: var(--tw-content);
