@@ -1,3 +1,7 @@
+{%- liquid
+  assign brand_blocks = section.blocks | where: 'type', 'brand'
+-%}
+
 {% schema %}
 {
   "name": "Featured Categories",
