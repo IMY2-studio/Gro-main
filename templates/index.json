@@ -385,6 +385,12 @@
       ],
       "settings": {
       }
+    },
+    "section_featured_brands_qWLaLT": {
+      "type": "section-featured-brands",
+      "settings": {
+        "heading": "Shop Designer Brands"
+      }
     }
   },
   "order": [
@@ -393,6 +399,7 @@
     "0236bff2-8a7a-4478-ad6e-b6bf5c64ad4d",
     "258d34b1-35f1-4df7-b74c-7e4ab4a143ec",
     "e3d4ebb6-c35f-41b1-9346-36a3c1b5c34d",
-    "65a5f80d-8801-488b-8308-67198bca1ab8"
+    "65a5f80d-8801-488b-8308-67198bca1ab8",
+    "section_featured_brands_qWLaLT"
   ]
 }
