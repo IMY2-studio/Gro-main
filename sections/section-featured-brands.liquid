@@ -2,6 +2,13 @@
   assign brand_blocks = section.blocks | where: 'type', 'brand'
 -%}
 
+<section>
+  {%- for block in brand_block -%}
+    <h2 class="heading-1 mb-[16px]">
+      {{ block.settings.collection.title }}
+    </h2>
+  {%- endfor -%}
+</section>
 {% schema %}
 {
   "name": "Featured Categories",
