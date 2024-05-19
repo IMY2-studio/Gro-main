@@ -2,7 +2,7 @@
   assign brand_blocks = section.blocks | where: 'type', 'brand'
 -%}
 
-<section>
+<section class="layout--grid">
   {%- for block in brand_blocks -%}
     <div>
       <h2 class="heading-1 mb-[16px]">
