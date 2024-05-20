@@ -45,9 +45,9 @@
       </li>
     {% endfor %}
   </ul>
-  <div class="bg-[#F1F1F1] w-full py-2 relative z-10 px-5 flex flex-col items-center justify-between">
+  <div class="bg-[#F1F1F1] w-full py-2 relative z-10 px-5 flex flex-col">
     <ul class="header__menu-nav hidden md:flex gap-5">
-      {% for link in topMenu %}
+      {% for link in topMenu.links %}
         {% if link.links != blank %}
           <li class="nav__item block relative">
             <a class="block w-fit uppercase" href="{{ link.url }}">{{ link.title }}</a>
