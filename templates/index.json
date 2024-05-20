@@ -212,15 +212,15 @@
     "section_featured_products_AniV7j": {
       "type": "section-featured-products",
       "blocks": {
-        "product_inqkkL": {
-          "type": "product",
+        "featured_product_eGEVBg": {
+          "type": "featuredProduct",
           "settings": {
             "featProduct": "andes-egg-pot-grey"
           }
         }
       },
       "block_order": [
-        "product_inqkkL"
+        "featured_product_eGEVBg"
       ],
       "settings": {
         "heading": "Save up to 60% on clearance items"
@@ -229,15 +229,15 @@
     "section_featured_products_BHLrnb": {
       "type": "section-featured-products",
       "blocks": {
-        "product_M8eWUB": {
-          "type": "product",
+        "featured_product_t7jQ4i": {
+          "type": "featuredProduct",
           "settings": {
             "featProduct": "100-arlo-basket-natural-combo"
           }
         }
       },
       "block_order": [
-        "product_M8eWUB"
+        "featured_product_t7jQ4i"
       ],
       "settings": {
         "heading": "What's trending"
