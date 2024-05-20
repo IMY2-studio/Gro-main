@@ -12,9 +12,9 @@
     <div class="col-span-6 md:col-span-3">
       <a href="{{ block.settings.collection.url }}">
         <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
-          {% if block.settings.product.featured_image != blank %}
+          {% if block.settings.product.featured_media != blank %}
             {{
-              block.settings.product.featured_image
+              block.settings.product.featured_media
               | image_url: width: 900
               | image_tag:
                 loading: 'lazy',
