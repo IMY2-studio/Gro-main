@@ -3,7 +3,7 @@
     class="main-menu flex justify-center flex-wrap md:gap-x-[12px] md:gap-y-[12px] xl:gap-x-[24px] relative z-40"
   >
     {% for link in menu.links %}
-      <li class="menu-item block {% if link.links %} has-dropdown{% endif %} last:text-[#970000]">
+      <li class="{{ link.handle }} menu-item block {% if link.links %} has-dropdown{% endif %}">
         {% if link.links.size > 0 %}
           <a
             href="{{ link.url }}"
