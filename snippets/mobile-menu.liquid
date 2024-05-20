@@ -46,7 +46,7 @@
     {% endfor %}
   </ul>
   <div class="bg-[#F1F1F1] w-full py-2 relative z-10 px-5 flex flex-col">
-    <ul class="header__menu-nav hidden md:flex gap-5">
+    <ul class="header__menu-nav hidden md:flex gap-5 flex-col">
       {% for link in topMenu.links %}
         {% if link.links != blank %}
           <li class="nav__item block relative">
