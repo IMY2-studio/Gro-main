@@ -25,23 +25,22 @@
                 ></span>
               </button>
             </div>
-            <div class="pb-3">
-              <ul
-                class=""
-                x-cloak
-                x-show="isAccordionOpen"
-                x-collapse
-                x-collapse.duration.500ms
-              >
-                {% for sublink in link.links %}
-                  <li class="submenu-item w-full{% if sublink.links %} has-submenu{% endif %}">
-                    <a href="{{ sublink.url }}" class="body-smaller uppercase">
-                      {{ sublink.title }}
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
+
+            <ul
+              class=""
+              x-cloak
+              x-show="isAccordionOpen"
+              x-collapse
+              x-collapse.duration.500ms
+            >
+              {% for sublink in link.links %}
+                <li class="submenu-item w-full{% if sublink.links %} has-submenu{% endif %}">
+                  <a href="{{ sublink.url }}" class="body-smaller uppercase">
+                    {{ sublink.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
           {% endif %}
         </div>
       </li>
