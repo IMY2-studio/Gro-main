@@ -245,6 +245,13 @@
     role="search"
     class="relative w-full col-span-2 border-b search border-b-white/20 lg:col-start-10 lg:col-end-13 focus:outline-none"
   >
+    <button
+      type="submit"
+      class=""
+      aria-label="{{ 'general.search.search' | t }}"
+    >
+      {% render 'icon-search' %}
+    </button>
     <div class="flex w-full field">
       <input
         class="search__input  pb-[4px] pl-[26px] lg:pl-0  w-full lg:text-[16px] lg:mt-[-4px]"
@@ -256,14 +263,6 @@
       >
       <label class="sr-only" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
       <input name="options[prefix]" type="hidden" value="last">
-
-      <button
-        type="submit"
-        class="absolute left-0 lg:-left-[8px] lg:-translate-x-full "
-        aria-label="{{ 'general.search.search' | t }}"
-      >
-        {% render 'icon-search' %}
-      </button>
     </div>
 
     <button class="absolute top-0 right-0" type="button" @click="closeSearchDrawer">
