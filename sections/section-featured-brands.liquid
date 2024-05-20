@@ -3,13 +3,13 @@
 -%}
 
 <section class="layout--grid">
-  <div class="col-span-6">
+  <div class="col-span-12">
     <h2 class="heading-1 mb-[16px]">
       {{ section.settings.heading }}
     </h2>
   </div>
   {%- for block in brand_blocks -%}
-    <div class="">
+    <div class="col-span-6">
       <h2 class="heading-1 mb-[16px]">
         {{ block.settings.collection.title }}
       </h2>
