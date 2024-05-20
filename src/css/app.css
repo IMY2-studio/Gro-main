@@ -40,7 +40,9 @@
 }
 
 
-
+.menu-item.sale a {
+    color: #970000;
+}
 
 /* Helpers and resets */
 

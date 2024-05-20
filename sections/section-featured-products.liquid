@@ -9,7 +9,7 @@
     </h2>
   </div>
   {%- for block in brand_blocks -%}
-    <div class="col-span-12 md:col-span-6">
+    <div class="col-span-6 md:col-span-3">
       <a href="{{ block.settings.collection.url }}">
         <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
           {% if block.settings.collection.image != blank %}
@@ -35,32 +35,32 @@
 </section>
 {% schema %}
 {
-  "name": "Featured Brands",
+  "name": "Featured Products",
   "settings": [
     {
       "type": "text",
       "id": "heading",
       "label": "Heading Text",
-      "default": "Shop Designer Brands"
+      "default": "What's trending"
     }
   ],
   "blocks": [
     {
-      "type": "brand",
-      "name": "Brand",
+      "type": "products",
+      "name": "Product",
       "settings": [
         {
-          "type": "collection",
-          "id": "collection",
-          "label": "Brand",
-          "info": "Choose the collection (Brand) you'd like to feature"
+          "type": "product",
+          "id": "product",
+          "label": "Product",
+          "info": "Choose the product you'd like to feature"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Featured Brands",
+      "name": "Featured Products",
       "blocks": []
     }
   ]
