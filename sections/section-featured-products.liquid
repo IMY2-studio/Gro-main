@@ -1,5 +1,5 @@
 {%- liquid
-  assign products = section.blocks | where: 'type', 'products'
+  assign products = section.blocks | where: 'type', 'product'
 -%}
 
 <section class="layout--grid gap-y-6 mb-14">
@@ -48,7 +48,7 @@
   ],
   "blocks": [
     {
-      "type": "products",
+      "type": "product",
       "name": "Product",
       "settings": [
         {
