@@ -165,8 +165,8 @@
     </div>
   </div>
   <div
-    class="bg-green py-2.5 transition-opacity"
-    :class="{'opacity-0 pointer-events-none': mobileMenuDrawerOpen }"
+    class="bg-green py-2.5"
+    :class="{'hidden': mobileMenuDrawerOpen }"
   >
     <ul class="ticker--list animate-ticker flex leading-none">
       {%- for block in marquee_items -%}
