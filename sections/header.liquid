@@ -221,7 +221,12 @@
   x-transition:leave-end="opacity-0 translate-x-full "
 >
   {%- for block in header_menus -%}
-    {%- render 'mobile-menu', block: block, section: section, menu: block.settings.menu -%}
+    {%- render 'mobile-menu',
+      block: block,
+      section: section,
+      menu: block.settings.menu,
+      topMenu: section.settings.header_1_menu
+    -%}
   {%- endfor -%}
 </div>
 
