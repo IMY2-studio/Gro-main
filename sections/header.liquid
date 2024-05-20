@@ -252,7 +252,7 @@
     >
       {% render 'icon-search' %}
     </button>
-    <div class="flex w-full field">
+    <div class="flex w-full field h-10">
       <input
         class="search__input  pb-[4px] pl-[26px] lg:pl-0  w-full lg:text-[16px] lg:mt-[-4px]"
         id="Search-In-Template"
@@ -265,7 +265,7 @@
       <input name="options[prefix]" type="hidden" value="last">
     </div>
 
-    <button class="absolute top-0 right-0" type="button" @click="closeSearchDrawer">
+    <button class="" type="button" @click="closeSearchDrawer">
       {% render 'icon-close-search' %}
     </button>
   </form>
