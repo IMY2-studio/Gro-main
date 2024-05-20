@@ -1327,6 +1327,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-y-7 {
   row-gap: 1.75rem;
 }
+.gap-y-6 {
+  row-gap: 1.5rem;
+}
 .space-y-\[20px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(20px * calc(1 - var(--tw-space-y-reverse)));
