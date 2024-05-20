@@ -2506,6 +2506,10 @@ select {
     grid-column: span 3 / span 3;
   }
 
+  .md\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
   .md\:my-0 {
     margin-top: 0px;
     margin-bottom: 0px;

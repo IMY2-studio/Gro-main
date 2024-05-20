@@ -9,7 +9,7 @@
     </h2>
   </div>
   {%- for block in brand_blocks -%}
-    <div class="col-span-6">
+    <div class="col-span-12 md:col-span-6">
       <a href="{{ block.settings.collection.url }}">
         <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
           {% if block.settings.collection.image != blank %}
