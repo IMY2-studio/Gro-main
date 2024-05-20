@@ -17,13 +17,15 @@
               >
                 {{ link.title }}
               </button>
-              <button class="relative w-3.5 h-3.5">
-                <span class="w-3.5 h-[1px]  bg-green block absolute top-1/2 left-0 translate-y-[-1px]"></span>
-                <span
-                  class="w-[1px] h-3.5 bg-green block absolute top-0 left-1/2 opacity transition ease-in-out duration-500"
-                  :class="{'opacity-0': isAccordionOpen,' opacity-100': !isAccordionOpen }"
-                ></span>
-              </button>
+              {%- if link.links.size > 0 -%}
+                <button class="relative w-3.5 h-3.5">
+                  <span class="w-3.5 h-[1px]  bg-green block absolute top-1/2 left-0 translate-y-[-1px]"></span>
+                  <span
+                    class="w-[1px] h-3.5 bg-green block absolute top-0 left-1/2 opacity transition ease-in-out duration-500"
+                    :class="{'opacity-0': isAccordionOpen,' opacity-100': !isAccordionOpen }"
+                  ></span>
+                </button>
+              {%- endif -%}
             </div>
             {%- if link.links.size > 0 -%}
               <ul
