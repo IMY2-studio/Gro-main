@@ -164,7 +164,10 @@
       </div>
     </div>
   </div>
-  <div class="bg-green py-2.5">
+  <div
+    class="bg-green py-2.5"
+    :class="{'opacity-0': mobileMenuDrawerOpen }"
+  >
     <ul class="ticker--list animate-ticker flex leading-none">
       {%- for block in marquee_items -%}
         {%- assign marquee = block.settings.marquee_text -%}
