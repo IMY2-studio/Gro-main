@@ -212,36 +212,15 @@
     "section_featured_products_AniV7j": {
       "type": "section-featured-products",
       "blocks": {
-        "products_7qNH67": {
-          "type": "products",
+        "product_inqkkL": {
+          "type": "product",
           "settings": {
-            "product": "100-arlo-basket-natural-combo"
-          }
-        },
-        "products_Q4HYt6": {
-          "type": "products",
-          "settings": {
-            "product": "75-combo-ball-basket-chalk-rubber-plant"
-          }
-        },
-        "products_J7kidp": {
-          "type": "products",
-          "settings": {
-            "product": "aerial-serving-bowl-black"
-          }
-        },
-        "products_9QE4wU": {
-          "type": "products",
-          "settings": {
-            "product": "200-bhodi-basket-coco-combo"
+            "featProduct": "andes-egg-pot-grey"
           }
         }
       },
       "block_order": [
-        "products_7qNH67",
-        "products_Q4HYt6",
-        "products_J7kidp",
-        "products_9QE4wU"
+        "product_inqkkL"
       ],
       "settings": {
         "heading": "Save up to 60% on clearance items"
@@ -250,36 +229,15 @@
     "section_featured_products_BHLrnb": {
       "type": "section-featured-products",
       "blocks": {
-        "products_LCqzDh": {
-          "type": "products",
+        "product_M8eWUB": {
+          "type": "product",
           "settings": {
-            "product": "andes-egg-pot-grey"
-          }
-        },
-        "products_z4aWCn": {
-          "type": "products",
-          "settings": {
-            "product": "andes-square-pot"
-          }
-        },
-        "products_HbqJgt": {
-          "type": "products",
-          "settings": {
-            "product": "aspen-ball-pot-grey"
-          }
-        },
-        "products_4TfyFC": {
-          "type": "products",
-          "settings": {
-            "product": "cactus-pot"
+            "featProduct": "100-arlo-basket-natural-combo"
           }
         }
       },
       "block_order": [
-        "products_LCqzDh",
-        "products_z4aWCn",
-        "products_HbqJgt",
-        "products_4TfyFC"
+        "product_M8eWUB"
       ],
       "settings": {
         "heading": "What's trending"
