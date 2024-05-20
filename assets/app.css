@@ -1664,6 +1664,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 }
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .pb-\[8px\] {
   padding-bottom: 8px;
 }
