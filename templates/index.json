@@ -317,6 +317,12 @@
       ],
       "settings": {
       }
+    },
+    "section_collection_listing_xng3mx": {
+      "type": "section-collection-listing",
+      "settings": {
+        "collection": "candles"
+      }
     }
   },
   "order": [
@@ -325,6 +331,7 @@
     "section_featured_brands_TiTDEd",
     "section_featured_products_AniV7j",
     "section_featured_products_BHLrnb",
-    "section_featured_looks_VddfhD"
+    "section_featured_looks_VddfhD",
+    "section_collection_listing_xng3mx"
   ]
 }
