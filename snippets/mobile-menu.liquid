@@ -16,10 +16,8 @@
             <ul class="">
               {% for sublink in link.links %}
                 <li class="submenu-item w-full{% if sublink.links %} has-submenu{% endif %}">
-                  <a href="{{ sublink.url }}">
-                    <span class="body-smaller">
-                      {{ sublink.title }}
-                    </span>
+                  <a href="{{ sublink.url }}" class="body-smaller uppercase">
+                    {{ sublink.title }}
                   </a>
                 </li>
               {% endfor %}
