@@ -1,129 +1,75 @@
 {%- liquid
-
-  assign category_blocks = section.blocks | where: "type", "category"
-
+  assign category_blocks = section.blocks | where: 'type', 'category'
 -%}
 
-
-
-<section 
-    class="layout--grid wrapper-section--swiper px-[16px] lg:px-[20px] mb-[120px] lg:mb-[200px] relative"
-    x-data="categorieslider"
->
-
-        <div class="col-span-2 lg:col-span-6">
-
-            {%- for block in section.blocks -%}
-                {%- if block.type == 'heading' -%}
-                    <h2 class="heading-1 mb-[16px]">
-                        {{ block.settings.heading }}
-                    </h2>
-                {%- endif -%}
-            {%- endfor -%}
-
+<section class="layout--grid gap-y-6 mb-14">
+  <div class="col-span-12">
+    <h2 class="heading-1 mb-[16px]">
+      {{ section.settings.heading }}
+    </h2>
+  </div>
+  {%- for block in category_blocks -%}
+    <div class="col-span-12 md:col-span-4">
+      <a href="{{ block.settings.collection.url }}">
+        <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
+          {% if block.settings.collection.image != blank %}
+            {{
+              block.settings.collection.image
+              | image_url: width: 900
+              | image_tag:
+                loading: 'lazy',
+                class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-video object-cover'
+            }}
+          {% else %}
+            <div class="aspect-video bg-[#120d0d]"></div>
+          {% endif %}
         </div>
-
-        {%- if category_blocks.size > 0 -%}
-
-        <div class="hidden col-span-2 swiper-pgaination--wrapper lg:flex lg:col-start-9 lg:col-end-13">
-
-            <div class="relative flex items-center justify-between w-full h-full swiper-pagination--inner">
-
-            <div class="fraction-pagination-swiper--wrapper">
-                <p class="inline body-smaller">
-                <span class="number">1</span>
-                <span>of</span>
-                <span class="total">{{ category_blocks.size | divided_by: 4  }}</span>
-                </p>
-            </div>
-
-    
-            <div class="swiper-pagination-categories"></div>
-            </div>
-        </div>
-
-        {%- endif -%}
-
-
-        <div class="relative col-span-2 lg:col-span-12" x-init="">
-
-
-        {%- if category_blocks.size > 0 -%}
-
-            <div class="swiper"
-                x-init="init($el)">
-
-                <div class="w-full swiper-wrapper">
-                    {%- for block in category_blocks -%}
-
-                        {%- assign block_collection = collections[block.settings.collection] -%}
-
-
-
-                        <div class="flex flex-col h-auto swiper-slide">
-                            <a href="{{ block_collection.url }}">
-                                <div class="collection-card-image--wrapper mb-[16px] h-auto group overflow-hidden">
-                                    {{ block_collection.image | image_url: width: 900 | image_tag: loading: 'lazy', class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex' }}
-                                </div>
-                                <div class="">
-                                    <h3 class="body-1">
-                                        {{ block_collection.title }}
-                                    </h3>
-                                </div>
-                            </a>
-                        </div>
-                        
-                    {%- endfor -%}
-                </div>
-
-
-            </div>
-            
-        {%- endif -%}
-
-          
-
+      </a>
+      <a href="{{ block.settings.collection.url }}">
+        <h3 class="text-[16px] md:text-[20px]">
+          {{ block.settings.collection.title }}
+        </h3>
+      </a>
     </div>
+  {%- endfor -%}
 </section>
 
-
-
 {% schema %}
+{
+  "name": "Featured Categories",
+  "settings": [],
+  "blocks": [
     {
-        "name": "Featured Categories",
-        "settings": [],
-        "blocks": [
-            {
-                "type": "heading",
-                "name": "Heading",
-                "limit": 1,
-                "settings": [
-                    {
-                        "type": "text",
-                        "id": "heading",
-                        "label": "Heading Text",
-                        "default": "Featured Categories"
-                    }
-                ]
-            },
-            {
-                "type": "category",
-                "name": "Category",
-                "settings": [
-                    {
-                        "type": "collection",
-                        "id": "collection",
-                        "label": "Category",
-                        "info": "Choose the collection (Category) you'd like to feature"
-                    }
-                ]
-            }
-        ],
-        "presets": [
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
         {
-            "name": "Featured Categories",
-            "blocks": []
+          "type": "text",
+          "id": "heading",
+          "label": "Heading Text",
+          "default": "Featured Categories"
         }
-    ]
+      ]
+    },
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Category",
+          "info": "Choose the collection (Category) you'd like to feature"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Categories",
+      "blocks": []
+    }
+  ]
 }
 {% endschema %}
