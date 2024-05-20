@@ -196,6 +196,38 @@
     },
     "section_featured_brands_TiTDEd": {
       "type": "section-featured-brands",
+      "blocks": {
+        "brand_gDkzqN": {
+          "type": "brand",
+          "settings": {
+            "collection": "accessories"
+          }
+        },
+        "brand_C44qYc": {
+          "type": "brand",
+          "settings": {
+            "collection": "basket-combos"
+          }
+        },
+        "brand_NCGR9P": {
+          "type": "brand",
+          "settings": {
+            "collection": "baskets"
+          }
+        },
+        "brand_iaEbzC": {
+          "type": "brand",
+          "settings": {
+            "collection": "bath-towels"
+          }
+        }
+      },
+      "block_order": [
+        "brand_gDkzqN",
+        "brand_C44qYc",
+        "brand_NCGR9P",
+        "brand_iaEbzC"
+      ],
       "settings": {
         "heading": "Shop Designer Brands"
       }
