@@ -45,4 +45,36 @@
       </li>
     {% endfor %}
   </ul>
+  <div class="bg-[#F1F1F1] w-full py-2 relative z-10 px-5 hidden lg:flex items-center justify-between">
+    <ul class="header__menu-nav hidden md:flex gap-5">
+      {% for link in section.settings.header_1_menu.links %}
+        {% if link.links != blank %}
+          <li class="nav__item block relative">
+            <a class="block w-fit uppercase" href="{{ link.url }}">{{ link.title }}</a>
+            <ul class="nav__item-submenu absolute bg-white border py-3 px-4 min-w-[160px] top-16 left-1/2 transform -translate-x-1/2">
+              {% for sublink in linklists[link.handle].links %}
+                <li>
+                  <a class="block w-fit uppercase" href="{{ sublink.url }}">
+                    {{ sublink.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+          <li>
+            <a class="block w-fit uppercase" href="{{ link.url }}"> {{ link.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <a href="{{ section.settings.featured_collection.url }}" class="uppercase flex items-center gap-x-2">
+      <span>{{- section.settings.featured_collection_label -}}</span>
+      <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9628 6.62502L5.72658 1.3888L6.25832 0.857055L12.3949 6.99363L6.25832 13.1302L5.72658 12.5985L10.948 7.37702L0.124966 7.37702L0.124966 6.62502L10.9628 6.62502Z" fill="#092324"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9628 6.62502L5.72658 1.3888L6.25832 0.857055L12.3949 6.99363L6.25832 13.1302L5.72658 12.5985L10.948 7.37702L0.124966 7.37702L0.124966 6.62502L10.9628 6.62502Z" fill="black" fill-opacity="0.2"/>
+      </svg>
+    </a>
+  </div>
 </div>
