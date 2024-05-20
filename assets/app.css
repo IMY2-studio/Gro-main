@@ -917,6 +917,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .aspect-\[216\/140\] {
   aspect-ratio: 216 / 140;
 }
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
 .h-full {
   height: 100%;
 }
