@@ -1434,6 +1434,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-green {
   border-color: var(--green);
 }
+.border-\[\#CED3D3\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(206 211 211 / var(--tw-border-opacity));
+}
 .border-y-green-light {
   border-top-color: var(--green-light);
   border-bottom-color: var(--green-light);
