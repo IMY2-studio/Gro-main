@@ -171,29 +171,6 @@
         "transition_speed": 300
       }
     },
-    "8c940d3e-048c-4a2d-8b77-baa973f536c3": {
-      "type": "section-text",
-      "blocks": {
-        "fd9b6d95-d0a6-42d0-a373-8df31a86a515": {
-          "type": "heading",
-          "settings": {
-            "heading": "Your Urban Oasis"
-          }
-        },
-        "881973b3-43fe-4f83-981a-319b60f43680": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Gro Urban Oasis is the seed of a fresh lifestyle concept, where simply living better comes to life through a range of inspirational products created by artisans and producers from across the globe.<\/p><p><br\/>We understand best practice sourcing and enduring quality that minimizes the impact on the planet, the Gro collection is created with wellbeing in mind.<\/p><p><br\/>A mostly exclusive assortment of ethically sourced homewares, eco friendly textiles, accessories for the garden, plants and more, be inspired to create your urban oasis and move towards living a more enhanced life<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "fd9b6d95-d0a6-42d0-a373-8df31a86a515",
-        "881973b3-43fe-4f83-981a-319b60f43680"
-      ],
-      "settings": {
-      }
-    },
     "section_featured_brands_TiTDEd": {
       "type": "section-featured-brands",
       "blocks": {
@@ -230,6 +207,30 @@
       ],
       "settings": {
         "heading": "Shop Designer Brands"
+      }
+    },
+    "8c940d3e-048c-4a2d-8b77-baa973f536c3": {
+      "type": "section-text",
+      "blocks": {
+        "fd9b6d95-d0a6-42d0-a373-8df31a86a515": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Urban Oasis"
+          }
+        },
+        "881973b3-43fe-4f83-981a-319b60f43680": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gro Urban Oasis is the seed of a fresh lifestyle concept, where simply living better comes to life through a range of inspirational products created by artisans and producers from across the globe.<\/p><p><br\/>We understand best practice sourcing and enduring quality that minimizes the impact on the planet, the Gro collection is created with wellbeing in mind.<\/p><p><br\/>A mostly exclusive assortment of ethically sourced homewares, eco friendly textiles, accessories for the garden, plants and more, be inspired to create your urban oasis and move towards living a more enhanced life<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "fd9b6d95-d0a6-42d0-a373-8df31a86a515",
+        "881973b3-43fe-4f83-981a-319b60f43680"
+      ],
+      "disabled": true,
+      "settings": {
       }
     },
     "0236bff2-8a7a-4478-ad6e-b6bf5c64ad4d": {
@@ -287,6 +288,7 @@
         "0565580d-cf3b-4b47-a83b-a1d6319273cd",
         "9c7d19e7-4b7e-41a6-b6b0-9b6efe9f67e7"
       ],
+      "disabled": true,
       "settings": {
       }
     },
@@ -326,6 +328,7 @@
         "fea192a0-a40d-4d6e-a7d7-13596ea43070",
         "f4d7ddff-dff4-49df-92c8-0decd032963a"
       ],
+      "disabled": true,
       "settings": {
       }
     },
@@ -356,6 +359,7 @@
         "e162a136-13f7-4b43-8691-4c9b88ea542f",
         "f0385238-527b-4417-8e3d-52a3e44a08b2"
       ],
+      "disabled": true,
       "settings": {
       }
     },
@@ -421,14 +425,15 @@
         "fa303acf-31b6-41a4-9d9e-dab54285f612",
         "19ed54ad-b18b-4139-a48b-8f2d55de9051"
       ],
+      "disabled": true,
       "settings": {
       }
     }
   },
   "order": [
     "f485f585-1257-4163-91f9-da13e9d00bd2",
-    "8c940d3e-048c-4a2d-8b77-baa973f536c3",
     "section_featured_brands_TiTDEd",
+    "8c940d3e-048c-4a2d-8b77-baa973f536c3",
     "0236bff2-8a7a-4478-ad6e-b6bf5c64ad4d",
     "258d34b1-35f1-4df7-b74c-7e4ab4a143ec",
     "e3d4ebb6-c35f-41b1-9346-36a3c1b5c34d",
