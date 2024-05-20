@@ -3,12 +3,12 @@
     class="main-menu flex justify-center flex-wrap md:gap-x-[12px] md:gap-y-[12px] xl:gap-x-[24px] relative z-40"
   >
     {% for link in menu.links %}
-      <li class="menu-item block {% if link.links %} has-dropdown{% endif %}">
+      <li class="menu-item block {% if link.links %} has-dropdown{% endif %} last:text-[#970000]">
         {% if link.links.size > 0 %}
           <a
             href="{{ link.url }}"
             data-link="{{ link.handle }}"
-            class="transition-opacity duration-150 ease-in-out delay-75 parent-link text-green uppercase last:text-[#970000]"
+            class="transition-opacity duration-150 ease-in-out delay-75 parent-link text-green uppercase "
             data-count="{{ link.links.size }}"
             @mouseenter="setHoveredItem('{{ link.handle }}')"
             :class="{'opacity-60' : hoveredItem !== '' && hoveredItem !== '{{ link.handle }}'}"
@@ -20,7 +20,7 @@
           <a
             href="{{ link.url }}"
             data-link="{{ link.handle }}"
-            class="transition-opacity duration-150 ease-in-out delay-75 text-green uppercase last:text-[#970000]"
+            class="transition-opacity duration-150 ease-in-out delay-75 text-green uppercase"
             @mouseenter="setHoveredItem('{{ link.handle }}')"
             :class="{'opacity-60' : hoveredItem !== '' && hoveredItem !== '{{ link.handle }}'}"
           >
