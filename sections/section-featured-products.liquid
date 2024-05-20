@@ -8,7 +8,7 @@
       {{ section.settings.heading }}
     </h2>
   </div>
-  {{ block.settings.product | json }}
+  {{ block.settings.product.media | json }}
   {%- for block in products -%}
     <div class="col-span-6 md:col-span-3">
       <a href="{{ block.settings.collection.url }}">
