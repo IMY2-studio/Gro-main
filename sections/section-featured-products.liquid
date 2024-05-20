@@ -1,20 +1,22 @@
 {%- liquid
-  assign brand_blocks = section.blocks | where: 'type', 'brand'
+  assign products = section.blocks | where: 'type', 'product'
 -%}
 
 <section class="layout--grid gap-y-6 mb-14">
   <div class="col-span-12">
-    <h2 class="heading-1 mb-[16px]">
+    <h2 class="heading-1 mb-[10px]">
       {{ section.settings.heading }}
     </h2>
   </div>
-  {%- for block in brand_blocks -%}
+
+  {%- for block in products -%}
     <div class="col-span-6 md:col-span-3">
       <a href="{{ block.settings.collection.url }}">
         <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
-          {% if block.settings.collection.image != blank %}
+          {% render 'dump' with block.settings.product.title %}
+          {% if block.settings.product.featured_media != blank %}
             {{
-              block.settings.collection.image
+              block.settings.product.featured_media
               | image_url: width: 900
               | image_tag:
                 loading: 'lazy',
@@ -25,9 +27,9 @@
           {% endif %}
         </div>
       </a>
-      <a href="{{ block.settings.collection.url }}">
+      <a href="{{ block.settings.product.url }}">
         <h3 class="text-[16px] md:text-[20px]">
-          {{ block.settings.collection.title }}
+          {{ block.settings.product.title }}
         </h3>
       </a>
     </div>
@@ -46,12 +48,12 @@
   ],
   "blocks": [
     {
-      "type": "products",
+      "type": "product",
       "name": "Product",
       "settings": [
         {
           "type": "product",
-          "id": "product",
+          "id": "featProduct",
           "label": "Product",
           "info": "Choose the product you'd like to feature"
         }
