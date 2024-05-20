@@ -33,7 +33,7 @@
               x-collapse.duration.500ms
             >
               {% for sublink in link.links %}
-                <li class="mb-2 last:mb-3 submenu-item w-full{% if sublink.links %} has-submenu{% endif %}">
+                <li class="first:pt-2 mb-2 last:mb-3 submenu-item w-full{% if sublink.links %} has-submenu{% endif %}">
                   <a href="{{ sublink.url }}" class="body-smaller uppercase">
                     {{ sublink.title }}
                   </a>

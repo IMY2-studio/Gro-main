@@ -2440,6 +2440,9 @@ select {
   --tw-content: '';
   content: var(--tw-content);
 }
+.first\:pt-2:first-child {
+  padding-top: 0.5rem;
+}
 .last\:mb-3:last-child {
   margin-bottom: 0.75rem;
 }
