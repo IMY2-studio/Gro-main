@@ -9,7 +9,7 @@
       >
         <div>
           {% if link.links %}
-            <div class="w-full flex items-center justify-between py-2.5" @click="isAccordionOpen = !isAccordionOpen">
+            <div class="w-full flex items-center justify-between py-3" @click="isAccordionOpen = !isAccordionOpen">
               <button
                 href="{{ link.url }}"
                 data-link="{{ link.handle }}"
@@ -26,7 +26,7 @@
               </button>
             </div>
             <ul
-              class="pb-2.5"
+              class="pb-3"
               x-cloak
               x-show="isAccordionOpen"
               x-collapse
