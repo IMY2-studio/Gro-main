@@ -1805,6 +1805,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-\[16px\] {
+  font-size: 16px;
+}
 .font-medium {
   font-weight: 500;
 }
@@ -2634,6 +2637,10 @@ select {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-\[20px\] {
+    font-size: 20px;
   }
 }
 @media (min-width: 1024px) {
