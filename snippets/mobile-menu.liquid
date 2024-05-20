@@ -9,7 +9,7 @@
       >
         <div>
           {% if link.links %}
-            <div class="w-full flex items-center justify-between py-2.5">
+            <div class="w-full flex items-center justify-between py-2.5" @click="isAccordionOpen = !isAccordionOpen">
               <button
                 href="{{ link.url }}"
                 data-link="{{ link.handle }}"
@@ -17,7 +17,7 @@
               >
                 {{ link.title }}
               </button>
-              <button @click="isAccordionOpen = !isAccordionOpen" class="relative w-3 h-3">
+              <button class="relative w-3 h-3">
                 <span class="w-3 h-[1px]  bg-green block absolute top-1/2 left-0 translate-y-[-1px]"></span>
                 <span
                   class="w-[1px] h-3 bg-green block absolute top-0 left-1/2 opacity transition ease-in-out duration-500"
