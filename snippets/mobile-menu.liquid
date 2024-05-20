@@ -47,7 +47,7 @@
   </ul>
   <div class="bg-[#F1F1F1] w-full py-2 relative z-10 px-5 hidden lg:flex items-center justify-between">
     <ul class="header__menu-nav hidden md:flex gap-5">
-      {% for link in section.settings.header_1_menu.links %}
+      {% for link in topMenu %}
         {% if link.links != blank %}
           <li class="nav__item block relative">
             <a class="block w-fit uppercase" href="{{ link.url }}">{{ link.title }}</a>
