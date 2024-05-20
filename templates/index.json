@@ -194,6 +194,12 @@
       "settings": {
       }
     },
+    "section_featured_brands_TiTDEd": {
+      "type": "section-featured-brands",
+      "settings": {
+        "heading": "Shop Designer Brands"
+      }
+    },
     "0236bff2-8a7a-4478-ad6e-b6bf5c64ad4d": {
       "type": "section-featured-categories",
       "blocks": {
@@ -390,6 +396,7 @@
   "order": [
     "f485f585-1257-4163-91f9-da13e9d00bd2",
     "8c940d3e-048c-4a2d-8b77-baa973f536c3",
+    "section_featured_brands_TiTDEd",
     "0236bff2-8a7a-4478-ad6e-b6bf5c64ad4d",
     "258d34b1-35f1-4df7-b74c-7e4ab4a143ec",
     "e3d4ebb6-c35f-41b1-9346-36a3c1b5c34d",
