@@ -3,7 +3,7 @@
 <div class="mobile-main-menu--wrapper pt-[96px] w-full h-full px-[16px] text-green">
   <ul class="main-menu-mobile flex flex-col flex-wrap space-y-[32px] relative z-40">
     {% for link in menu.links %}
-      <li class="menu-item block {% if link.links %} has-dropdown{% endif %}">
+      <li class="border-b menu-item block {% if link.links %} has-dropdown{% endif %}">
         <div>
           {% if link.links %}
             <button
