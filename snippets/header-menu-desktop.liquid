@@ -8,7 +8,7 @@
           <a
             href="{{ link.url }}"
             data-link="{{ link.handle }}"
-            class="transition-opacity duration-150 ease-in-out delay-75 parent-link text-green uppercase {{ link.title }} {% if link.title == 'Shop' %}text-[#970000]{% endif %}"
+            class="transition-opacity duration-150 ease-in-out delay-75 parent-link text-green uppercase last:text-[#970000]"
             data-count="{{ link.links.size }}"
             @mouseenter="setHoveredItem('{{ link.handle }}')"
             :class="{'opacity-60' : hoveredItem !== '' && hoveredItem !== '{{ link.handle }}'}"
@@ -20,7 +20,7 @@
           <a
             href="{{ link.url }}"
             data-link="{{ link.handle }}"
-            class="transition-opacity duration-150 ease-in-out delay-75 text-green uppercase {{ link.title }} {% if link.title == 'Shop' %}text-[#970000]{% endif %}"
+            class="transition-opacity duration-150 ease-in-out delay-75 text-green uppercase last:text-[#970000]"
             @mouseenter="setHoveredItem('{{ link.handle }}')"
             :class="{'opacity-60' : hoveredItem !== '' && hoveredItem !== '{{ link.handle }}'}"
           >
