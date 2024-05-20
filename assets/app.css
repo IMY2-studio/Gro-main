@@ -1970,7 +1970,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-.menu-item.sale {
+.menu-item.sale a {
     color: #970000;
 }
 /* Helpers and resets */
