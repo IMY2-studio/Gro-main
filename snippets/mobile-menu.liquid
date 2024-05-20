@@ -4,35 +4,28 @@
   <ul class="main-menu-mobile flex flex-col flex-wrap space-y-[32px] relative z-40">
     {% for link in menu.links %}
       <li class="menu-item block {% if link.links %} has-dropdown{% endif %}">
-        {% if link.links.size > 0 %}
-          <button data-href="{{ link.url }}" data-link="{{ link.handle }}" @click.debounce="showMenuMobile($event)">
-            {{ link.title }}
-          </button>
-
-        {% else %}
-          <div>
-            {% if link.links %}
-              <a
-                href="{{ link.url }}"
-                data-link="{{ link.handle }}"
-                class="body-smaller"
-              >
-                {{ link.title }}
-              </a>
-              <ul class="">
-                {% for sublink in link.links %}
-                  <li class="submenu-item w-full{% if sublink.links %} has-submenu{% endif %}">
-                    <a href="{{ sublink.url }}">
-                      <span class="body-smaller">
-                        {{ sublink.title }}
-                      </span>
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </div>
-        {% endif %}
+        <div>
+          {% if link.links %}
+            <button
+              href="{{ link.url }}"
+              data-link="{{ link.handle }}"
+              class="body-smaller"
+            >
+              {{ link.title }}
+            </button>
+            <ul class="">
+              {% for sublink in link.links %}
+                <li class="submenu-item w-full{% if sublink.links %} has-submenu{% endif %}">
+                  <a href="{{ sublink.url }}">
+                    <span class="body-smaller">
+                      {{ sublink.title }}
+                    </span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
       </li>
     {% endfor %}
   </ul>
