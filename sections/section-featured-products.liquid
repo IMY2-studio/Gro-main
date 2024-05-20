@@ -1,5 +1,5 @@
 {%- liquid
-  assign products = section.blocks | where: 'type', 'featuredProduct'
+  assign featProducts = section.blocks | where: 'type', 'featuredProduct'
 -%}
 
 <section class="layout--grid gap-y-6 mb-14">
@@ -9,7 +9,7 @@
     </h2>
   </div>
 
-  {%- for block in products -%}
+  {%- for block in featProducts -%}
     <div class="col-span-6 md:col-span-3">
       <a href="{{ block.settings.featProduct.url }}">
         <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
