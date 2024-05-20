@@ -23,28 +23,10 @@
                 {% for sublink in link.links %}
                   <li class="submenu-item w-full{% if sublink.links %} has-submenu{% endif %}">
                     <a href="{{ sublink.url }}">
-                      {% comment %} Make this image the collection image {% endcomment %}
-
-                      <div class="aspect-square w-full relative mb-[12px]">
-                        {%- if sublink.type == 'collection_link' -%}
-                          {%- if sublink.object.image != blank -%}
-                            {{
-                              sublink.object.image
-                              | image_url: width: 900
-                              | image_tag:
-                                loading: 'lazy',
-                                class: 'w-full h-full relative absolute inset-0 object-cover'
-                            }}
-                          {%- endif -%}
-                        {%- endif -%}
-                      </div>
-
                       <span class="body-smaller">
                         {{ sublink.title }}
                       </span>
                     </a>
-
-                    {% comment %} No Grandchilderen as far as we know {% endcomment %}
                   </li>
                 {% endfor %}
               </ul>
