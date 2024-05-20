@@ -1060,6 +1060,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-0\.5 {
   width: 0.125rem;
 }
+.w-\[1px\] {
+  width: 1px;
+}
 .min-w-full {
   min-width: 100%;
 }
