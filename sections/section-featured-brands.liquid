@@ -11,13 +11,13 @@
   {%- for block in brand_blocks -%}
     <div class="col-span-6">
       <a href="{{ block.settings.collection.url }}">
-        <div class="collection-card-image--wrapper mb-[16px] h-auto group overflow-hidden aspect-video">
+        <div class="collection-card-image--wrapper mb-[16px] h-auto group overflow-hidden">
           {{
             block.settings.collection.image
             | image_url: width: 900
             | image_tag:
               loading: 'lazy',
-              class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center'
+              class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-video'
           }}
         </div>
       </a>
