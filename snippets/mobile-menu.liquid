@@ -1,7 +1,7 @@
 {% comment %} Mobile linked List {% endcomment %}
 
 <div class="mobile-main-menu--wrapper pt-[96px] w-full h-full text-green">
-  <ul class="main-menu-mobile flex flex-col flex-wrap relative z-40">
+  <ul class="main-menu-mobile flex flex-col flex-wrap relative z-40" x-data="{ isAccordionOpen: false }">
     {% for link in menu.links %}
       <li class="px-[16px] border-b border-[#CED3D3] menu-item block {% if link.links %} has-dropdown{% endif %}">
         <div>
@@ -11,7 +11,6 @@
                 href="{{ link.url }}"
                 data-link="{{ link.handle }}"
                 class="body-smaller uppercase"
-                x-data="{ isAccordionOpen: false }"
               >
                 {{ link.title }}
               </button>
