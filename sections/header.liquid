@@ -7,7 +7,7 @@
 <header
   class="fixed inset-x-0 top-0 z-50"
 >
-  <div class="bg-[#F1F1F1] w-full py-2 relative z-10 px-5 flex items-center justify-between">
+  <div class="bg-[#F1F1F1] w-full py-2 relative z-10 px-5 hidden lg:flex items-center justify-between">
     <ul class="header__menu-nav hidden md:flex gap-5">
       {% for link in section.settings.header_1_menu.links %}
         {% if link.links != blank %}
@@ -59,7 +59,7 @@
       }
     "
     @mouseleave="setHoveredItem('')"
-    class="py-3"
+    class="lg:py-3"
     {% if template == 'index' %}
       :class="
         headerMenuOverlay ?
@@ -76,7 +76,7 @@
     {% endif %}
   >
     <div
-      class="items-center transition-all opacity-0 layout--grid lg:items-start xl:items-center"
+      class="items-center transition-all opacity-0 layout--grid lg:items-start xl:items-center relative"
       :class=" { '!opacity-100' : isPageReady }"
     >
       <div class="col-span-1 flex justify-start py-[8px]">
@@ -94,10 +94,25 @@
 
       {%- if section.blocks.size > 0 -%}
         <button
-          class="absolute -translate-x-1/2 -translate-y-1/2 body-1 left-1/2 top-1/2 lg:hidden"
+          class="absolute -translate-x-1/2 -translate-y-1/2 body-1 left-1/2 top-1/2 flex lg:hidden text-green w-6 h-3.5"
           @click="mobileMenuDrawerOpen = !mobileMenuDrawerOpen"
-          x-text="mobileMenuDrawerOpen ? 'Close' : 'Menu'"
-        ></button>
+          type="button"
+        >
+          <span class="relative w-6 h-3.5 items-center">
+            <span
+              class="h-[1px] w-full bg-green block absolute top-0"
+              :class="{'rotate-45 translate-y-[7px]': mobileMenuDrawerOpen }"
+            ></span>
+            <span
+              class="h-[1px] w-full bg-green block absolute top-1/2 -translate-y-1/2"
+              :class="{'opacity-0': mobileMenuDrawerOpen }"
+            ></span>
+            <span
+              class="h-[1px] w-full bg-green block absolute bottom-0"
+              :class="{'-rotate-45 -translate-y-[6px]': mobileMenuDrawerOpen }"
+            ></span>
+          </span>
+        </button>
 
         {%- for block in header_menus -%}
           <div class="items-center justify-center hidden w-full h-full md:col-span-8 lg:col-span-9 xl:col-span-10 lg:flex md:flex-wrap">
@@ -124,7 +139,7 @@
             {% comment %} Search Goes here {% endcomment %}
 
             <li
-              class="cursor-pointer search-button rounded-full border-green border border-opacity-20 w-10 h-10 flex items-center justify-center min-w-10"
+              class="cursor-pointer search-button rounded-full border-[#CED3D3] border w-10 h-10 flex items-center justify-center min-w-[2.5rem]"
               @click="openSearchDrawer($event)"
             >
               {% render 'icon-search' %}
@@ -135,7 +150,7 @@
                 type="button"
                 title="Cart button"
                 @click="$dispatch('toggle-cart')"
-                class="relative rounded-full border-green border border-opacity-20 w-10 h-10 flex items-center justify-center min-w-10"
+                class="relative rounded-full border-[#CED3D3] border w-10 h-10 flex items-center justify-center min-w-[2.5rem]"
               >
                 <span class="sr-only">{{ 'templates.cart.cart' | t | append: ' ' }}</span>
 
@@ -149,41 +164,42 @@
       </div>
     </div>
   </div>
-  <div class="bg-green py-2.5">
+  <div
+    class="bg-green py-2.5"
+    :class="{'hidden': mobileMenuDrawerOpen }"
+  >
     <ul class="ticker--list animate-ticker flex leading-none">
       {%- for block in marquee_items -%}
         {%- assign marquee = block.settings.marquee_text -%}
         {%- if marquee != blank -%}
-          <li class="h-full flex items-center">
+          <li class="h-full flex items-center before:block before:w-1.5 before:h-1.5 before:bg-white before:content-[''] before:rounded-full before:mr-6">
             <span class="body-1 flex whitespace-nowrap text-white">
               {{ marquee }}
             </span>
-
-            <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]"></div>
+            <div class="mx-3"></div>
           </li>
         {%- endif -%}
       {%- endfor -%}
       {%- for block in marquee_items -%}
         {%- assign marquee = block.settings.marquee_text -%}
         {%- if marquee != blank -%}
-          <li class="h-full flex items-center">
+          <li class="h-full flex items-center before:block before:w-1.5 before:h-1.5 before:bg-white before:content-[''] before:rounded-full before:mr-6">
             <span class="body-1 flex whitespace-nowrap text-white">
               {{ marquee }}
             </span>
 
-            <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]"></div>
+            <div class="mx-3"></div>
           </li>
         {%- endif -%}
       {%- endfor -%}
       {%- for block in marquee_items -%}
         {%- assign marquee = block.settings.marquee_text -%}
         {%- if marquee != blank -%}
-          <li class="h-full flex items-center">
+          <li class="h-full flex items-center before:block before:w-1.5 before:h-1.5 before:bg-white before:content-[''] before:rounded-full before:mr-6">
             <span class="body-1 flex whitespace-nowrap text-white">
               {{ marquee }}
             </span>
-
-            <div class="block bg-green rounded-full w-[4px] h-[4px] mx-[24px]"></div>
+            <div class="mx-3"></div>
           </li>
         {%- endif -%}
       {%- endfor -%}
@@ -205,7 +221,14 @@
   x-transition:leave-end="opacity-0 translate-x-full "
 >
   {%- for block in header_menus -%}
-    {%- render 'mobile-menu', block: block, section: section, menu: block.settings.menu -%}
+    {%- render 'mobile-menu',
+      block: block,
+      section: section,
+      menu: block.settings.menu,
+      topMenu: section.settings.header_1_menu,
+      featCollectionLabel: section.settings.featured_collection_label,
+      featCollectionUrl: section.settings.featured_collection.url
+    -%}
   {%- endfor -%}
 </div>
 
@@ -220,30 +243,29 @@
     action="{{ routes.search_url }}"
     method="get"
     role="search"
-    class="relative w-full col-span-2 border-b search border-b-white/20 lg:col-start-10 lg:col-end-13 focus:outline-none"
+    class="px-2.5 border-[#CED3D3] border rounded-full flex items-center relative w-full col-span-2 border-b search lg:col-start-10 lg:col-end-13 focus:outline-none"
   >
-    <div class="flex w-full field">
+    <button
+      type="submit"
+      class=""
+      aria-label="{{ 'general.search.search' | t }}"
+    >
+      {% render 'icon-search' %}
+    </button>
+    <div class="flex w-full field h-10">
       <input
-        class="search__input  pb-[4px] pl-[26px] lg:pl-0  w-full lg:text-[16px] lg:mt-[-4px]"
+        class="search__input px-[10px] w-full lg:text-[16px] text-green"
         id="Search-In-Template"
         type="search"
         name="q"
         value="{{ search.terms | escape }}"
-        placeholder="Search for anything..."
+        placeholder="Shop our products..."
       >
       <label class="sr-only" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
       <input name="options[prefix]" type="hidden" value="last">
-
-      <button
-        type="submit"
-        class="absolute left-0 lg:-left-[8px] lg:-translate-x-full "
-        aria-label="{{ 'general.search.search' | t }}"
-      >
-        {% render 'icon-search' %}
-      </button>
     </div>
 
-    <button class="absolute top-0 right-0" type="button" @click="closeSearchDrawer">
+    <button class="" type="button" @click="closeSearchDrawer">
       {% render 'icon-close-search' %}
     </button>
   </form>

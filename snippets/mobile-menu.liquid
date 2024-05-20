@@ -1,80 +1,84 @@
 {% comment %} Mobile linked List {% endcomment %}
 
-<div class="mobile-main-menu--wrapper pt-[96px] w-full h-full px-[16px]">
-
-<ul class="main-menu-mobile flex flex-col flex-wrap space-y-[32px] relative z-40">
-  {% for link in menu.links %}
-    <li class="menu-item block {% if link.links %} has-dropdown{% endif %}">
-
-    {% if link.links.size > 0 %}
-
-    <button data-href="{{ link.url }}" data-link="{{ link.handle }}" @click.debounce="showMenuMobile($event)">
-      {{ link.title }}
-    </button>
-
-    {% else  %}
-
-      <a href="{{ link.url }}" 
-        data-link="{{ link.handle }}" 
-        class="body-smaller">
-
-        {{ link.title }}
-      </a>
-
-    {% endif %}
-
-    </li>
-  {% endfor %}
-</ul>
-
-</div>
-
-
-<div id="header-menus-drawer-mobile" class="fixed inset-x-0 top-0 h-screen bg-green layout--grid z-[999] pt-[120px] pb-[60px] lg:hidden overflow-y-scroll scrollbar-hide" style="transform: translateX(-100%);">
-
-{% for link in menu.links %}
-
-
-  <div class="dropdown-menu--wrapper-mobile col-span-2" data-menu-mobile="{{ link.handle }}" style="opacity: 0; display: none;">
-
-  <div class="mb-[32px] w-full col-span-2">
-    <button class="text-white body-smaller" data-link="{{ link.handle }}" @click.debounce="closeMenuMobile($event)">
-      Back
-    </button>
-  </div>
-
-  {% if link.links %}
-
-    <ul class="dropdown grid grid-cols-2 justify-center items-center gap-x-[12px] gap-y-[12px] flex-wrap">
-
-      {% for sublink in link.links %}
-        <li class="submenu-item w-full{% if sublink.links %} has-submenu{% endif %}">
-          <a href="{{ sublink.url }}">
-
-          {% comment %} Make this image the collection image {% endcomment %}
-
-          <div class="aspect-square w-full relative mb-[12px]">
-
-            {%- if sublink.type == 'collection_link' -%}
-
-              {%- if sublink.object.image != blank -%}
-                {{ sublink.object.image | image_url: width: 900 | image_tag: loading: 'lazy', class: 'w-full h-full relative absolute inset-0 object-cover' }}
+<div class="mobile-main-menu--wrapper pt-[56px] w-full h-full text-green">
+  <ul class="main-menu-mobile flex flex-col flex-wrap relative z-40">
+    {% for link in menu.links %}
+      <li
+        class="px-[16px] border-b border-[#CED3D3] menu-item block {% if link.links %} has-dropdown{% endif %}"
+        x-data="{ isAccordionOpen: false }"
+      >
+        <div>
+          {% if link.links %}
+            <div class="w-full flex items-center justify-between py-3" @click="isAccordionOpen = !isAccordionOpen">
+              <button
+                href="{{ link.url }}"
+                data-link="{{ link.handle }}"
+                class="body-smaller uppercase"
+              >
+                {{ link.title }}
+              </button>
+              {%- if link.links.size > 0 -%}
+                <button class="relative w-3.5 h-3.5">
+                  <span class="w-3.5 h-[1px]  bg-green block absolute top-1/2 left-0 translate-y-[-1px]"></span>
+                  <span
+                    class="w-[1px] h-3.5 bg-green block absolute top-0 left-1/2 opacity transition ease-in-out duration-500"
+                    :class="{'opacity-0': isAccordionOpen,' opacity-100': !isAccordionOpen }"
+                  ></span>
+                </button>
               {%- endif -%}
+            </div>
+            {%- if link.links.size > 0 -%}
+              <ul
+                class=""
+                x-cloak
+                x-show="isAccordionOpen"
+                x-collapse
+                x-collapse.duration.500ms
+              >
+                {% for sublink in link.links %}
+                  <li class="first:pt-2 mb-2 last:mb-3 submenu-item w-full{% if sublink.links %} has-submenu{% endif %}">
+                    <a href="{{ sublink.url }}" class="body-smaller uppercase">
+                      {{ sublink.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
             {%- endif -%}
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
 
-          </div>
-
-            <span class="body-smaller">
-              {{ sublink.title }}
-            </span>
-
-          </a>
-
-          {% comment %} No Grandchilderen as far as we know {% endcomment %}
-        </li>
+  <div class="bg-[#F1F1F1] w-full pb-5">
+    <a href="{{ featCollectionUrl }}" class="uppercase flex items-center gap-x-2 py-3 px-5 border-b border-[#CED3D3]">
+      <span>{{- featCollectionLabel -}}</span>
+      <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9628 6.62502L5.72658 1.3888L6.25832 0.857055L12.3949 6.99363L6.25832 13.1302L5.72658 12.5985L10.948 7.37702L0.124966 7.37702L0.124966 6.62502L10.9628 6.62502Z" fill="#092324"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9628 6.62502L5.72658 1.3888L6.25832 0.857055L12.3949 6.99363L6.25832 13.1302L5.72658 12.5985L10.948 7.37702L0.124966 7.37702L0.124966 6.62502L10.9628 6.62502Z" fill="black" fill-opacity="0.2"/>
+      </svg>
+    </a>
+    <ul class="flex gap-5 flex-col px-5 py-3">
+      {% for link in topMenu.links %}
+        {% if link.links != blank %}
+          <li class="nav__item block relative">
+            <a class="block w-fit uppercase" href="{{ link.url }}">{{ link.title }}</a>
+            <ul class="nav__item-submenu absolute bg-white border py-3 px-4 min-w-[160px] top-16 left-1/2 transform -translate-x-1/2">
+              {% for sublink in linklists[link.handle].links %}
+                <li>
+                  <a class="block w-fit uppercase" href="{{ sublink.url }}">
+                    {{ sublink.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+          <li>
+            <a class="block w-fit uppercase" href="{{ link.url }}"> {{ link.title }}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
-  {% endif %}
   </div>
-{% endfor %}
 </div>
