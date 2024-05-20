@@ -242,12 +242,65 @@
       "settings": {
         "heading": "What's trending"
       }
+    },
+    "section_featured_categories_YXPBYE": {
+      "type": "section-featured-categories",
+      "blocks": {
+        "category_cwrWhF": {
+          "type": "category",
+          "settings": {
+            "collection": "accessories"
+          }
+        },
+        "category_YU3E73": {
+          "type": "category",
+          "settings": {
+            "collection": "bath-towels"
+          }
+        },
+        "category_eKUw9D": {
+          "type": "category",
+          "settings": {
+            "collection": "bedding"
+          }
+        },
+        "category_haCy6P": {
+          "type": "category",
+          "settings": {
+            "collection": "books-1"
+          }
+        },
+        "category_3FUrxN": {
+          "type": "category",
+          "settings": {
+            "collection": "chairs"
+          }
+        },
+        "category_CtH9Dd": {
+          "type": "category",
+          "settings": {
+            "collection": "candles"
+          }
+        }
+      },
+      "block_order": [
+        "category_cwrWhF",
+        "category_YU3E73",
+        "category_eKUw9D",
+        "category_haCy6P",
+        "category_3FUrxN",
+        "category_CtH9Dd"
+      ],
+      "settings": {
+        "heading": "Shop by category"
+      }
     }
   },
   "order": [
     "f485f585-1257-4163-91f9-da13e9d00bd2",
     "section_featured_brands_TiTDEd",
     "section_featured_products_AniV7j",
-    "section_featured_products_BHLrnb"
+    "section_featured_products_BHLrnb",
+    "section_featured_categories_YXPBYE"
   ]
 }
