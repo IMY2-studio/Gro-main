@@ -249,6 +249,38 @@
     },
     "section_featured_products_BHLrnb": {
       "type": "section-featured-products",
+      "blocks": {
+        "products_LCqzDh": {
+          "type": "products",
+          "settings": {
+            "product": "andes-egg-pot-grey"
+          }
+        },
+        "products_z4aWCn": {
+          "type": "products",
+          "settings": {
+            "product": "andes-square-pot"
+          }
+        },
+        "products_HbqJgt": {
+          "type": "products",
+          "settings": {
+            "product": "aspen-ball-pot-grey"
+          }
+        },
+        "products_4TfyFC": {
+          "type": "products",
+          "settings": {
+            "product": "cactus-pot"
+          }
+        }
+      },
+      "block_order": [
+        "products_LCqzDh",
+        "products_z4aWCn",
+        "products_HbqJgt",
+        "products_4TfyFC"
+      ],
       "settings": {
         "heading": "What's trending"
       }
