@@ -94,10 +94,27 @@
 
       {%- if section.blocks.size > 0 -%}
         <button
-          class="absolute -translate-x-1/2 -translate-y-1/2 body-1 left-1/2 top-1/2 lg:hidden text-green"
+          class=""
           @click="mobileMenuDrawerOpen = !mobileMenuDrawerOpen"
           x-text="mobileMenuDrawerOpen ? 'Close' : 'Menu'"
         ></button>
+        <button
+          class="absolute -translate-x-1/2 -translate-y-1/2 body-1 left-1/2 top-1/2 lg:hidden text-green md:hidden w-6 h-3.5 flex items-center"
+          @click="$store.menuPanel.toggle()"
+          type="button"
+        >
+          <span class="relative">
+            <span
+              class="h-0.5 w-full bg-stone block absolute top-0"
+              :class="{'rotate-45 translate-y-[6px]': $store.menuPanel.open }"
+            ></span>
+            <span class="h-0.5 w-full bg-stone block absolute" :class="{'opacity-0': $store.menuPanel.open }"></span>
+            <span
+              class="h-0.5 w-full bg-stone block absolute bottom-0"
+              :class="{'-rotate-45 -translate-y-[6px]': $store.menuPanel.open }"
+            ></span>
+          </span>
+        </button>
 
         {%- for block in header_menus -%}
           <div class="items-center justify-center hidden w-full h-full md:col-span-8 lg:col-span-9 xl:col-span-10 lg:flex md:flex-wrap">
