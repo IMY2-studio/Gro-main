@@ -18,10 +18,10 @@
               | image_url: width: 900
               | image_tag:
                 loading: 'lazy',
-                class: 'lg:group-hover:scale-[1.1] transition-all w-full h-full absolute inset-0 flex object-center aspect-video object-cover'
+                class: 'lg:group-hover:scale-[1.1] transition-all w-full h-full absolute inset-0 object-center aspect-video object-cover'
             }}
           {% else %}
-            <div class="aspect-video bg-[#120d0d]"></div>
+            <div class="bg-[#120d0d] w-full h-full absolute inset-0"></div>
           {% endif %}
         </div>
       </a>
