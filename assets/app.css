@@ -873,6 +873,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-\[0px\] {
   margin-bottom: 0px;
 }
+.mt-\[85px\] {
+  margin-top: 85px;
+}
 .block {
   display: block;
 }
