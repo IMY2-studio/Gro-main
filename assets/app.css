@@ -2622,6 +2622,10 @@ select {
     display: grid;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:aspect-video {
     aspect-ratio: 16 / 9;
   }
