@@ -2017,7 +2017,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     color: #970000;
 }
 .swiper-pagination--inner-collection-listing .swiper-pagination-bullet {
-    border: 1px solid #092324;
+    border: 1px solid #092324 !important;
+    border-color: #092324 !important;
 }
 .swiper-pagination--inner-collection-listing .swiper-pagination-bullet-active {
     background-color: #092324;
