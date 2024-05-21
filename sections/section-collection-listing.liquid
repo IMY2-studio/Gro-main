@@ -67,48 +67,46 @@
   </div>
 
   <div
-    class="wrapper-section--swiper px-[16px] lg:px-[20px] mb-[120px] lg:mb-[200px] relative"
+    class="wrapper-section--swiper px-[16px] lg:px-[20px] mb-[120px] relative"
     x-data="categorieslider"
   >
     <div class="relative col-span-2 lg:col-span-12" x-init="">
-      {%- if category_blocks.size > 0 -%}
-        <div
-          class="swiper"
-          x-init="init($el)"
-        >
-          <div class="w-full swiper-wrapper">
-            {%- for product in section.settings.collection.products limit: 4 -%}
-              <div class="flex flex-col h-auto swiper-slide">
-                {%- if product and product != empty -%}
-                  {%- assign lazy_load = lazy_load | default: 'lazy' -%}
+      <div
+        class="swiper"
+        x-init="init($el)"
+      >
+        <div class="w-full swiper-wrapper">
+          {%- for product in section.settings.collection.products limit: 4 -%}
+            <div class="flex flex-col h-auto swiper-slide">
+              {%- if product and product != empty -%}
+                {%- assign lazy_load = lazy_load | default: 'lazy' -%}
 
-                  <a href="{{ product.url | within: collection }}" class="card-wrapper group">
-                    <div class="card">
-                      {%- if product.featured_media != blank -%}
-                        <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
-                          {{
-                            product.featured_media
-                            | image_url: width: 600
-                            | image_tag:
-                              loading: lazy_load,
-                              class: 'aspect-video w-full h-full absolute inset-0 object-center z-10 lg:group-hover:scale-[1.1] transition-all object-cover object-center'
-                          }}
-                        </div>
-                      {%- endif -%}
-
-                      <div class="card-product-title--wrapper">
-                        <h3 class="body-1 text-green text-[16px] md:text-[20px]">
-                          {{ product.title }}
-                        </h3>
+                <a href="{{ product.url | within: collection }}" class="card-wrapper group">
+                  <div class="card">
+                    {%- if product.featured_media != blank -%}
+                      <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
+                        {{
+                          product.featured_media
+                          | image_url: width: 600
+                          | image_tag:
+                            loading: lazy_load,
+                            class: 'aspect-video w-full h-full absolute inset-0 object-center z-10 lg:group-hover:scale-[1.1] transition-all object-cover object-center'
+                        }}
                       </div>
+                    {%- endif -%}
+
+                    <div class="card-product-title--wrapper">
+                      <h3 class="body-1 text-green text-[16px] md:text-[20px]">
+                        {{ product.title }}
+                      </h3>
                     </div>
-                  </a>
-                {%- endif -%}
-              </div>
-            {%- endfor -%}
-          </div>
+                  </div>
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
         </div>
-      {%- endif -%}
+      </div>
     </div>
   </div>
 </section>
