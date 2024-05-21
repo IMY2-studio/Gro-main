@@ -2,7 +2,7 @@
   assign category_blocks = section.blocks | where: 'type', 'category'
 -%}
 
-<section class="grid grid-cols-12 gap-x-5 gap-y-6 mb-14">
+<section class="px-5 grid grid-cols-12 gap-x-5 gap-y-6 mb-14">
   <div class="col-span-12">
     <h2 class="heading-1 mb-[16px]">
       {{ section.settings.heading }}
@@ -22,7 +22,7 @@
                 class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square md:aspect-video object-cover'
             }}
           {% else %}
-            <div class="aspect-video bg-[#120d0d]"></div>
+            <div class="aspect-square md:aspect-video bg-[#120d0d]"></div>
           {% endif %}
         </div>
       </a>
