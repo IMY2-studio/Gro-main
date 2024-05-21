@@ -3,13 +3,13 @@
 -%}
 
 <section class="layout--grid gap-y-6 mb-14">
-  <div class="col-span-12">
+  <div class="col-span-2 md:col-span-12">
     <h2 class="heading-1 mb-[16px]">
       {{ section.settings.heading }}
     </h2>
   </div>
   {%- for block in brand_blocks -%}
-    <div class="col-span-6">
+    <div class="md:col-span-6 col-span-1">
       <a href="{{ block.settings.collection.url }}">
         <div class="collection-card-image--wrapper mb-[10px] h-0 group overflow-hidden relative pt-[66.5%]">
           {% if block.settings.collection.image != blank %}
