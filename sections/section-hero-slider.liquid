@@ -46,7 +46,12 @@
                   </p>
                 {% endif %}
                 {% if block.settings.block_link %}
-                  <a href="{{ block.settings.block_link }}" class="absolute top-0 left-0 z-10 w-full h-full"></a>
+                  <a
+                    href="{{ block.settings.block_link }}"
+                    class="block w-fit mt-5 bg-green text-white rounded-full px-7 py-2"
+                  >
+                    {{- block.settings.button_label -}}
+                  </a>
                 {% endif %}
               </div>
             </div>
