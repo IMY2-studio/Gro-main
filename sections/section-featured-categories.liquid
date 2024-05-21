@@ -2,37 +2,38 @@
   assign category_blocks = section.blocks | where: 'type', 'category'
 -%}
 
-<section class="px-5 grid grid-cols-12 gap-x-2.5 md:gap-x-5 gap-y-6 mb-14">
-  <div class="col-span-12">
+<section class="px-5 mb-14">
+  <div class="">
     <h2 class="heading-1 mb-[0px] md:mb-[16px]">
       {{ section.settings.heading }}
     </h2>
   </div>
-
-  {%- for block in category_blocks -%}
-    <div class="col-span-4">
-      <a href="{{ block.settings.collection.url }}">
-        <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
-          {% if block.settings.collection.image != blank %}
-            {{
-              block.settings.collection.image
-              | image_url: width: 900
-              | image_tag:
-                loading: 'lazy',
-                class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square md:aspect-video object-cover'
-            }}
-          {% else %}
-            <div class="aspect-square md:aspect-video bg-[#120d0d]"></div>
-          {% endif %}
-        </div>
-      </a>
-      <a href="{{ block.settings.collection.url }}">
-        <h3 class="text-[16px] md:text-[20px]">
-          {{ block.settings.collection.title }}
-        </h3>
-      </a>
-    </div>
-  {%- endfor -%}
+  <div class="grid grid-cols-12 gap-x-2.5 md:gap-x-5 gap-y-6">
+    {%- for block in category_blocks -%}
+      <div class="col-span-4">
+        <a href="{{ block.settings.collection.url }}">
+          <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
+            {% if block.settings.collection.image != blank %}
+              {{
+                block.settings.collection.image
+                | image_url: width: 900
+                | image_tag:
+                  loading: 'lazy',
+                  class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square md:aspect-video object-cover'
+              }}
+            {% else %}
+              <div class="aspect-square md:aspect-video bg-[#120d0d]"></div>
+            {% endif %}
+          </div>
+        </a>
+        <a href="{{ block.settings.collection.url }}">
+          <h3 class="text-[16px] md:text-[20px]">
+            {{ block.settings.collection.title }}
+          </h3>
+        </a>
+      </div>
+    {%- endfor -%}
+  </div>
 </section>
 
 {% schema %}
