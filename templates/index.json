@@ -102,7 +102,10 @@
             "image_fit_m": "fit",
             "background_colour_m": "#ff13f6",
             "hero_image_m": "shopify:\/\/shop_images\/mobile_2x_482a31f0-513a-4f2d-853d-03ec4f684350.jpg",
-            "block_link_m": "",
+            "heading_m": "Save 25%",
+            "description_m": "Lorem ipsum dolor sit amet consectetur. Ultrices congue ante nulla adipiscing varius mattis. Orci nisi ultrices urna ligula suscipit ullamcorper sed dui quis.",
+            "button_label_m": "Shop now",
+            "block_link_m": "shopify:\/\/collections\/beach-towels",
             "image_caption_m": "Image Caption"
           }
         },
@@ -113,6 +116,9 @@
             "image_fit_m": "fit",
             "background_colour_m": "#c3674b",
             "hero_image_m": "shopify:\/\/shop_images\/mobile_-_16.jpg",
+            "heading_m": "",
+            "description_m": "",
+            "button_label_m": "Shop now",
             "block_link_m": "",
             "image_caption_m": "Image Caption"
           }
@@ -123,6 +129,9 @@
             "image_fit_m": "fill",
             "background_colour_m": "#000000",
             "hero_image_m": "shopify:\/\/shop_images\/banner_11.jpg",
+            "heading_m": "",
+            "description_m": "",
+            "button_label_m": "Shop now",
             "block_link_m": "shopify:\/\/collections\/serveware",
             "image_caption_m": ""
           }
@@ -133,6 +142,9 @@
             "image_fit_m": "fill",
             "background_colour_m": "#000000",
             "hero_image_m": "shopify:\/\/shop_images\/banner_83216625-2af5-4d7e-bb35-0500ee358c20.jpg",
+            "heading_m": "",
+            "description_m": "",
+            "button_label_m": "Shop now",
             "block_link_m": "shopify:\/\/collections\/cushions-throws",
             "image_caption_m": ""
           }
@@ -143,6 +155,9 @@
             "image_fit_m": "fill",
             "background_colour_m": "#000000",
             "hero_image_m": "shopify:\/\/shop_images\/banner_2_5ec07b80-d29f-4f92-828e-54269dba29b4.jpg",
+            "heading_m": "",
+            "description_m": "",
+            "button_label_m": "Shop now",
             "block_link_m": "",
             "image_caption_m": ""
           }
@@ -153,6 +168,9 @@
             "image_fit_m": "fill",
             "background_colour_m": "#000000",
             "hero_image_m": "shopify:\/\/shop_images\/Banner_2.jpg",
+            "heading_m": "",
+            "description_m": "",
+            "button_label_m": "Shop now",
             "block_link_m": "shopify:\/\/collections\/homewares",
             "image_caption_m": ""
           }
@@ -163,6 +181,9 @@
             "image_fit_m": "fill",
             "background_colour_m": "#000000",
             "hero_image_m": "shopify:\/\/shop_images\/gro_urban_oasis_028.jpg",
+            "heading_m": "",
+            "description_m": "",
+            "button_label_m": "Shop now",
             "block_link_m": "shopify:\/\/collections\/vases-ceramics",
             "image_caption_m": ""
           }
