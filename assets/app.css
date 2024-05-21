@@ -2600,6 +2600,10 @@ select {
     margin-bottom: 0px;
   }
 
+  .md\:mb-\[16px\] {
+    margin-bottom: 16px;
+  }
+
   .md\:flex {
     display: flex;
   }
