@@ -27,7 +27,7 @@
     </a>
   </div>
   <div class="col-span-12">
-    {%- for product in collection.products -%}
+    {%- for product in collection.products limit: 4 -%}
       {% render 'card-product', card_product: product %}
     {%- endfor -%}
   </div>
