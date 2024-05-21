@@ -50,7 +50,7 @@
             {% if block.settings.block_link %}
               <a href="{{ block.settings.block_link }}" class="absolute top-0 left-0 z-10 w-full h-full"></a>
             {% endif %}
-            <div class="z-0 aspect-[390/524] lg:aspect-[1440/780] lg:max-h-[calc(100vh-120px)] overflow-hidden w-full">
+            <div class="z-0 aspect-[390/524] lg:aspect-[1440/780] lg:max-h-[calc(100vh-120px)] overflow-hidden w-full relative">
               {% if block.settings.image_fit == 'fit' %}
                 {{
                   block.settings.hero_image
@@ -64,6 +64,14 @@
                   | image_tag: loading: 'lazy', class: 'w-full h-full object-cover object-center max-w-none'
                 }}
               {% endif %}
+              <div class="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                {% if block.settings.heading %}
+                  <h2 class="heading-1 text-white">{{ block.settings.heading }}</h2>
+                {% endif %}
+                {% if block.settings.description %}
+                  <p class="text-white">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
             </div>
           </div>
         {%- endif -%}
@@ -148,14 +156,6 @@
                   | image_tag: loading: 'lazy', class: 'w-full h-full object-cover object-center max-w-none'
                 }}
               {% endif %}
-              <div class="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                {% if block.settings.heading %}
-                  <h2 class="heading-1 text-white">{{ block.settings.heading }}</h2>
-                {% endif %}
-                {% if block.settings.description %}
-                  <p class="text-white">{{ block.settings.description }}</p>
-                {% endif %}
-              </div>
             </div>
           </div>
         {%- endif -%}
