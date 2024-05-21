@@ -2690,6 +2690,10 @@ select {
   .md\:text-\[20px\] {
     font-size: 20px;
   }
+
+  .md\:leading-7 {
+    line-height: 1.75rem;
+  }
 }
 @media (min-width: 1024px) {
 
