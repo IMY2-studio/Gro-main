@@ -31,6 +31,9 @@
                   {{ product.title }}
                 </h3>
               </div>
+              <div class="price--wrapper">
+                {% render '_price-element', product: product %}
+              </div>
             </div>
           </a>
         {%- endif -%}
