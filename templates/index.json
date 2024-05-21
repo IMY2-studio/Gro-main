@@ -226,6 +226,7 @@
     "section_collection_listing_xng3mx": {
       "type": "section-collection-listing",
       "settings": {
+        "description": "Lorem ipsum dolor sit amet consectetur. Ultrices congue ante nulla adipiscing varius mattis. Orci nisi ultrices urna ligula suscipit ullamcorper sed dui quis.",
         "collection": "candles"
       }
     },
