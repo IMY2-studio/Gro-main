@@ -1,4 +1,4 @@
-<section class="bg-[rgb(241,241,241)] layout--grid py-5 mb-14 gap-y-5">
+<section class="bg-[rgb(241,241,241)] layout--grid py-5 mb-14">
   {% render 'dump' with section.settings.collection %}
   <div class="col-span-6 flex items-center justify-center">
     <div>
@@ -18,10 +18,10 @@
             | image_url: width: 900
             | image_tag:
               loading: 'lazy',
-              class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-video object-cover'
+              class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square object-cover'
           }}
         {% else %}
-          <div class="aspect-video bg-[#120d0d]"></div>
+          <div class="aspect-square bg-[#120d0d]"></div>
         {% endif %}
       </div>
     </a>
