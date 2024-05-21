@@ -1,38 +1,42 @@
-{%- liquid
-  assign featProducts = section.blocks | where: 'type', 'featuredProduct'
--%}
 {% render 'dump' with featProducts[0] %}
-<section class="layout--grid gap-y-6 mb-14">
-  <div class="col-span-12">
+<section class="mb-14">
+  <div class="">
     <h2 class="heading-1 mb-[10px]">
       {{ section.settings.heading }}
     </h2>
   </div>
 
-  {%- for block in featProducts -%}
-    <div class="col-span-6 md:col-span-3">
-      <a href="{{ block.settings.featProduct.url }}">
-        <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
-          {% if block.settings.featProduct.featured_media != blank %}
-            {{
-              block.settings.featProduct.featured_media
-              | image_url: width: 900
-              | image_tag:
-                loading: 'lazy',
-                class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-video object-cover'
-            }}
-          {% else %}
-            <div class="aspect-video bg-[#d3d3d3]"></div>
-          {% endif %}
-        </div>
-      </a>
-      <a href="{{ block.settings.featProduct.url }}">
-        <h3 class="text-[16px] md:text-[20px]">
-          {{ block.settings.featProduct.title }}
-        </h3>
-      </a>
-    </div>
-  {%- endfor -%}
+  <div class="col-span-12 grid grid-cols-12 gap-x-5">
+    {%- for product in section.settings.collection.products limit: 4 -%}
+      <div class="col-span-12 md:col-span-3">
+        {%- if product and product != empty -%}
+          {%- assign lazy_load = lazy_load | default: 'lazy' -%}
+
+          <a href="{{ product.url | within: collection }}" class="card-wrapper group">
+            <div class="card">
+              {%- if product.featured_media != blank -%}
+                <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
+                  {{
+                    product.featured_media
+                    | image_url: width: 600
+                    | image_tag:
+                      loading: lazy_load,
+                      class: 'aspect-video w-full h-full absolute inset-0 object-center z-10 lg:group-hover:scale-[1.1] transition-all object-cover object-center'
+                  }}
+                </div>
+              {%- endif -%}
+
+              <div class="card-product-title--wrapper">
+                <h3 class="body-1 text-green text-[16px] md:text-[20px]">
+                  {{ product.title }}
+                </h3>
+              </div>
+            </div>
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
 </section>
 {% schema %}
 {
@@ -47,7 +51,7 @@
     {
       "type": "collection",
       "id": "collection",
-      "label": "Category",
+      "label": "Products",
       "info": "Choose the collection (Category) you'd like to feature"
     }
   ],
