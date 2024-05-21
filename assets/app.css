@@ -1848,6 +1848,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-\[92px\] {
   font-size: 92px;
 }
+.text-\[60px\] {
+  font-size: 60px;
+}
 .font-medium {
   font-weight: 500;
 }
@@ -2716,6 +2719,10 @@ select {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-\[92px\] {
+    font-size: 92px;
   }
 
   .md\:leading-7 {
