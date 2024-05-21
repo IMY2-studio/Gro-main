@@ -694,6 +694,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
 .m-0 {
   margin: 0px;
 }
@@ -1196,6 +1199,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
 .flex-row {
   flex-direction: row;
 }
@@ -1273,6 +1279,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .gap-y-\[10px\] {
   row-gap: 10px;
+}
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+.gap-y-5 {
+  row-gap: 1.25rem;
 }
 .space-y-\[20px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -1467,6 +1480,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-\[\#120d0d\] {
   --tw-bg-opacity: 1;
   background-color: rgb(18 13 13 / var(--tw-bg-opacity));
+}
+.bg-\[rgb\(241\2c 241\2c 241\)\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 241 241 / var(--tw-bg-opacity));
 }
 .fill-white {
   fill: #FFF;
