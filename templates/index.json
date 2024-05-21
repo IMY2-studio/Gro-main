@@ -301,29 +301,6 @@
       "settings": {
         "heading": "What's trending"
       }
-    },
-    "section_featured_looks_VddfhD": {
-      "type": "section-featured-looks",
-      "blocks": {
-        "collection_N6xdy9": {
-          "type": "collection",
-          "settings": {
-            "collection": "accessories"
-          }
-        },
-        "heading_chgYLY": {
-          "type": "heading",
-          "settings": {
-            "heading": "Shop the look"
-          }
-        }
-      },
-      "block_order": [
-        "collection_N6xdy9",
-        "heading_chgYLY"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
@@ -332,7 +309,6 @@
     "section_collection_listing_xng3mx",
     "section_featured_brands_TiTDEd",
     "section_featured_products_AniV7j",
-    "section_featured_products_BHLrnb",
-    "section_featured_looks_VddfhD"
+    "section_featured_products_BHLrnb"
   ]
 }
