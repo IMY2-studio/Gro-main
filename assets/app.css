@@ -1865,6 +1865,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .leading-\[1\.06\] {
   line-height: 1.06;
 }
+.leading-5 {
+  line-height: 1.25rem;
+}
 .tracking-tight {
   letter-spacing: -0.025em;
 }
