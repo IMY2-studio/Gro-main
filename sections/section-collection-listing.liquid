@@ -35,7 +35,7 @@
           <a href="{{ product.url | within: collection }}" class="card-wrapper group">
             <div class="card">
               {%- if product.featured_media != blank -%}
-                <div class="relative w-full block aspect-square mb-[16px] overflow-hidden">
+                <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
                   {{
                     product.featured_media
                     | image_url: width: 600
