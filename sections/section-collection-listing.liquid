@@ -70,42 +70,55 @@
     class="col-span-12 wrapper-section--swiper relative"
     x-data="categorieslider"
   >
-    <div class="" x-init="">
-      <div
-        class="swiper"
-        x-init="init($el)"
-      >
-        <div class="w-full swiper-wrapper">
-          {%- for product in section.settings.collection.products limit: 4 -%}
-            <div class="flex flex-col h-auto swiper-slide">
-              {%- if product and product != empty -%}
-                {%- assign lazy_load = lazy_load | default: 'lazy' -%}
+    {%- if section.settings.collection.products.size > 0 -%}
+      <div class="hidden col-span-2 swiper-pgaination--wrapper lg:flex lg:col-start-9 lg:col-end-13">
+        <div class="relative flex items-center justify-between w-full h-full swiper-pagination--inner">
+          <div class="fraction-pagination-swiper--wrapper">
+            <p class="inline body-smaller">
+              <span class="number">1</span>
+              <span>of</span>
+              <span class="total">{{ section.settings.collection.products.size | divided_by: 4 }}</span>
+            </p>
+          </div>
 
-                <a href="{{ product.url | within: collection }}" class="card-wrapper group">
-                  <div class="card">
-                    {%- if product.featured_media != blank -%}
-                      <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
-                        {{
-                          product.featured_media
-                          | image_url: width: 600
-                          | image_tag:
-                            loading: lazy_load,
-                            class: 'aspect-video w-full h-full absolute inset-0 object-center z-10 lg:group-hover:scale-[1.1] transition-all object-cover object-center'
-                        }}
-                      </div>
-                    {%- endif -%}
-
-                    <div class="card-product-title--wrapper">
-                      <h3 class="body-1 text-green text-[16px] md:text-[20px]">
-                        {{ product.title }}
-                      </h3>
-                    </div>
-                  </div>
-                </a>
-              {%- endif -%}
-            </div>
-          {%- endfor -%}
+          <div class="swiper-pagination-categories"></div>
         </div>
+      </div>
+    {%- endif -%}
+    <div
+      class="swiper"
+      x-init="init($el)"
+    >
+      <div class="w-full swiper-wrapper">
+        {%- for product in section.settings.collection.products limit: 4 -%}
+          <div class="flex flex-col h-auto swiper-slide">
+            {%- if product and product != empty -%}
+              {%- assign lazy_load = lazy_load | default: 'lazy' -%}
+
+              <a href="{{ product.url | within: collection }}" class="card-wrapper group">
+                <div class="card">
+                  {%- if product.featured_media != blank -%}
+                    <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
+                      {{
+                        product.featured_media
+                        | image_url: width: 600
+                        | image_tag:
+                          loading: lazy_load,
+                          class: 'aspect-video w-full h-full absolute inset-0 object-center z-10 lg:group-hover:scale-[1.1] transition-all object-cover object-center'
+                      }}
+                    </div>
+                  {%- endif -%}
+
+                  <div class="card-product-title--wrapper">
+                    <h3 class="body-1 text-green text-[16px] md:text-[20px]">
+                      {{ product.title }}
+                    </h3>
+                  </div>
+                </div>
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
       </div>
     </div>
   </div>
