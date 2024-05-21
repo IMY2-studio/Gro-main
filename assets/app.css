@@ -2016,6 +2016,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .menu-item.sale a {
     color: #970000;
 }
+.swiper-pagination--inner-collection-listing .swiper-pagination-bullet {
+    border: 1px solid #092324;
+}
 .swiper-pagination--inner-collection-listing .swiper-pagination-bullet-active {
     background-color: #092324;
 }
