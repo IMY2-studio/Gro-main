@@ -36,6 +36,24 @@
                   | image_tag: loading: 'eager', class: 'w-full h-full object-cover object-center max-w-none'
                 }}
               {% endif %}
+              <div class="text-center absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                {% if block.settings.heading %}
+                  <h2 class="heading-1 text-white text-[60px] md:text-[92px]">{{ block.settings.heading }}</h2>
+                {% endif %}
+                {% if block.settings.description %}
+                  <p class="text-white text-[16px] md:text-[20px] w-full max-w-md leading-5 md:leading-7">
+                    {{ block.settings.description }}
+                  </p>
+                {% endif %}
+                {% if block.settings.block_link %}
+                  <a
+                    href="{{ block.settings.block_link }}"
+                    class="mx-auto block w-fit mt-5 bg-white text-green rounded-full px-7 py-2"
+                  >
+                    {{- block.settings.button_label -}}
+                  </a>
+                {% endif %}
+              </div>
             </div>
           </div>
         {%- else -%}
@@ -50,7 +68,7 @@
             {% if block.settings.block_link %}
               <a href="{{ block.settings.block_link }}" class="absolute top-0 left-0 z-10 w-full h-full"></a>
             {% endif %}
-            <div class="z-0 aspect-[390/524] lg:aspect-[1440/780] lg:max-h-[calc(100vh-120px)] overflow-hidden w-full">
+            <div class="z-0 aspect-[390/524] lg:aspect-[1440/780] lg:max-h-[calc(100vh-120px)] overflow-hidden w-full relative">
               {% if block.settings.image_fit == 'fit' %}
                 {{
                   block.settings.hero_image
@@ -148,14 +166,6 @@
                   | image_tag: loading: 'lazy', class: 'w-full h-full object-cover object-center max-w-none'
                 }}
               {% endif %}
-              <div class="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                {% if block.settings.heading %}
-                  <h2 class="heading-1 text-white">{{ block.settings.heading }}</h2>
-                {% endif %}
-                {% if block.settings.description %}
-                  <p class="text-white">{{ block.settings.description }}</p>
-                {% endif %}
-              </div>
             </div>
           </div>
         {%- endif -%}
