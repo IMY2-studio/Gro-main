@@ -193,7 +193,7 @@
                     {{ block.settings.description_m }}
                   </p>
                 {% endif %}
-                {% if block.settings.block_link_m and block.settings.button_label_m %}
+                {% if block.settings.block_link_m and block.settings.button_label_m != blank %}
                   <a
                     href="{{ block.settings.block_link_m }}"
                     class="mx-auto block w-fit mt-5 bg-white text-green rounded-full px-7 py-2"
