@@ -1,6 +1,6 @@
 <section class="bg-[rgb(241,241,241)] layout--grid py-5 mb-14 gap-y-5">
   {% render 'dump' with section.settings.collection %}
-  <div class="col-span-6 flex items-center justify-center">
+  <div class="col-span-12 md:col-span-6 flex items-center justify-center">
     <div class="w-full max-w-md">
       <a href="{{ section.settings.collection.url }}">
         <h2 class="heading-1 mb-2">
@@ -18,7 +18,7 @@
       </a>
     </div>
   </div>
-  <div class="col-span-6">
+  <div class="col-span-12 md:col-span-6">
     <a href="{{ section.settings.collection.url }}">
       <div class="group overflow-hidden">
         {% if section.settings.collection.image != blank %}
