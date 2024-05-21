@@ -1790,6 +1790,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pr-2 {
   padding-right: 0.5rem;
 }
+.pt-\[66\.5\%\] {
+  padding-top: 66.5%;
+}
 .text-left {
   text-align: left;
 }

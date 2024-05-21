@@ -11,7 +11,7 @@
   {%- for block in brand_blocks -%}
     <div class="col-span-6">
       <a href="{{ block.settings.collection.url }}">
-        <div class="collection-card-image--wrapper mb-[10px] h-auto group overflow-hidden aspect-video">
+        <div class="collection-card-image--wrapper mb-[10px] h-0 group overflow-hidden relative pt-[66.5%]">
           {% if block.settings.collection.image != blank %}
             {{
               block.settings.collection.image
