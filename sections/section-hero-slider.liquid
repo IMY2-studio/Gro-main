@@ -138,6 +138,24 @@
                   | image_tag: loading: 'eager', class: 'w-full h-full object-cover object-center max-w-none'
                 }}
               {% endif %}
+              <div class="text-center absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                {% if block.settings.heading_m %}
+                  <h2 class="heading-1 text-white text-[60px] md:text-[92px]">{{ block.settings.heading_m }}</h2>
+                {% endif %}
+                {% if block.settings.description_m %}
+                  <p class="text-white text-[16px] md:text-[20px] w-full max-w-md leading-5 md:leading-7">
+                    {{ block.settings.description_m }}
+                  </p>
+                {% endif %}
+                {% if block.settings.block_link_m %}
+                  <a
+                    href="{{ block.settings.block_link_m }}"
+                    class="mx-auto block w-fit mt-5 bg-white text-green rounded-full px-7 py-2"
+                  >
+                    {{- block.settings.button_label_m -}}
+                  </a>
+                {% endif %}
+              </div>
             </div>
           </div>
         {%- else -%}
@@ -166,6 +184,24 @@
                   | image_tag: loading: 'lazy', class: 'w-full h-full object-cover object-center max-w-none'
                 }}
               {% endif %}
+              <div class="text-center absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                {% if block.settings.heading_m %}
+                  <h2 class="heading-1 text-white text-[60px] md:text-[92px]">{{ block.settings.heading_m }}</h2>
+                {% endif %}
+                {% if block.settings.description_m %}
+                  <p class="text-white text-[16px] md:text-[20px] w-full max-w-md leading-5 md:leading-7">
+                    {{ block.settings.description_m }}
+                  </p>
+                {% endif %}
+                {% if block.settings.block_link_m %}
+                  <a
+                    href="{{ block.settings.block_link_m }}"
+                    class="mx-auto block w-fit mt-5 bg-white text-green rounded-full px-7 py-2"
+                  >
+                    {{- block.settings.button_label_m -}}
+                  </a>
+                {% endif %}
+              </div>
             </div>
           </div>
         {%- endif -%}
@@ -290,6 +326,22 @@
           "type": "image_picker",
           "id": "hero_image_m",
           "label": "Hero Image"
+        },
+        {
+          "type": "text",
+          "id": "heading_m",
+          "label": "Heading Text"
+        },
+        {
+          "type": "textarea",
+          "id": "description_m",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "button_label_m",
+          "label": "Button Label",
+          "default": "Shop now"
         },
         {
           "type": "url",
