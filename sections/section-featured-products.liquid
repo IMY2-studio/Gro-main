@@ -7,7 +7,7 @@
 
   <div class="col-span-12 grid grid-cols-12 gap-x-5">
     {%- for product in section.settings.collection.products limit: 4 -%}
-      <div class="col-span-12 md:col-span-3">
+      <div class="col-span-6 md:col-span-3">
         {%- if product and product != empty -%}
           {%- assign lazy_load = lazy_load | default: 'lazy' -%}
 
