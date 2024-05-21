@@ -1302,6 +1302,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-y-5 {
   row-gap: 1.25rem;
 }
+.gap-x-2\.5 {
+  -moz-column-gap: 0.625rem;
+       column-gap: 0.625rem;
+}
 .space-y-\[20px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(20px * calc(1 - var(--tw-space-y-reverse)));
@@ -2679,6 +2683,11 @@ select {
 
   .md\:gap-y-\[12px\] {
     row-gap: 12px;
+  }
+
+  .md\:gap-x-5 {
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
   }
 
   .md\:border-r {
