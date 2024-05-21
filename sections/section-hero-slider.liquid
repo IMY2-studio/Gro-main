@@ -1,55 +1,80 @@
-<section 
+<section
   id="Banner-{{ section.id }}"
-  class="mb-[120px] lg:mb-[160px] mt-[55px] hidden lg:block"
+  class="mb-14 mt-[55px] hidden lg:block"
   data-slide-time="{{ section.settings.slide_time }}"
   data-transition-speed="{{ section.settings.transition_speed }}"
   x-data="heroSlider"
 >
-  {%- assign slides = section.blocks | where: "type", "hero_image" -%}
+  {%- assign slides = section.blocks | where: 'type', 'hero_image' -%}
 
   <div class="relative w-full h-full swiper">
     <div class="relative w-full swiper-wrapper h-full mb-[12px]">
       {%- for block in slides -%}
         {%- if forloop.index0 == 0 -%}
-          <div class="swiper-slide !relative"
-            {% if block.settings.image_fit == 'fit' %} style="background: {{ block.settings.background_colour }}"{% endif %}
+          <div
+            class="swiper-slide !relative"
+            {% if block.settings.image_fit == 'fit' %}
+              style="background: {{ block.settings.background_colour }}"
+            {% endif %}
             data-section="{{ section.id }}"
-            data-caption="{{ block.settings.image_caption }}">
+            data-caption="{{ block.settings.image_caption }}"
+          >
             {% if block.settings.block_link %}
               <a href="{{ block.settings.block_link }}" class="absolute top-0 left-0 z-10 w-full h-full"></a>
             {% endif %}
             <div class="aspect-[390/524] lg:aspect-[1440/780] lg:max-h-[calc(100vh-120px)] relative overflow-hidden w-full z-0">
               {% if block.settings.image_fit == 'fit' %}
-                {{ block.settings.hero_image | image_url: width: 1440 | image_tag: loading: 'eager', class: 'absolute left-0 top-0 h-full w-full object-contain' }}
+                {{
+                  block.settings.hero_image
+                  | image_url: width: 1440
+                  | image_tag: loading: 'eager', class: 'absolute left-0 top-0 h-full w-full object-contain'
+                }}
               {% else %}
-                {{ block.settings.hero_image | image_url: width: 1440 | image_tag: loading: 'eager', class: 'w-full h-full object-cover object-center max-w-none' }}
+                {{
+                  block.settings.hero_image
+                  | image_url: width: 1440
+                  | image_tag: loading: 'eager', class: 'w-full h-full object-cover object-center max-w-none'
+                }}
               {% endif %}
             </div>
           </div>
         {%- else -%}
-        <div class="!relative swiper-slide"
-          {% if block.settings.image_fit == 'fit' %} style="background: {{ block.settings.background_colour }}"{% endif %}
-          data-section="{{ section.id }}"
-          data-caption="{{ block.settings.image_caption }}"
-        >
-          {% if block.settings.block_link %}
-            <a href="{{ block.settings.block_link }}" class="absolute top-0 left-0 z-10 w-full h-full"></a>
-          {% endif %}
-          <div class="z-0 aspect-[390/524] lg:aspect-[1440/780] lg:max-h-[calc(100vh-120px)] overflow-hidden w-full">
+          <div
+            class="!relative swiper-slide"
             {% if block.settings.image_fit == 'fit' %}
-              {{ block.settings.hero_image | image_url: width: 1440 | image_tag: loading: 'lazy', class: 'absolute left-0 top-0 h-full w-full object-contain' }}
-            {% else %}
-              {{ block.settings.hero_image | image_url: width: 1440 | image_tag: loading: 'lazy', class: 'w-full h-full object-cover object-center max-w-none' }}
+              style="background: {{ block.settings.background_colour }}"
             {% endif %}
+            data-section="{{ section.id }}"
+            data-caption="{{ block.settings.image_caption }}"
+          >
+            {% if block.settings.block_link %}
+              <a href="{{ block.settings.block_link }}" class="absolute top-0 left-0 z-10 w-full h-full"></a>
+            {% endif %}
+            <div class="z-0 aspect-[390/524] lg:aspect-[1440/780] lg:max-h-[calc(100vh-120px)] overflow-hidden w-full">
+              {% if block.settings.image_fit == 'fit' %}
+                {{
+                  block.settings.hero_image
+                  | image_url: width: 1440
+                  | image_tag: loading: 'lazy', class: 'absolute left-0 top-0 h-full w-full object-contain'
+                }}
+              {% else %}
+                {{
+                  block.settings.hero_image
+                  | image_url: width: 1440
+                  | image_tag: loading: 'lazy', class: 'w-full h-full object-cover object-center max-w-none'
+                }}
+              {% endif %}
+            </div>
           </div>
-        </div>
         {%- endif -%}
       {%- endfor -%}
     </div>
 
     <div class="relative swiper-pgaination--wrapper layout--grid">
       <div class="relative flex justify-between col-span-2 swiper-pagination--inner lg:col-start-10 lg:col-end-13">
-        <span id="image-caption-{{ section.id }}" class="body-smaller">{{ section.blocks[0].settings.image_caption }}</span>
+        <span id="image-caption-{{ section.id }}" class="body-smaller">
+          {{- section.blocks[0].settings.image_caption -}}
+        </span>
         <div class="swiper-pagination"></div>
       </div>
     </div>
@@ -57,58 +82,83 @@
 </section>
 
 {% comment %} Mobile version {% endcomment %}
-<section 
+<section
   id="MobileBanner-{{ section.id }}"
   class="mb-[120px] lg:mb-[160px] mt-[55px] lg:hidden"
   x-data="heroSlider"
   data-slide-time="{{ section.settings.slide_time }}"
   data-transition-speed="{{ section.settings.transition_speed }}"
 >
-  {%- assign mobileSlides = section.blocks | where: "type", "hero_image_mobile" -%}
+  {%- assign mobileSlides = section.blocks | where: 'type', 'hero_image_mobile' -%}
 
   <div class="relative w-full h-full swiper">
     <div class="relative w-full swiper-wrapper h-full mb-[12px]">
       {%- for block in mobileSlides -%}
         {%- if forloop.index0 == 0 -%}
-          <div class="swiper-slide !relative"
-            {% if block.settings.image_fit_m == 'fit' %} style="background: {{ block.settings.background_colour_m }}"{% endif %}
+          <div
+            class="swiper-slide !relative"
+            {% if block.settings.image_fit_m == 'fit' %}
+              style="background: {{ block.settings.background_colour_m }}"
+            {% endif %}
             data-section="{{ section.id }}"
-            data-caption="{{ block.settings.image_caption_m }}">
+            data-caption="{{ block.settings.image_caption_m }}"
+          >
             {% if block.settings.block_link_m %}
               <a href="{{ block.settings.block_link_m }}" class="absolute top-0 left-0 z-10 w-full h-full"></a>
             {% endif %}
             <div class="z-0 relative w-full h-[calc(var(--vh,1vh)*100-100px)] overflow-hidden">
               {% if block.settings.image_fit_m == 'fit' %}
-                {{ block.settings.hero_image_m | image_url: width: 1440 | image_tag: loading: 'eager', class: 'absolute left-0 top-0 h-full w-full object-contain' }}
+                {{
+                  block.settings.hero_image_m
+                  | image_url: width: 1440
+                  | image_tag: loading: 'eager', class: 'absolute left-0 top-0 h-full w-full object-contain'
+                }}
               {% else %}
-                {{ block.settings.hero_image_m | image_url: width: 1440 | image_tag: loading: 'eager', class: 'w-full h-full object-cover object-center max-w-none' }}
+                {{
+                  block.settings.hero_image_m
+                  | image_url: width: 1440
+                  | image_tag: loading: 'eager', class: 'w-full h-full object-cover object-center max-w-none'
+                }}
               {% endif %}
             </div>
           </div>
         {%- else -%}
-        <div class="swiper-slide !relative"
-          {% if block.settings.image_fit_m == 'fit' %} style="background: {{ block.settings.background_colour_m }}"{% endif %}
-          data-section="{{ section.id }}"
-          data-caption="{{ block.settings.image_caption_m }}"
-        >
-          {% if block.settings.block_link_m %}
-            <a href="{{ block.settings.block_link_m }}" class="absolute top-0 left-0 z-10 w-full h-full"></a>
-          {% endif %}
-          <div class="z-0 w-full h-[calc(var(--vh,1vh)*100-100px)] overflow-hidden">
+          <div
+            class="swiper-slide !relative"
             {% if block.settings.image_fit_m == 'fit' %}
-              {{ block.settings.hero_image_m | image_url: width: 1440 | image_tag: loading: 'lazy', class: 'absolute left-0 top-0 h-full w-full object-contain' }}
-            {% else %}
-              {{ block.settings.hero_image_m | image_url: width: 1440 | image_tag: loading: 'lazy', class: 'w-full h-full object-cover object-center max-w-none' }}
+              style="background: {{ block.settings.background_colour_m }}"
             {% endif %}
+            data-section="{{ section.id }}"
+            data-caption="{{ block.settings.image_caption_m }}"
+          >
+            {% if block.settings.block_link_m %}
+              <a href="{{ block.settings.block_link_m }}" class="absolute top-0 left-0 z-10 w-full h-full"></a>
+            {% endif %}
+            <div class="z-0 w-full h-[calc(var(--vh,1vh)*100-100px)] overflow-hidden">
+              {% if block.settings.image_fit_m == 'fit' %}
+                {{
+                  block.settings.hero_image_m
+                  | image_url: width: 1440
+                  | image_tag: loading: 'lazy', class: 'absolute left-0 top-0 h-full w-full object-contain'
+                }}
+              {% else %}
+                {{
+                  block.settings.hero_image_m
+                  | image_url: width: 1440
+                  | image_tag: loading: 'lazy', class: 'w-full h-full object-cover object-center max-w-none'
+                }}
+              {% endif %}
+            </div>
           </div>
-        </div>
         {%- endif -%}
       {%- endfor -%}
     </div>
 
     <div class="relative swiper-pgaination--wrapper layout--grid">
       <div class="relative flex justify-between col-span-2 swiper-pagination--inner lg:col-start-10 lg:col-end-13">
-        <span id="image-caption-{{ section.id }}" class="body-smaller">{{ section.blocks[0].settings.image_caption_m }}</span>
+        <span id="image-caption-{{ section.id }}" class="body-smaller">
+          {{- section.blocks[0].settings.image_caption_m -}}
+        </span>
         <div class="swiper-pagination"></div>
       </div>
     </div>
@@ -134,92 +184,92 @@
   ],
   "blocks": [
     {
-        "type": "hero_image",
-        "name": "Hero Image",
-        "settings": [
-          {
-            "type": "select",
-            "id": "image_fit",
-            "label": "Image Fit",
-            "options": [
-              {
-                "value": "fill",
-                "label": "Fill"
-              },
-              {
-                "value": "fit",
-                "label": "Fit"
-              }
-            ],
-            "default": "fill"
-          },
-          {
-            "type": "color",
-            "id": "background_colour",
-            "label": "Background Colour (for fitted image)",
-            "default": "#000000"
-          },
-          {
-              "type": "image_picker",
-              "id": "hero_image",
-              "label": "Hero Image"
-          },
-          {
-              "type": "url",
-              "id": "block_link",
-              "label": "Link"
-          },
-          {
-              "type": "text",
-              "id": "image_caption",
-              "label": "Image Caption",
-              "default": "Image Caption"
-          }
-        ]
-      },
-      {
-        "type": "hero_image_mobile",
-        "name": "Hero Image Mobile",
-        "settings": [
+      "type": "hero_image",
+      "name": "Hero Image",
+      "settings": [
+        {
+          "type": "select",
+          "id": "image_fit",
+          "label": "Image Fit",
+          "options": [
             {
-              "type": "select",
-              "id": "image_fit_m",
-              "label": "Image Fit",
-              "options": [
-                {
-                  "value": "fill",
-                  "label": "Fill"
-                },
-                {
-                  "value": "fit",
-                  "label": "Fit"
-                }
-              ],
-              "default": "fill"
+              "value": "fill",
+              "label": "Fill"
             },
             {
-              "type": "color",
-              "id": "background_colour_m",
-              "label": "Background Colour (for fitted image)",
-              "default": "#000000"
-            },
-            {
-                "type": "image_picker",
-                "id": "hero_image_m",
-                "label": "Hero Image"
-            },
-            {
-                "type": "url",
-                "id": "block_link_m",
-                "label": "Link"
-            },
-            {
-                "type": "text",
-                "id": "image_caption_m",
-                "label": "Image Caption Mobile",
-                "default": "Image Caption"
+              "value": "fit",
+              "label": "Fit"
             }
-        ]
+          ],
+          "default": "fill"
+        },
+        {
+          "type": "color",
+          "id": "background_colour",
+          "label": "Background Colour (for fitted image)",
+          "default": "#000000"
+        },
+        {
+          "type": "image_picker",
+          "id": "hero_image",
+          "label": "Hero Image"
+        },
+        {
+          "type": "url",
+          "id": "block_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "image_caption",
+          "label": "Image Caption",
+          "default": "Image Caption"
+        }
+      ]
+    },
+    {
+      "type": "hero_image_mobile",
+      "name": "Hero Image Mobile",
+      "settings": [
+        {
+          "type": "select",
+          "id": "image_fit_m",
+          "label": "Image Fit",
+          "options": [
+            {
+              "value": "fill",
+              "label": "Fill"
+            },
+            {
+              "value": "fit",
+              "label": "Fit"
+            }
+          ],
+          "default": "fill"
+        },
+        {
+          "type": "color",
+          "id": "background_colour_m",
+          "label": "Background Colour (for fitted image)",
+          "default": "#000000"
+        },
+        {
+          "type": "image_picker",
+          "id": "hero_image_m",
+          "label": "Hero Image"
+        },
+        {
+          "type": "url",
+          "id": "block_link_m",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "image_caption_m",
+          "label": "Image Caption Mobile",
+          "default": "Image Caption"
+        }
+      ]
     }
   ],
   "presets": [

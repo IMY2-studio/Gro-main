@@ -697,6 +697,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+.row-start-2 {
+  grid-row-start: 2;
+}
+.row-start-1 {
+  grid-row-start: 1;
+}
 .m-0 {
   margin: 0px;
 }
@@ -857,6 +866,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+.mb-\[0px\] {
+  margin-bottom: 0px;
+}
+.mt-\[85px\] {
+  margin-top: 85px;
 }
 .block {
   display: block;
@@ -1085,6 +1103,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-w-sm {
   max-width: 24rem;
 }
+.max-w-md {
+  max-width: 28rem;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1286,6 +1307,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .gap-y-5 {
   row-gap: 1.25rem;
+}
+.gap-x-2\.5 {
+  -moz-column-gap: 0.625rem;
+       column-gap: 0.625rem;
 }
 .space-y-\[20px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -1654,6 +1679,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
 .pb-\[8px\] {
   padding-bottom: 8px;
 }
@@ -1774,6 +1803,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pr-2 {
   padding-right: 0.5rem;
 }
+.pt-\[66\.5\%\] {
+  padding-top: 66.5%;
+}
 .text-left {
   text-align: left;
 }
@@ -1864,6 +1896,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .leading-\[1\.06\] {
   line-height: 1.06;
+}
+.leading-5 {
+  line-height: 1.25rem;
+}
+.leading-7 {
+  line-height: 1.75rem;
 }
 .tracking-tight {
   letter-spacing: -0.025em;
@@ -2538,6 +2576,14 @@ select {
     grid-column: span 4 / span 4;
   }
 
+  .md\:col-span-12 {
+    grid-column: span 12 / span 12;
+  }
+
+  .md\:row-start-auto {
+    grid-row-start: auto;
+  }
+
   .md\:my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -2556,12 +2602,28 @@ select {
     margin-top: 0px;
   }
 
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .md\:mb-\[16px\] {
+    margin-bottom: 16px;
+  }
+
+  .md\:mb-\[24px\] {
+    margin-bottom: 24px;
+  }
+
   .md\:flex {
     display: flex;
   }
 
   .md\:grid {
     display: grid;
+  }
+
+  .md\:aspect-video {
+    aspect-ratio: 16 / 9;
   }
 
   .md\:h-8 {
@@ -2637,6 +2699,11 @@ select {
     row-gap: 12px;
   }
 
+  .md\:gap-x-5 {
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
+
   .md\:border-r {
     border-right-width: 1px;
   }
@@ -2666,6 +2733,10 @@ select {
 
   .md\:text-\[20px\] {
     font-size: 20px;
+  }
+
+  .md\:leading-7 {
+    line-height: 1.75rem;
   }
 }
 @media (min-width: 1024px) {

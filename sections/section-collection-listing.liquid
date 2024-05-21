@@ -1,18 +1,23 @@
 <section class="bg-[rgb(241,241,241)] layout--grid py-5 mb-14 gap-y-5">
-  {% render 'dump' with section.settings.collection %}
-  <div class="col-span-6 flex items-center justify-center">
-    <div>
+  <div class="row-start-2 md:row-start-auto col-span-12 md:col-span-6 flex items-center justify-center">
+    <div class="w-full md:max-w-md mb-5 md:mb-0">
       <a href="{{ section.settings.collection.url }}">
-        <h2 class="heading-1">
+        <h2 class="heading-1 mb-2">
           {{ section.settings.collection.title }}
         </h2>
       </a>
       <div>
-        <p>{{ section.settings.descrition }}</p>
+        <p class=" text-[16px] md:text-[20px] leading-5 md:leading-7">{{ section.settings.description }}</p>
       </div>
+      <a
+        href="{{ section.settings.collection.url }}"
+        class="block w-fit mt-5 bg-green text-white rounded-full px-7 py-2"
+      >
+        See More
+      </a>
     </div>
   </div>
-  <div class="col-span-6">
+  <div class="col-span-12 md:col-span-6 row-start-1 md:row-start-auto">
     <a href="{{ section.settings.collection.url }}">
       <div class="group overflow-hidden">
         {% if section.settings.collection.image != blank %}
@@ -31,7 +36,7 @@
   </div>
   <div class="col-span-12 grid grid-cols-12 gap-x-5">
     {%- for product in section.settings.collection.products limit: 4 -%}
-      <div class="col-span-3">
+      <div class="col-span-12 md:col-span-3">
         {%- if product and product != empty -%}
           {%- assign lazy_load = lazy_load | default: 'lazy' -%}
 
