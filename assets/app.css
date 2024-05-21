@@ -697,6 +697,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
+.row-start-2 {
+  grid-row-start: 2;
+}
+.row-start-1 {
+  grid-row-start: 1;
+}
 .m-0 {
   margin: 0px;
 }
@@ -2549,6 +2555,10 @@ select {
 
   .md\:col-span-4 {
     grid-column: span 4 / span 4;
+  }
+
+  .md\:row-start-auto {
+    grid-row-start: auto;
   }
 
   .md\:my-0 {
