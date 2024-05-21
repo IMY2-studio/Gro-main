@@ -134,7 +134,7 @@
             {% if block.settings.block_link_m %}
               <a href="{{ block.settings.block_link_m }}" class="absolute top-0 left-0 z-10 w-full h-full"></a>
             {% endif %}
-            <div class="z-0 w-full h-[calc(var(--vh,1vh)*100-100px)] overflow-hidden">
+            <div class="z-0 w-full h-[calc(var(--vh,1vh)*100-100px)] overflow-hidden relative">
               {% if block.settings.image_fit_m == 'fit' %}
                 {{
                   block.settings.hero_image_m
@@ -148,6 +148,11 @@
                   | image_tag: loading: 'lazy', class: 'w-full h-full object-cover object-center max-w-none'
                 }}
               {% endif %}
+              <div>
+                {% if block.settings.heading %}
+                  <h2 class="heading-1">{{ block.settings.heading }}</h2>
+                {% endif %}
+              </div>
             </div>
           </div>
         {%- endif -%}
