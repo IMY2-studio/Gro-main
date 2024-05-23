@@ -191,25 +191,25 @@
         "brand_gDkzqN": {
           "type": "brand",
           "settings": {
-            "collection": "accessories"
+            "collection": "ben-david"
           }
         },
         "brand_C44qYc": {
           "type": "brand",
           "settings": {
-            "collection": "basket-combos"
+            "collection": "saarde"
           }
         },
         "brand_NCGR9P": {
           "type": "brand",
           "settings": {
-            "collection": "baskets"
+            "collection": "eadie-lifestyle"
           }
         },
         "brand_iaEbzC": {
           "type": "brand",
           "settings": {
-            "collection": "bath-towels"
+            "collection": "common-folk"
           }
         }
       },
@@ -227,14 +227,14 @@
       "type": "section-featured-products",
       "settings": {
         "heading": "Save up to 60% on clearance items",
-        "collection": "accessories"
+        "collection": "sale"
       }
     },
     "section_featured_products_BHLrnb": {
       "type": "section-featured-products",
       "settings": {
         "heading": "What's trending",
-        "collection": "sale"
+        "collection": "home-fragrance"
       }
     }
   },
