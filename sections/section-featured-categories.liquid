@@ -13,16 +13,26 @@
       <div class="col-span-4">
         <a href="{{ block.settings.collection.url }}">
           <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
-            {% if block.settings.collection.image != blank %}
+            {% if section.settings.alt_hero_image != blank %}
               {{
-                block.settings.collection.image
+                block.settings.alt_hero_image
                 | image_url: width: 900
                 | image_tag:
                   loading: 'lazy',
                   class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square md:aspect-video object-cover'
               }}
             {% else %}
-              <div class="aspect-square md:aspect-video bg-[#120d0d]"></div>
+              {% if block.settings.collection.image != blank %}
+                {{
+                  block.settings.collection.image
+                  | image_url: width: 900
+                  | image_tag:
+                    loading: 'lazy',
+                    class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square md:aspect-video object-cover'
+                }}
+              {% else %}
+                <div class="aspect-square md:aspect-video bg-[#120d0d]"></div>
+              {% endif %}
             {% endif %}
           </div>
         </a>
@@ -57,6 +67,11 @@
           "id": "collection",
           "label": "Category",
           "info": "Choose the collection (Category) you'd like to feature"
+        },
+        {
+          "type": "image_picker",
+          "id": "alt_hero_image",
+          "label": "Alternative Hero Image"
         }
       ]
     }
