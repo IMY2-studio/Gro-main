@@ -15,11 +15,11 @@
           <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
             {% if section.settings.alt_hero_image != blank %}
               {{
-                section.settings.alt_hero_image
+                block.settings.alt_hero_image
                 | image_url: width: 900
                 | image_tag:
                   loading: 'lazy',
-                  class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square object-cover'
+                  class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square md:aspect-video object-cover'
               }}
             {% else %}
               {% if block.settings.collection.image != blank %}
