@@ -1079,6 +1079,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-w-none {
   max-width: none;
 }
+.max-w-md {
+  max-width: 28rem;
+}
 .max-w-full {
   max-width: 100%;
 }
@@ -1093,9 +1096,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-sm {
   max-width: 24rem;
-}
-.max-w-md {
-  max-width: 28rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1836,6 +1836,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1rem;
   line-height: 1.5rem;
 }
+.text-\[60px\] {
+  font-size: 60px;
+}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1847,12 +1850,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-.text-\[92px\] {
-  font-size: 92px;
-}
-.text-\[60px\] {
-  font-size: 60px;
 }
 .font-medium {
   font-weight: 500;
@@ -2719,13 +2716,13 @@ select {
     font-size: 20px;
   }
 
+  .md\:text-\[92px\] {
+    font-size: 92px;
+  }
+
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .md\:text-\[92px\] {
-    font-size: 92px;
   }
 
   .md\:leading-7 {
