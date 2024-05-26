@@ -44,6 +44,13 @@
             "settings": {
               "marquee_text": "Mid Season Sale 25% OFF RRP* Storewide"
             }
+          },
+          "marquee_link_fjwVqa": {
+            "type": "marquee_link",
+            "settings": {
+              "marquee_link_text": "Baskets Collection",
+              "marquee_url": "shopify:\/\/collections\/baskets"
+            }
           }
         },
         "block_order": [
@@ -52,7 +59,8 @@
           "marquee_text_q48eaa",
           "marquee_text_iadWx9",
           "marquee_text_WtUX3F",
-          "marquee_text_N6awhX"
+          "marquee_text_N6awhX",
+          "marquee_link_fjwVqa"
         ],
         "settings": {
           "header_1_menu": "header-1",
