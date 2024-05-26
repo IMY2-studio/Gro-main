@@ -210,6 +210,18 @@
           </li>
         {%- endif -%}
       {%- endfor -%}
+      {%- for block in marquee_links -%}
+        {%- assign text = block.settings.marquee_link_text -%}
+        {%- assign url = block.settings.marquee_url -%}
+        {%- if text != blank -%}
+          <li class="h-full flex items-center before:block before:w-1.5 before:h-1.5 before:bg-white before:content-[''] before:rounded-full before:mr-6">
+            <a href="{{ url }}" class="body-1 flex whitespace-nowrap text-white">
+              {{ text }}
+            </a>
+            <div class="mx-3"></div>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
       {%- for block in marquee_items -%}
         {%- assign marquee = block.settings.marquee_text -%}
         {%- if marquee != blank -%}
