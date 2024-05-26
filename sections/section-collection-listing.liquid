@@ -20,16 +20,26 @@
   <div class="col-span-12 md:col-span-6 row-start-1 md:row-start-auto">
     <a href="{{ section.settings.collection.url }}">
       <div class="group overflow-hidden">
-        {% if section.settings.collection.image != blank %}
+        {% if section.settings.alt_hero_image != blank %}
           {{
-            section.settings.collection.image
+            section.settings.alt_hero_image
             | image_url: width: 900
             | image_tag:
               loading: 'lazy',
               class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square object-cover'
           }}
         {% else %}
-          <div class="aspect-square bg-[#120d0d]"></div>
+          {% if section.settings.collection.image != blank %}
+            {{
+              section.settings.collection.image
+              | image_url: width: 900
+              | image_tag:
+                loading: 'lazy',
+                class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square object-cover'
+            }}
+          {% else %}
+            <div class="aspect-square bg-[#120d0d]"></div>
+          {% endif %}
         {% endif %}
       </div>
     </a>
@@ -130,6 +140,11 @@
       "id": "collection",
       "label": "Featured Collection",
       "info": "Choose the collection (Brand) you'd like to feature"
+    },
+    {
+      "type": "image_picker",
+      "id": "alt_hero_image",
+      "label": "Alternative Hero Image"
     }
   ],
   "presets": [
