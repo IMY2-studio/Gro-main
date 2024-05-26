@@ -13,7 +13,7 @@
       <div class="col-span-4">
         <a href="{{ block.settings.collection.url }}">
           <div class="collection-card-image--wrapper mb-[12px] h-auto group overflow-hidden">
-            {% if section.settings.alt_hero_image != blank %}
+            {% if block.settings.alt_hero_image != blank %}
               {{
                 block.settings.alt_hero_image
                 | image_url: width: 900
