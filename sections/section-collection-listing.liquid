@@ -19,19 +19,23 @@
   </div>
   <div class="col-span-12 md:col-span-6 row-start-1 md:row-start-auto">
     <a href="{{ section.settings.collection.url }}">
-      <div class="group overflow-hidden">
-        {% if section.settings.collection.image != blank %}
-          {{
-            section.settings.collection.image
-            | image_url: width: 900
-            | image_tag:
-              loading: 'lazy',
-              class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square object-cover'
-          }}
-        {% else %}
-          <div class="aspect-square bg-[#120d0d]"></div>
-        {% endif %}
-      </div>
+      {% if section.settings.collection.image != blank %}
+        <div class="group overflow-hidden">
+          {% if section.settings.collection.image != blank %}
+            {{
+              section.settings.collection.image
+              | image_url: width: 900
+              | image_tag:
+                loading: 'lazy',
+                class: 'lg:group-hover:scale-[1.1] transition-all w-full h-auto relative flex object-center aspect-square object-cover'
+            }}
+          {% else %}
+            <div class="aspect-square bg-[#120d0d]"></div>
+          {% endif %}
+        </div>
+      {% else %}
+
+      {% endif %}
     </a>
   </div>
   <div class="col-span-12 hidden md:grid grid-cols-12 gap-x-5 ">
