@@ -21,6 +21,20 @@
               "menu": ""
             }
           },
+          "marquee_link_fjwVqa": {
+            "type": "marquee_link",
+            "settings": {
+              "marquee_link_text": "Baskets Collection",
+              "marquee_url": "shopify:\/\/collections\/baskets"
+            }
+          },
+          "marquee_link_P8EMyA": {
+            "type": "marquee_link",
+            "settings": {
+              "marquee_link_text": "Mid Season Sale 25% OFF RRP* Storewide",
+              "marquee_url": "shopify:\/\/collections\/beach-towels"
+            }
+          },
           "marquee_text_q48eaa": {
             "type": "marquee_text",
             "settings": {
@@ -44,23 +58,17 @@
             "settings": {
               "marquee_text": "Mid Season Sale 25% OFF RRP* Storewide"
             }
-          },
-          "marquee_link_fjwVqa": {
-            "type": "marquee_link",
-            "settings": {
-              "marquee_link_text": "Baskets Collection",
-              "marquee_url": "shopify:\/\/collections\/baskets"
-            }
           }
         },
         "block_order": [
           "d455ee20-4a2e-4527-9d49-c22687e2a1df",
           "1587edcc-4352-400a-a95a-b1f09ef52a81",
+          "marquee_link_fjwVqa",
+          "marquee_link_P8EMyA",
           "marquee_text_q48eaa",
           "marquee_text_iadWx9",
           "marquee_text_WtUX3F",
-          "marquee_text_N6awhX",
-          "marquee_link_fjwVqa"
+          "marquee_text_N6awhX"
         ],
         "settings": {
           "header_1_menu": "header-1",
