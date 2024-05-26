@@ -269,7 +269,8 @@
       "type": "section-collection-listing",
       "settings": {
         "description": "Lorem ipsum dolor sit amet consectetur. Ultrices congue ante nulla adipiscing varius mattis. Orci nisi ultrices urna ligula suscipit ullamcorper sed dui quis.",
-        "collection": "candles"
+        "collection": "candles",
+        "alt_hero_image": "shopify:\/\/shop_images\/mobile_-_11.jpg"
       }
     },
     "section_featured_brands_TiTDEd": {
