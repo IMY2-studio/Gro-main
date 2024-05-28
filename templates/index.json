@@ -16,6 +16,58 @@
             "image_caption": ""
           }
         },
+        "hero_image_TNg8FW": {
+          "type": "hero_image",
+          "settings": {
+            "image_fit": "fill",
+            "background_colour": "#000000",
+            "hero_image": "shopify:\/\/shop_images\/banner_18.jpg",
+            "heading": "",
+            "description": "",
+            "button_label": "",
+            "block_link": "",
+            "image_caption": ""
+          }
+        },
+        "hero_image_r3qXUj": {
+          "type": "hero_image",
+          "settings": {
+            "image_fit": "fill",
+            "background_colour": "#000000",
+            "hero_image": "shopify:\/\/shop_images\/banner_19.jpg",
+            "heading": "",
+            "description": "",
+            "button_label": "",
+            "block_link": "",
+            "image_caption": ""
+          }
+        },
+        "hero_image_bn9Kai": {
+          "type": "hero_image",
+          "settings": {
+            "image_fit": "fill",
+            "background_colour": "#000000",
+            "hero_image": "shopify:\/\/shop_images\/banner_17.jpg",
+            "heading": "",
+            "description": "",
+            "button_label": "",
+            "block_link": "",
+            "image_caption": ""
+          }
+        },
+        "hero_image_kCdTW7": {
+          "type": "hero_image",
+          "settings": {
+            "image_fit": "fill",
+            "background_colour": "#000000",
+            "hero_image": "shopify:\/\/shop_images\/banner_16.jpg",
+            "heading": "",
+            "description": "",
+            "button_label": "",
+            "block_link": "",
+            "image_caption": ""
+          }
+        },
         "hero_image_mobile_d4X4MQ": {
           "type": "hero_image_mobile",
           "settings": {
@@ -28,25 +80,15 @@
             "block_link_m": "",
             "image_caption_m": ""
           }
-        },
-        "036c067c-5431-4b5f-a9ae-ae51dabe7c53": {
-          "type": "hero_image_mobile",
-          "settings": {
-            "image_fit_m": "fill",
-            "background_colour_m": "#000000",
-            "hero_image_m": "shopify:\/\/shop_images\/gro_urban_oasis_028.jpg",
-            "heading_m": "",
-            "description_m": "",
-            "button_label_m": "Shop now",
-            "block_link_m": "shopify:\/\/collections\/vases-ceramics",
-            "image_caption_m": ""
-          }
         }
       },
       "block_order": [
         "hero_image_q8M9KT",
-        "hero_image_mobile_d4X4MQ",
-        "036c067c-5431-4b5f-a9ae-ae51dabe7c53"
+        "hero_image_TNg8FW",
+        "hero_image_r3qXUj",
+        "hero_image_bn9Kai",
+        "hero_image_kCdTW7",
+        "hero_image_mobile_d4X4MQ"
       ],
       "custom_css": [
 
