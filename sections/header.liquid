@@ -139,7 +139,7 @@
           <ul class="flex items-center justify-end gap-x-2">
             {% comment %} Search Goes here {% endcomment %}
             <li
-              class="cursor-pointer search-button rounded-full border-[#CED3D3] border w-10 min-w-[2.5rem] h-10 flex lg:hidden items-center justify-center"
+              class="cursor-pointer search-button rounded-full lg:border-[#CED3D3] lg:border lg:w-10 lg:min-w-[2.5rem] lg:h-10 flex lg:hidden items-center justify-center"
               @click="openSearchDrawer($event)"
             >
               {% render 'icon-search' %}
@@ -180,7 +180,19 @@
                 type="button"
                 title="Cart button"
                 @click="$dispatch('toggle-cart')"
-                class="relative rounded-full border-[#CED3D3] border w-10 h-10 flex items-center justify-center min-w-[2.5rem]"
+                class="flex lg:hidden relative rounded-full items-center justify-center"
+              >
+                <span class="sr-only">{{ 'templates.cart.cart' | t | append: ' ' }}</span>
+
+                {% render 'icon-cart' %}
+
+                {% comment %} Will most likely need later {% endcomment %}
+              </button>
+              <button
+                type="button"
+                title="Cart button"
+                @click="$dispatch('toggle-cart')"
+                class="hidden relative rounded-full border-[#CED3D3] border w-10 h-10 lg:flex items-center justify-center min-w-[2.5rem]"
               >
                 <span class="sr-only">{{ 'templates.cart.cart' | t | append: ' ' }}</span>
 
