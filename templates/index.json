@@ -203,7 +203,7 @@
       "settings": {
         "description": "Lorem ipsum dolor sit amet consectetur. Ultrices congue ante nulla adipiscing varius mattis. Orci nisi ultrices urna ligula suscipit ullamcorper sed dui quis.",
         "collection": "candles",
-        "alt_hero_image": "shopify:\/\/shop_images\/mobile_-_11.jpg"
+        "alt_hero_image": "shopify:\/\/shop_images\/Rectangle_13_10a2ff9e-b804-4ddf-873a-c79359ee9bc4.jpg"
       }
     },
     "section_featured_brands_TiTDEd": {
@@ -212,25 +212,29 @@
         "brand_gDkzqN": {
           "type": "brand",
           "settings": {
-            "collection": "accessories"
+            "collection": "ben-david",
+            "alt_hero_image": "shopify:\/\/shop_images\/Rectangle_13.png"
           }
         },
         "brand_C44qYc": {
           "type": "brand",
           "settings": {
-            "collection": "basket-combos"
+            "collection": "basket-combos",
+            "alt_hero_image": "shopify:\/\/shop_images\/Rectangle_19.png"
           }
         },
         "brand_NCGR9P": {
           "type": "brand",
           "settings": {
-            "collection": "baskets"
+            "collection": "eadie-lifestyle",
+            "alt_hero_image": "shopify:\/\/shop_images\/Rectangle_20_71b70c7f-3be1-400a-9dd9-568236c17564.png"
           }
         },
         "brand_iaEbzC": {
           "type": "brand",
           "settings": {
-            "collection": "bath-towels"
+            "collection": "common-folk",
+            "alt_hero_image": "shopify:\/\/shop_images\/Frame_273.png"
           }
         }
       },
@@ -255,7 +259,7 @@
       "type": "section-featured-products",
       "settings": {
         "heading": "What's trending",
-        "collection": "sale"
+        "collection": "mothers-day"
       }
     }
   },
