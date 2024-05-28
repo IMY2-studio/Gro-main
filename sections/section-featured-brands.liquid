@@ -2,46 +2,48 @@
   assign brand_blocks = section.blocks | where: 'type', 'brand'
 -%}
 
-<section class="layout--grid gap-y-6 mb-14">
-  <div class="col-span-2 lg:col-span-12">
-    <h2 class="heading-1 lg:mb-[24px]">
+<section class="mb-14">
+  <div class="">
+    <h2 class="heading-1 mb-[12px] lg:mb-[24px]">
       {{ section.settings.heading }}
     </h2>
   </div>
-  {%- for block in brand_blocks -%}
-    <div class="lg:col-span-6 col-span-1">
-      <a href="{{ block.settings.collection.url }}">
-        <div class="collection-card-image--wrapper mb-[10px] h-0 group overflow-hidden relative pt-[66.5%]">
-          {% if block.settings.alt_hero_image != blank %}
-            {{
-              block.settings.alt_hero_image
-              | image_url: width: 900
-              | image_tag:
-                loading: 'lazy',
-                class: 'lg:group-hover:scale-[1.1] transition-all w-full h-full absolute inset-0 object-center aspect-video object-cover'
-            }}
-          {% else %}
-            {% if block.settings.collection.image != blank %}
+  <div class="layout--grid gap-y-6 ">
+    {%- for block in brand_blocks -%}
+      <div class="lg:col-span-6 col-span-1">
+        <a href="{{ block.settings.collection.url }}">
+          <div class="collection-card-image--wrapper mb-[10px] h-0 group overflow-hidden relative pt-[66.5%]">
+            {% if block.settings.alt_hero_image != blank %}
               {{
-                block.settings.collection.image
+                block.settings.alt_hero_image
                 | image_url: width: 900
                 | image_tag:
                   loading: 'lazy',
                   class: 'lg:group-hover:scale-[1.1] transition-all w-full h-full absolute inset-0 object-center aspect-video object-cover'
               }}
             {% else %}
-              <div class="bg-[#120d0d] w-full h-full absolute inset-0"></div>
+              {% if block.settings.collection.image != blank %}
+                {{
+                  block.settings.collection.image
+                  | image_url: width: 900
+                  | image_tag:
+                    loading: 'lazy',
+                    class: 'lg:group-hover:scale-[1.1] transition-all w-full h-full absolute inset-0 object-center aspect-video object-cover'
+                }}
+              {% else %}
+                <div class="bg-[#120d0d] w-full h-full absolute inset-0"></div>
+              {% endif %}
             {% endif %}
-          {% endif %}
-        </div>
-      </a>
-      <a href="{{ block.settings.collection.url }}">
-        <h3 class="text-[16px] md:text-[20px]">
-          {{ block.settings.collection.title }}
-        </h3>
-      </a>
-    </div>
-  {%- endfor -%}
+          </div>
+        </a>
+        <a href="{{ block.settings.collection.url }}">
+          <h3 class="text-[16px] md:text-[20px]">
+            {{ block.settings.collection.title }}
+          </h3>
+        </a>
+      </div>
+    {%- endfor -%}
+  </div>
 </section>
 {% schema %}
 {
