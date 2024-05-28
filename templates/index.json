@@ -16,17 +16,17 @@
             "image_caption": ""
           }
         },
-        "5699afe8-c83f-4898-a4b2-0e072974dc69": {
-          "type": "hero_image",
+        "hero_image_mobile_d4X4MQ": {
+          "type": "hero_image_mobile",
           "settings": {
-            "image_fit": "fill",
-            "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/gro_urban_oasis_028.jpg",
-            "heading": "",
-            "description": "",
-            "button_label": "Shop now",
-            "block_link": "shopify:\/\/collections\/vases-ceramics",
-            "image_caption": ""
+            "image_fit_m": "fill",
+            "background_colour_m": "#000000",
+            "hero_image_m": "shopify:\/\/shop_images\/mobile_-_14.jpg",
+            "heading_m": "",
+            "description_m": "",
+            "button_label_m": "",
+            "block_link_m": "",
+            "image_caption_m": ""
           }
         },
         "036c067c-5431-4b5f-a9ae-ae51dabe7c53": {
@@ -45,7 +45,7 @@
       },
       "block_order": [
         "hero_image_q8M9KT",
-        "5699afe8-c83f-4898-a4b2-0e072974dc69",
+        "hero_image_mobile_d4X4MQ",
         "036c067c-5431-4b5f-a9ae-ae51dabe7c53"
       ],
       "custom_css": [
