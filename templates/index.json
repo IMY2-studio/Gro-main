@@ -3,83 +3,16 @@
     "f485f585-1257-4163-91f9-da13e9d00bd2": {
       "type": "section-hero-slider",
       "blocks": {
-        "hero_image_NDcMpL": {
+        "hero_image_q8M9KT": {
           "type": "hero_image",
           "settings": {
-            "image_fit": "fit",
-            "background_colour": "#ff13f6",
-            "hero_image": "shopify:\/\/shop_images\/desktop_2x_a3a6817e-3b18-4e76-81b5-d771f99db5c2.jpg",
-            "heading": "SAVE 25%",
-            "description": "Lorem ipsum dolor sit amet consectetur. Ultrices congue ante nulla adipiscing varius mattis. Orci nisi ultrices urna ligula suscipit ullamcorper sed dui quis.",
-            "button_label": "Shop now",
-            "block_link": "shopify:\/\/collections\/accessories",
-            "image_caption": "Image Caption"
-          }
-        },
-        "hero_image_jj4tD9": {
-          "type": "hero_image",
-          "disabled": true,
-          "settings": {
-            "image_fit": "fit",
-            "background_colour": "#c3674b",
-            "hero_image": "shopify:\/\/shop_images\/banner_21.jpg",
+            "image_fit": "fill",
+            "background_colour": "#000000",
+            "hero_image": "shopify:\/\/shop_images\/Frame_266_5b3282f4-b834-4b61-bc24-a38bc114e2ac.jpg",
             "heading": "",
             "description": "",
-            "button_label": "Shop now",
+            "button_label": "",
             "block_link": "",
-            "image_caption": "Image Caption"
-          }
-        },
-        "1297218e-abb9-40e4-ad50-e35c313b7c84": {
-          "type": "hero_image",
-          "disabled": true,
-          "settings": {
-            "image_fit": "fill",
-            "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/banner_11.jpg",
-            "heading": "",
-            "description": "",
-            "button_label": "Shop now",
-            "block_link": "shopify:\/\/collections\/serveware",
-            "image_caption": ""
-          }
-        },
-        "a42e289e-4f99-4e08-abd8-9b185fdb269b": {
-          "type": "hero_image",
-          "settings": {
-            "image_fit": "fill",
-            "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/banner_68e89c92-0377-4e79-b59e-bee1f42b8a0d.jpg",
-            "heading": "",
-            "description": "",
-            "button_label": "Shop now",
-            "block_link": "shopify:\/\/collections\/cushions-throws",
-            "image_caption": ""
-          }
-        },
-        "hero_image_rNV9RD": {
-          "type": "hero_image",
-          "settings": {
-            "image_fit": "fill",
-            "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/banner_2_8d9d5118-484e-4d61-8923-48d3572ac4db.jpg",
-            "heading": "",
-            "description": "",
-            "button_label": "Shop now",
-            "block_link": "",
-            "image_caption": ""
-          }
-        },
-        "73f5b899-16eb-4bbe-aada-465dea04f907": {
-          "type": "hero_image",
-          "settings": {
-            "image_fit": "fill",
-            "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/Banner_2.jpg",
-            "heading": "",
-            "description": "",
-            "button_label": "Shop now",
-            "block_link": "shopify:\/\/collections\/homewares",
             "image_caption": ""
           }
         },
@@ -94,85 +27,6 @@
             "button_label": "Shop now",
             "block_link": "shopify:\/\/collections\/vases-ceramics",
             "image_caption": ""
-          }
-        },
-        "hero_image_mobile_h9CYEG": {
-          "type": "hero_image_mobile",
-          "settings": {
-            "image_fit_m": "fit",
-            "background_colour_m": "#ff13f6",
-            "hero_image_m": "shopify:\/\/shop_images\/mobile_2x_482a31f0-513a-4f2d-853d-03ec4f684350.jpg",
-            "heading_m": "Save 25%",
-            "description_m": "Lorem ipsum dolor sit amet consectetur. Ultrices congue ante nulla adipiscing varius mattis. Orci nisi ultrices urna ligula suscipit ullamcorper sed dui quis.",
-            "button_label_m": "Shop now",
-            "block_link_m": "shopify:\/\/collections\/beach-towels",
-            "image_caption_m": "Image Caption"
-          }
-        },
-        "hero_image_mobile_jHENKc": {
-          "type": "hero_image_mobile",
-          "disabled": true,
-          "settings": {
-            "image_fit_m": "fit",
-            "background_colour_m": "#c3674b",
-            "hero_image_m": "shopify:\/\/shop_images\/mobile_-_16.jpg",
-            "heading_m": "",
-            "description_m": "",
-            "button_label_m": "Shop now",
-            "block_link_m": "",
-            "image_caption_m": "Image Caption"
-          }
-        },
-        "d91a6a8d-ae9f-49f1-a8ef-b710ee99b2f2": {
-          "type": "hero_image_mobile",
-          "settings": {
-            "image_fit_m": "fill",
-            "background_colour_m": "#000000",
-            "hero_image_m": "shopify:\/\/shop_images\/banner_11.jpg",
-            "heading_m": "",
-            "description_m": "",
-            "button_label_m": "Shop now",
-            "block_link_m": "shopify:\/\/collections\/serveware",
-            "image_caption_m": ""
-          }
-        },
-        "91a8675a-57f3-4695-baf5-8fe62ebdc2f6": {
-          "type": "hero_image_mobile",
-          "settings": {
-            "image_fit_m": "fill",
-            "background_colour_m": "#000000",
-            "hero_image_m": "shopify:\/\/shop_images\/banner_83216625-2af5-4d7e-bb35-0500ee358c20.jpg",
-            "heading_m": "",
-            "description_m": "",
-            "button_label_m": "Shop now",
-            "block_link_m": "shopify:\/\/collections\/cushions-throws",
-            "image_caption_m": ""
-          }
-        },
-        "hero_image_mobile_zir96J": {
-          "type": "hero_image_mobile",
-          "settings": {
-            "image_fit_m": "fill",
-            "background_colour_m": "#000000",
-            "hero_image_m": "shopify:\/\/shop_images\/banner_2_5ec07b80-d29f-4f92-828e-54269dba29b4.jpg",
-            "heading_m": "",
-            "description_m": "",
-            "button_label_m": "Shop now",
-            "block_link_m": "",
-            "image_caption_m": ""
-          }
-        },
-        "1a08d8e6-8879-4d44-9e91-111374604eab": {
-          "type": "hero_image_mobile",
-          "settings": {
-            "image_fit_m": "fill",
-            "background_colour_m": "#000000",
-            "hero_image_m": "shopify:\/\/shop_images\/Banner_2.jpg",
-            "heading_m": "",
-            "description_m": "",
-            "button_label_m": "Shop now",
-            "block_link_m": "shopify:\/\/collections\/homewares",
-            "image_caption_m": ""
           }
         },
         "036c067c-5431-4b5f-a9ae-ae51dabe7c53": {
@@ -190,19 +44,8 @@
         }
       },
       "block_order": [
-        "hero_image_NDcMpL",
-        "hero_image_jj4tD9",
-        "1297218e-abb9-40e4-ad50-e35c313b7c84",
-        "a42e289e-4f99-4e08-abd8-9b185fdb269b",
-        "hero_image_rNV9RD",
-        "73f5b899-16eb-4bbe-aada-465dea04f907",
+        "hero_image_q8M9KT",
         "5699afe8-c83f-4898-a4b2-0e072974dc69",
-        "hero_image_mobile_h9CYEG",
-        "hero_image_mobile_jHENKc",
-        "d91a6a8d-ae9f-49f1-a8ef-b710ee99b2f2",
-        "91a8675a-57f3-4695-baf5-8fe62ebdc2f6",
-        "hero_image_mobile_zir96J",
-        "1a08d8e6-8879-4d44-9e91-111374604eab",
         "036c067c-5431-4b5f-a9ae-ae51dabe7c53"
       ],
       "custom_css": [
@@ -219,38 +62,43 @@
         "category_cwrWhF": {
           "type": "category",
           "settings": {
-            "collection": "accessories",
-            "alt_hero_image": "shopify:\/\/shop_images\/1076094NayaPotMatteWhiteLarge2_fb4b464b-0ab5-46d7-b598-a79df44c57e1.jpg"
+            "collection": "napery",
+            "alt_hero_image": "shopify:\/\/shop_images\/Rectangle_13.jpg"
           }
         },
         "category_YU3E73": {
           "type": "category",
           "settings": {
-            "collection": "bath-towels"
+            "collection": "serveware",
+            "alt_hero_image": "shopify:\/\/shop_images\/Rectangle_14.jpg"
           }
         },
         "category_eKUw9D": {
           "type": "category",
           "settings": {
-            "collection": "bedding"
+            "collection": "vases-ceramics",
+            "alt_hero_image": "shopify:\/\/shop_images\/Rectangle_15.jpg"
           }
         },
         "category_haCy6P": {
           "type": "category",
           "settings": {
-            "collection": "books-1"
+            "collection": "bath-towels",
+            "alt_hero_image": "shopify:\/\/shop_images\/Rectangle_16.jpg"
           }
         },
         "category_3FUrxN": {
           "type": "category",
           "settings": {
-            "collection": "chairs"
+            "collection": "pots-baskets",
+            "alt_hero_image": "shopify:\/\/shop_images\/Rectangle_17.jpg"
           }
         },
         "category_CtH9Dd": {
           "type": "category",
           "settings": {
-            "collection": "candles"
+            "collection": "indoor",
+            "alt_hero_image": "shopify:\/\/shop_images\/Rectangle_18.jpg"
           }
         }
       },
