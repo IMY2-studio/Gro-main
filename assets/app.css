@@ -1506,12 +1506,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(241 241 241 / var(--tw-bg-opacity));
 }
-
-.bg-\[rgb\(241\2c 241\2c 241\)\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 241 241 / var(--tw-bg-opacity));
-}
-
 .fill-white {
   fill: #FFF;
 }
@@ -1823,6 +1817,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .font-sans {
   font-family: FoundersGrotesk, Arial, sans-serif;
 }
+.text-\[15px\] {
+  font-size: 15px;
+}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1865,9 +1862,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-.text-\[15px\] {
-  font-size: 15px;
 }
 .font-medium {
   font-weight: 500;
