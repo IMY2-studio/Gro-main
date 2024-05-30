@@ -20,7 +20,7 @@
           <a
             href="{{ link.url }}"
             data-link="{{ link.handle }}"
-            class="transition-opacity duration-150 ease-in-out delay-75 text-green uppercase"
+            class="text-[15px] transition-opacity duration-150 ease-in-out delay-75 text-green uppercase"
             @mouseenter="setHoveredItem('{{ link.handle }}')"
             :class="{'opacity-60' : hoveredItem !== '' && hoveredItem !== '{{ link.handle }}'}"
           >
