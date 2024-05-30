@@ -1462,6 +1462,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(230 233 233 / var(--tw-border-opacity));
 }
+.\!border-\[\#E6E9E9\] {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(230 233 233 / var(--tw-border-opacity)) !important;
+}
 .border-y-green-light {
   border-top-color: var(--green-light);
   border-bottom-color: var(--green-light);
