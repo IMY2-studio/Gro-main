@@ -1506,6 +1506,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(241 241 241 / var(--tw-bg-opacity));
 }
+.bg-\[rgb\(241\2c 241\2c 241\)\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 241 241 / var(--tw-bg-opacity));
+}
 .fill-white {
   fill: #FFF;
 }
