@@ -1506,10 +1506,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(241 241 241 / var(--tw-bg-opacity));
 }
+<<<<<<< Updated upstream
 .bg-\[rgb\(241\2c 241\2c 241\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(241 241 241 / var(--tw-bg-opacity));
 }
+=======
+>>>>>>> Stashed changes
 .fill-white {
   fill: #FFF;
 }
