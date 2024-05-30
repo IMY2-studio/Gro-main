@@ -1,144 +1,150 @@
-
 {%- paginate collection.products by 24 -%}
+  <div
+    class="section-{{ section.id }}-collection-grid-wrapper flex flex-col"
+    id="ProductGridContainer"
+    x-data="
+      {
+        showSorting: false
+      }
+    "
+  >
+    <div class="px-[16px] lg:px-[20px] border-t border-t-green-light w-full block">
+      <div class="filters-and-sorting--wrapper grid grid-cols-2 lg:grid-cols-12 gap-x-[16px] lg:gap-x-[20px] py-[20px] z-[49] sticky bg-white top-[54px] left-0">
+        {% comment %} Filtering {% endcomment %}
 
-<div class="section-{{ section.id }}-collection-grid-wrapper flex flex-col" id="ProductGridContainer" x-data="{
-  showSorting: false
-}">
-  
-  <div class="px-[16px] lg:px-[20px] border-t border-t-green-light w-full block">
+        <div class="col-span-1 lg:col-span-9">
+          {% render 'filters', results: collection, enable_sorting: section.settings.enable_filtering %}
+        </div>
 
-  <div class="filters-and-sorting--wrapper grid grid-cols-2 lg:grid-cols-12 gap-x-[16px] lg:gap-x-[20px] py-[20px] z-[49] sticky bg-white top-[54px] left-0">
+        {% comment %} Sorting {% endcomment %}
 
-      {% comment %} Filtering {% endcomment %}
+        <div class="flex justify-end col-span-1 lg:col-span-3">
+          {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
 
-      <div class="col-span-1 lg:col-span-9">
-        {% render 'filters', results: collection, enable_sorting: section.settings.enable_filtering %}
-      </div>
+          <div
+            class="collection--sort z-50 border border-solid border-green-light  bg-transparent leading-none pl-[20px] pr-[46px] text-center py-[7px] flex items-center body-smaller justify-center relative w-fit rounded-[20px]  duration-1000"
+            id="sort-options-wrapper"
+            @click="showSorting = !showSorting; $dispatch('toggle')"
+            x-data="
+              {
+                loading: false,
+                toggle() {
+                  showSorting ? showSortingOptions() : hideSortingOptions();
+                },
+                sort: '{{ sort_by }}',
+                sortCollection(){
+                  this.loading = true;
+                  fetch('/collections/{{ collection.handle }}?sort_by=' + this.sort)
+                    .then(response => response.text())
+                    .then(data => {
+                      let html_div = document.createElement('div');
+                      html_div.innerHTML = data;
 
-      {% comment %} Sorting {% endcomment %}
+                      let html_dom = html_div.querySelector('#ProductGridContainer').innerHTML;
+                      document.querySelector('#ProductGridContainer').innerHTML = html_dom;
+                      // update url without refreshing the page
+                      history.replaceState(null, null, '?sort_by=' + this.sort);
+                    })
+                    .catch(error => console.error('Error:', error))
+                    .finally(() => this.loading = false);
+                }
+              }
+            "
+          >
+            {% render 'loader' %}
 
-      <div class="flex justify-end col-span-1 lg:col-span-3">
+            <span class="mr-[10px] body-smaller pointer-events-none"> Sort: </span>
 
-      {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+            {%- assign sort_by_title = collection.sort_options | where: 'value', sort_by -%}
 
-      <div class="collection--sort z-50 border border-solid border-green-light  bg-transparent leading-none pl-[20px] pr-[46px] text-center py-[7px] flex items-center body-smaller justify-center relative w-fit rounded-[20px]  duration-1000"
-        id="sort-options-wrapper"
-        @click="showSorting = !showSorting; $dispatch('toggle')"
-        x-data="{
-          loading: false,
-          toggle() {
-            showSorting ? showSortingOptions() : hideSortingOptions();
-          },
-          sort: '{{ sort_by }}',
-          sortCollection(){
-            this.loading = true;
-            fetch('/collections/{{ collection.handle }}?sort_by=' + this.sort)
-              .then(response => response.text())
-              .then(data => {
-                let html_div = document.createElement('div');
-                html_div.innerHTML = data;
+            <span class="pointer-events-none body-smaller" id="colllection-sort-display">
+              {{ sort_by_title[0].name }}
+            </span>
 
-                let html_dom = html_div.querySelector('#ProductGridContainer').innerHTML;
-                document.querySelector('#ProductGridContainer').innerHTML = html_dom;
-                // update url without refreshing the page 
-                history.replaceState(null, null, '?sort_by=' + this.sort);
-              })
-              .catch(error => console.error('Error:', error))
-              .finally(() => this.loading = false);
-          }
-        }">
-        
-        {% render 'loader' %}
+            <fieldset
+              id="sort-by"
+              x-model="sort"
+              @toggle.window="
+                $nextTick(() => {
+                toggle()
+                })
+              "
+              @change="sortCollection()"
+              style="height: 0; opacity: 0;"
+              class="absolute top-[100%] px-[20px] -inset-x-[1px] bg-white rounded-b-[20px] border-green-light border-b border-x  overflow-hidden w-[calc(100%+2px)]"
+            >
+              <div class="flex flex-col w-full justify-start py-[7px] px-[4px] space-y-[4px]">
+                {% for option in collection.sort_options %}
+                  <label class="body-smaller  text-left text-green {% if option.value == sort_by %} opacity-60 {% else %} opacity-100 lg:hover:opacity-60  {% endif %} cursor-pointer">
+                    {{- option.name }}
+                    <input
+                      class="sr-only"
+                      value="{{ option.value }}"
+                      {% if option.value == sort_by %}
+                        checked="checked"
+                      {% endif %}
+                      type="radio"
+                    >
+                  </label>
+                {% endfor %}
+              </div>
+            </fieldset>
 
-        <span class="mr-[10px] body-smaller pointer-events-none">
-          Sort:
-        </span>
-
-        {%- assign sort_by_title = collection.sort_options |  where: "value", sort_by -%}
-
-        <span class="pointer-events-none body-smaller" id="colllection-sort-display">
-          {{ sort_by_title[0].name }}
-        </span>
-
-        <fieldset   id="sort-by" 
-                    x-model="sort"
-                    @toggle.window="$nextTick(() => {
-                      toggle()
-                      })"
-                    @change="sortCollection()"
-                    style="height: 0; opacity: 0;"
-                    class="absolute top-[100%] px-[20px] -inset-x-[1px] bg-white rounded-b-[20px] border-green-light border-b border-x  overflow-hidden w-[calc(100%+2px)]">
-
-          <div class="flex flex-col w-full justify-start py-[7px] px-[4px] space-y-[4px]" >
-            {% for option in collection.sort_options %}
-            <label class="body-smaller  text-left text-green {% if option.value == sort_by %} opacity-60 {% else %} opacity-100 lg:hover:opacity-60  {% endif %} cursor-pointer">{{ option.name }}
-                <input class="sr-only" value="{{ option.value }}" {% if option.value == sort_by %}checked="checked"{% endif %} type="radio">
-              </label>
-            {% endfor %}
+            {% render 'icon-chevron', class: 'absolute right-[16px] lg:right-[20px] pointer-events-none sort-chevron' %}
           </div>
-        </fieldset>
-
-        {% render 'icon-chevron', class: 'absolute right-[16px] lg:right-[20px] pointer-events-none sort-chevron' %}
-        
+        </div>
       </div>
 
-    </div>
-
-
-
-  </div>
-
-    <div class="{% if section.settings.enable_filtering %} conditional--class {% endif %}  w-full block max-w-[1440px] mx-auto">
-
-
-
+      <div class="{% if section.settings.enable_filtering %} conditional--class {% endif %}  w-full block max-w-[1440px] mx-auto">
         {%- if collection.products.size == 0 -%}
-
-          <div class="block w-full collection collection--empty" id="product-grid" data-next-url="{{paginate.next.url}}" data-id="{{ section.id }}">
+          <div
+            class="block w-full collection collection--empty"
+            id="product-grid"
+            data-next-url="{{paginate.next.url}}"
+            data-id="{{ section.id }}"
+          >
             <div class="loading-overlay gradient"></div>
             <div class="">
               <h2 class="">
-                {{ 'sections.collection_template.empty' | t }}<br>
-                {{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: "" }}
+                {{ 'sections.collection_template.empty' | t -}}
+                <br>
+                {{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: '' }}
               </h2>
             </div>
           </div>
 
-
         {%- else -%}
-
-          <div class="collection w-full mb-[120px] lg:mb-[240px] pt-[20px]" >
-            <ul id="product-grid" data-id="{{ section.id }}" data-next-url="{{paginate.next.url}}" class="grid grid-cols-2 gap-x-[20px] gap-y-[32px] lg:grid-cols-4">
+          <div class="collection w-full mb-[120px] lg:mb-[240px]">
+            <ul
+              id="product-grid"
+              data-id="{{ section.id }}"
+              data-next-url="{{paginate.next.url}}"
+              class="grid grid-cols-2 gap-x-[20px] gap-y-[32px] lg:grid-cols-4"
+            >
               {%- for product in collection.products -%}
-  
                 <li class="grid__item">
-                  {% render 'card-product',
-                    card_product: product
-                  %}
+                  {% render 'card-product', card_product: product %}
                 </li>
               {%- endfor -%}
             </ul>
-
-
           </div>
         {%- endif -%}
-
-    </div>
-
-    {%- if paginate.pages > 1 -%}
-
-      <div class="load-more flex justify-center items-center  mb-[120px] lg:mb-[240px]">
-        <a class="load-more_btn button body-1 text-center w-full max-w-[450px] lg:py-[28px]" onclick="loadMoreProducts()">Load More</a>
-        <div class="hidden w-8 h-8 ml-auto mr-auto border-4 border-black border-solid rounded-full load-more_spinner border-t-gray-200 animate-spin"></div>
       </div>
 
-    {%- endif -%}
-
-
+      {%- if paginate.pages > 1 -%}
+        <div class="load-more flex justify-center items-center  mb-[120px] lg:mb-[240px]">
+          <a
+            class="load-more_btn button body-1 text-center w-full max-w-[450px] lg:py-[28px]"
+            onclick="loadMoreProducts()"
+            >Load More</a
+          >
+          <div
+            class="hidden w-8 h-8 ml-auto mr-auto border-4 border-black border-solid rounded-full load-more_spinner border-t-gray-200 animate-spin"
+          ></div>
+        </div>
+      {%- endif -%}
+    </div>
   </div>
-
-</div>
-
 {%- endpaginate -%}
 
 {% schema %}
