@@ -54,7 +54,7 @@
       <div class="col-span-12 md:col-span-3">
         {%- if block_product and block_product != empty -%}
           {%- assign lazy_load = lazy_load | default: 'lazy' -%}
-
+          {{ block_product | json }}
           <a href="{{ block_product.url }}" class="card-wrapper group">
             <div class="card">
               {%- if block_product.featured_media != blank -%}
