@@ -45,34 +45,36 @@
     </a>
   </div>
   <div class="col-span-12 hidden md:grid grid-cols-12 gap-x-5 ">
-    {%- for block in section.blocks limit: 4 -%}
-      <div class="col-span-12 md:col-span-3">
-        {%- if block.product and block.product != empty -%}
-          {%- assign lazy_load = lazy_load | default: 'lazy' -%}
+    {%- for block in section.blocks -%}
+      {% if block.type == 'collection_products' %}
+        <div class="col-span-12 md:col-span-3">
+          {%- if block.product and block.product != empty -%}
+            {%- assign lazy_load = lazy_load | default: 'lazy' -%}
 
-          <a href="{{ block.product.url }}" class="card-wrapper group">
-            <div class="card">
-              {%- if block.product.featured_media != blank -%}
-                <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
-                  {{
-                    block.product.featured_media
-                    | image_url: width: 600
-                    | image_tag:
-                      loading: lazy_load,
-                      class: 'aspect-video w-full h-full absolute inset-0 object-center z-10 lg:group-hover:scale-[1.1] transition-all object-cover object-center'
-                  }}
+            <a href="{{ block.product.url }}" class="card-wrapper group">
+              <div class="card">
+                {%- if block.product.featured_media != blank -%}
+                  <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
+                    {{
+                      block.product.featured_media
+                      | image_url: width: 600
+                      | image_tag:
+                        loading: lazy_load,
+                        class: 'aspect-video w-full h-full absolute inset-0 object-center z-10 lg:group-hover:scale-[1.1] transition-all object-cover object-center'
+                    }}
+                  </div>
+                {%- endif -%}
+
+                <div class="card-product-title--wrapper">
+                  <h3 class="body-1 text-green text-[16px] md:text-[20px]">
+                    {{ block.product.title }}
+                  </h3>
                 </div>
-              {%- endif -%}
-
-              <div class="card-product-title--wrapper">
-                <h3 class="body-1 text-green text-[16px] md:text-[20px]">
-                  {{ block.product.title }}
-                </h3>
               </div>
-            </div>
-          </a>
-        {%- endif -%}
-      </div>
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
     {%- endfor -%}
   </div>
 
