@@ -1,106 +1,78 @@
 {%- liquid
-
-  assign product_blocks = section.blocks | where: "type", "product"
-
+  assign product_blocks = section.blocks | where: 'type', 'product'
 -%}
 
-
-
 <section class="flex flex-col px-[16px] lg:px-[20px] mb-[120px] lg:mb-[200px]">
-    <div class="flex flex-col">
-        {%- for block in section.blocks -%}
-            {%- if block.type == 'heading' -%}
-                <h2 class="heading-1 mb-[8px]">
-                    {{ block.settings.heading }}
-                </h2>
-            {%- endif -%}
-          {%- endfor -%}
+  <div class="flex flex-col">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'heading' -%}
+        <h2 class="heading-1 mb-[8px]">
+          {{ block.settings.heading }}
+        </h2>
+      {%- endif -%}
+    {%- endfor -%}
 
-        {%- if product_blocks.size > 0 -%}
+    {%- if product_blocks.size > 0 -%}
+      <ul class="w-full grid grid-cols-2 gap-x-[20px] lg:grid-cols-4">
+        {%- for block in product_blocks -%}
+          {%- assign block_product = all_products[block.settings.product] -%}
 
-            <ul class="w-full grid grid-cols-2 gap-x-[20px] lg:grid-cols-4">
-                {%- for block in product_blocks -%}
+          <li class="relative w-full">
+            {% render 'card-product', card_product: block_product %}
+          </li>
+        {%- endfor -%}
+      </ul>
 
-                    {%- assign block_product = all_products[block.settings.product] -%}
+    {%- else -%}
+      <ul class="w-full grid grid-cols-2 gap-x-[20px] lg:grid-cols-4">
+        {%- for product in product.collections[1].products limit: 4 -%}
+          {%- assign block_product = product -%}
 
-
-
-
-                    <li class="relative w-full">
-
-                    {% render 'card-product',
-                    card_product: block_product %}
-
-                    </li>
-                    
-                {%- endfor -%}
-            </ul>
-
-            {%- else -%}
-
-            
-            <ul class="w-full grid grid-cols-2 gap-x-[20px] lg:grid-cols-4">
-                {%- for product in product.collections[1].products limit: 4 -%}
-
-                    {%- assign block_product = product -%}
-
-
-
-
-                    <li class="relative w-full">
-
-                    {% render 'card-product',
-                    card_product: block_product %}
-
-                    </li>
-                    
-                {%- endfor -%}
-            </ul>
-            
-        {%- endif -%}
-
-          
-
-    </div>
+          <li class="relative w-full">
+            {% render 'card-product', card_product: block_product %}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
 </section>
 
-
 {% schema %}
+{
+  "name": "Related Products",
+  "settings": [],
+  "blocks": [
     {
-        "name": "Related Products",
-        "settings": [],
-        "blocks": [
-            {
-                "type": "heading",
-                "name": "Heading",
-                "limit": 1,
-                "settings": [
-                    {
-                        "type": "text",
-                        "id": "heading",
-                        "label": "Heading Text",
-                        "default": "Related Products"
-                    }
-                ]
-            },
-            {
-                "type": "product",
-                "name": "Product",
-                "settings": [
-                    {
-                        "type": "product",
-                        "id": "product",
-                        "label": "Product",
-                        "info": "Choose the related product you'd like to feature"
-                    }
-                ]
-            }
-        ],
-        "presets": [
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
         {
-            "name": "Related Products",
-            "blocks": []
+          "type": "text",
+          "id": "heading",
+          "label": "Heading Text",
+          "default": "Related Products"
         }
-    ]
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product",
+          "info": "Choose the related product you'd like to feature"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Related Products",
+      "blocks": []
+    }
+  ]
 }
 {% endschema %}
