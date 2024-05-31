@@ -649,6 +649,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-\[75px\] {
   top: 75px;
 }
+.top-\[0px\] {
+  top: 0px;
+}
+.top-\[38px\] {
+  top: 38px;
+}
+.top-\[110px\] {
+  top: 110px;
+}
 .isolate {
   isolation: isolate;
 }
@@ -1149,6 +1158,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .translate-y-\[-1px\] {
   --tw-translate-y: -1px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-y-\[calc\(-100\%_\+_110px\)\] {
+  --tw-translate-y: calc(-100% + 110px);
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .rotate-45 {
@@ -1819,6 +1832,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-\[120px\] {
   padding-top: 120px;
+}
+.pt-\[0px\] {
+  padding-top: 0px;
 }
 .text-left {
   text-align: left;
