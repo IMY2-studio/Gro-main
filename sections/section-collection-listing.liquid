@@ -45,17 +45,17 @@
     </a>
   </div>
   <div class="col-span-12 hidden md:grid grid-cols-12 gap-x-5 ">
-    {%- for product in section.settings.collection.products limit: 4 -%}
+    {%- for block in section.blocks limit: 4 -%}
       <div class="col-span-12 md:col-span-3">
-        {%- if product and product != empty -%}
+        {%- if block.product and block.product != empty -%}
           {%- assign lazy_load = lazy_load | default: 'lazy' -%}
 
-          <a href="{{ product.url | within: collection }}" class="card-wrapper group">
+          <a href="{{ block.product.url }}" class="card-wrapper group">
             <div class="card">
-              {%- if product.featured_media != blank -%}
+              {%- if block.product.featured_media != blank -%}
                 <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
                   {{
-                    product.featured_media
+                    block.product.featured_media
                     | image_url: width: 600
                     | image_tag:
                       loading: lazy_load,
@@ -66,7 +66,7 @@
 
               <div class="card-product-title--wrapper">
                 <h3 class="body-1 text-green text-[16px] md:text-[20px]">
-                  {{ product.title }}
+                  {{ block.product.title }}
                 </h3>
               </div>
             </div>
