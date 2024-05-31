@@ -56,10 +56,10 @@
 
         <a href="{{ block_product.url }}" class="card-wrapper group">
           <div class="card">
-            {%- if block_product.featured_media != blank -%}
+            {%- if block_product.product.featured_media != blank -%}
               <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
                 {{
-                  block_product.featured_media
+                  block_product.product.featured_media
                   | image_url: width: 600
                   | image_tag:
                     loading: lazy_load,
@@ -70,7 +70,7 @@
 
             <div class="card-product-title--wrapper">
               <h3 class="body-1 text-green text-[16px] md:text-[20px]">
-                {{ block_product.title }}
+                {{ block_product.product.title }}
               </h3>
             </div>
           </div>
