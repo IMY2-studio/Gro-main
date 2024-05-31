@@ -1,3 +1,6 @@
+{%- liquid
+  assign product_blocks = section.blocks | where: 'type', 'collection_products'
+-%}
 <section class="bg-[#E6E9E9] layout--grid py-5 mb-14 gap-y-5">
   <div class="row-start-2 md:row-start-auto col-span-12 md:col-span-6 flex items-center justify-center">
     <div class="w-full md:max-w-md mb-5 md:mb-0">
@@ -46,17 +49,20 @@
   </div>
 
   <div class="col-span-12 hidden md:grid grid-cols-12 gap-x-5 ">
-    {%- for product in section.settings.collection.products limit: 4 -%}
+    {%- for block in product_blocks -%}
+      {%- assign block_product = all_products[block.settings.product] -%}
       <div class="col-span-12 md:col-span-3">
-        {%- if product and product != empty -%}
+        {% render 'dump' with block_product %}
+        {{ block_product.title | json }}
+        {%- if block_product and block_product != empty -%}
           {%- assign lazy_load = lazy_load | default: 'lazy' -%}
-
-          <a href="{{ product.url }}" class="card-wrapper group">
+          {{ block_product | json }}
+          <a href="{{ block_product.url }}" class="card-wrapper group">
             <div class="card">
-              {%- if product.featured_media != blank -%}
+              {%- if block_product.featured_media != blank -%}
                 <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
                   {{
-                    product.featured_media
+                    block_product.featured_media
                     | image_url: width: 600
                     | image_tag:
                       loading: lazy_load,
@@ -67,7 +73,7 @@
 
               <div class="card-product-title--wrapper">
                 <h3 class="body-1 text-green text-[16px] md:text-[20px]">
-                  {{ product.title }}
+                  {{ block_product.title }}
                 </h3>
               </div>
             </div>
@@ -148,10 +154,28 @@
       "label": "Alternative Hero Image"
     }
   ],
-
+  "blocks": [
+    {
+      "type": "collection_products",
+      "name": "Collection Products",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Alternative Image"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Collection Listing"
+      "name": "Collection Listing",
+      "blocks": []
     }
   ]
 }
