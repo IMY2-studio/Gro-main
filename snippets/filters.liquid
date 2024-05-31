@@ -57,7 +57,11 @@
 
         {%- case filter.type -%}
           {%- when 'boolean', 'list' -%}
+<<<<<<< Updated upstream
             <div class="flex items-center gap-x-3">
+=======
+            <div class="flex items-center gap-x-5">
+>>>>>>> Stashed changes
               <ul class="filter-group-display__list flex flex-col lg:flex-row space-y-[20px] lg:space-y-0 lg:space-x-[4px]">
                 {%- for filter in collection.filters limit: 1 -%}
                   {%- if filter.active_values.size > 0 -%}
