@@ -50,19 +50,18 @@
 
   <div class="col-span-12 hidden md:grid grid-cols-12 gap-x-5 ">
     {%- for block in product_blocks -%}
-      {%- assign block_product = all_products[block.settings.product] -%}
+      {%- assign block_product_handle = block.settings.product -%}
+      {%- assign product = all_products[block_product_handle] -%}
       <div class="col-span-12 md:col-span-3">
-        {% render 'dump' with block_product %}
-        {{ block_product.title | json }}
-        {%- if block_product and block_product != empty -%}
+        {%- if product and product != empty -%}
           {%- assign lazy_load = lazy_load | default: 'lazy' -%}
-          {{ block_product | json }}
-          <a href="{{ block_product.url }}" class="card-wrapper group">
+
+          <a href="{{ product.url }}" class="card-wrapper group">
             <div class="card">
-              {%- if block_product.featured_media != blank -%}
+              {%- if product.featured_media != blank -%}
                 <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
                   {{
-                    block_product.featured_media
+                    product.featured_media
                     | image_url: width: 600
                     | image_tag:
                       loading: lazy_load,
@@ -73,7 +72,7 @@
 
               <div class="card-product-title--wrapper">
                 <h3 class="body-1 text-green text-[16px] md:text-[20px]">
-                  {{ block_product.title }}
+                  {{ product.title }}
                 </h3>
               </div>
             </div>
