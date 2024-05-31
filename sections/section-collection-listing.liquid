@@ -148,11 +148,32 @@
       "label": "Alternative Hero Image"
     }
   ],
-
+  "blocks": [
+    {
+      "type": "collection_products",
+      "name": "Collection Products",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Alternative Image"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Collection Listing",
-      "blocks": []
+      "blocks": [
+        {
+          "type": "collection_products"
+        }
+      ]
     }
   ]
 }
