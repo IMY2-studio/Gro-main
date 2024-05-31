@@ -274,10 +274,17 @@
           "settings": {
             "product": "100-arlo-basket-natural-combo"
           }
+        },
+        "collection_products_aFFAUc": {
+          "type": "collection_products",
+          "settings": {
+            "product": "49-combo-arlo-basket-natural-peace-lily"
+          }
         }
       },
       "block_order": [
-        "collection_products_ktxD8G"
+        "collection_products_ktxD8G",
+        "collection_products_aFFAUc"
       ],
       "settings": {
         "description": "Lorem ipsum dolor sit amet consectetur. Ultrices congue ante nulla adipiscing varius mattis. Orci nisi ultrices urna ligula suscipit ullamcorper sed dui quis.",
