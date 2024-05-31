@@ -1315,6 +1315,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-y-\[10px\] {
   row-gap: 10px;
 }
+.gap-x-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
 .space-y-\[20px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(20px * calc(1 - var(--tw-space-y-reverse)));
@@ -1457,6 +1461,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .border-green {
   border-color: var(--green);
+}
+.border-\[\#E6E9E9\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(230 233 233 / var(--tw-border-opacity));
+}
+.\!border-\[\#E6E9E9\] {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(230 233 233 / var(--tw-border-opacity)) !important;
 }
 .border-y-green-light {
   border-top-color: var(--green-light);
@@ -1805,6 +1817,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pr-2 {
   padding-right: 0.5rem;
 }
+.pt-\[120px\] {
+  padding-top: 120px;
+}
 .text-left {
   text-align: left;
 }
@@ -1997,6 +2012,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .transition-opacity {
   transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-colors {
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
