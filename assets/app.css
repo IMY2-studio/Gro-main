@@ -652,6 +652,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-\[0px\] {
   top: 0px;
 }
+.top-\[38px\] {
+  top: 38px;
+}
 .isolate {
   isolation: isolate;
 }
