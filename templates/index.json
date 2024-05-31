@@ -281,11 +281,25 @@
           "settings": {
             "product": "aerial-serving-bowl-black-medium"
           }
+        },
+        "collection_products_QhKd8U": {
+          "type": "collection_products",
+          "settings": {
+            "product": "1073259"
+          }
+        },
+        "collection_products_jchBDB": {
+          "type": "collection_products",
+          "settings": {
+            "product": "1076214"
+          }
         }
       },
       "block_order": [
         "collection_products_ktxD8G",
-        "collection_products_aFFAUc"
+        "collection_products_aFFAUc",
+        "collection_products_QhKd8U",
+        "collection_products_jchBDB"
       ],
       "settings": {
         "description": "Lorem ipsum dolor sit amet consectetur. Ultrices congue ante nulla adipiscing varius mattis. Orci nisi ultrices urna ligula suscipit ullamcorper sed dui quis.",
