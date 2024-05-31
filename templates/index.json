@@ -272,13 +272,15 @@
         "collection_products_ktxD8G": {
           "type": "collection_products",
           "settings": {
-            "product": "a-good-life-for-all-book"
+            "product": "a-good-life-for-all-book-1",
+            "image": "shopify:\/\/shop_images\/Rectangle_13_10a2ff9e-b804-4ddf-873a-c79359ee9bc4.jpg"
           }
         },
         "collection_products_aFFAUc": {
           "type": "collection_products",
           "settings": {
-            "product": "aerial-serving-bowl-black-medium"
+            "product": "aerial-serving-bowl-black-medium",
+            "image": "shopify:\/\/shop_images\/Rectangle_14.jpg"
           }
         }
       },
