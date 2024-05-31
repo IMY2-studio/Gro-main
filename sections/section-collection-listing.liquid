@@ -53,7 +53,7 @@
 
           <a href="{{ product.url }}" class="card-wrapper group">
             <div class="card">
-              {%- if block_product.featured_media != blank -%}
+              {%- if product.featured_media != blank -%}
                 <div class="relative w-full block aspect-video mb-[16px] overflow-hidden">
                   {{
                     product.featured_media
