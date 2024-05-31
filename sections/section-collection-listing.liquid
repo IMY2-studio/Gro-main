@@ -48,7 +48,7 @@
   <div class="col-span-12 hidden md:grid grid-cols-12 gap-x-5 ">
     {%- for block in section.blocks -%}
       {% if block.type == 'collection_products' %}
-        {% render 'dump' with block.product %}
+        {% render 'dump' with block %}
         <div class="col-span-12 md:col-span-3">
           {%- if block.product and block.product != empty -%}
             {%- assign lazy_load = lazy_load | default: 'lazy' -%}
