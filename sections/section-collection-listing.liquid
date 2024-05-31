@@ -53,7 +53,7 @@
       {%- assign block_product = all_products[block.settings.product] -%}
       <div class="col-span-12 md:col-span-3">
         {% render 'dump' with block_product.title %}
-        {{ block_product | json }}
+        {{ block_product.title | json }}
         {%- if block_product and block_product != empty -%}
           {%- assign lazy_load = lazy_load | default: 'lazy' -%}
           {{ block_product | json }}
