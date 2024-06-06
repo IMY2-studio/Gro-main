@@ -6,93 +6,52 @@
         "hero_image_NDcMpL": {
           "type": "hero_image",
           "settings": {
-            "image_fit": "fit",
-            "background_colour": "#ff13f6",
-            "hero_image": "shopify:\/\/shop_images\/desktop_2x_a3a6817e-3b18-4e76-81b5-d771f99db5c2.jpg",
-            "heading": "SAVE 25%",
-            "description": "Lorem ipsum dolor sit amet consectetur. Ultrices congue ante nulla adipiscing varius mattis. Orci nisi ultrices urna ligula suscipit ullamcorper sed dui quis.",
-            "button_label": "Shop now",
-            "block_link": "shopify:\/\/collections\/accessories",
-            "image_caption": "Image Caption"
-          }
-        },
-        "hero_image_jj4tD9": {
-          "type": "hero_image",
-          "disabled": true,
-          "settings": {
-            "image_fit": "fit",
-            "background_colour": "#c3674b",
-            "hero_image": "shopify:\/\/shop_images\/banner_21.jpg",
+            "image_fit": "fill",
+            "background_colour": "#ff2f13",
+            "hero_image": "shopify:\/\/shop_images\/desktop_d922cc39-f8a4-46ee-90c2-213604be9121.jpg",
             "heading": "",
             "description": "",
-            "button_label": "Shop now",
+            "button_label": "",
+            "block_link": "shopify:\/\/collections\/dining",
+            "image_caption": ""
+          }
+        },
+        "hero_image_JRX4Lg": {
+          "type": "hero_image",
+          "settings": {
+            "image_fit": "fill",
+            "background_colour": "#000000",
+            "hero_image": "shopify:\/\/shop_images\/banner_22_209f47fb-45f7-4f0d-a094-d02c13cab51f.jpg",
+            "heading": "",
+            "description": "",
+            "button_label": "",
+            "block_link": "shopify:\/\/collections\/dining",
+            "image_caption": ""
+          }
+        },
+        "hero_image_ydTTR3": {
+          "type": "hero_image",
+          "settings": {
+            "image_fit": "fill",
+            "background_colour": "#000000",
+            "hero_image": "shopify:\/\/shop_images\/banner_19.jpg",
+            "heading": "",
+            "description": "",
+            "button_label": "",
+            "block_link": "shopify:\/\/collections\/dining",
+            "image_caption": ""
+          }
+        },
+        "hero_image_hHYd76": {
+          "type": "hero_image",
+          "settings": {
+            "image_fit": "fill",
+            "background_colour": "#000000",
+            "hero_image": "shopify:\/\/shop_images\/banner_16.jpg",
+            "heading": "",
+            "description": "",
+            "button_label": "",
             "block_link": "",
-            "image_caption": "Image Caption"
-          }
-        },
-        "1297218e-abb9-40e4-ad50-e35c313b7c84": {
-          "type": "hero_image",
-          "disabled": true,
-          "settings": {
-            "image_fit": "fill",
-            "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/banner_11.jpg",
-            "heading": "",
-            "description": "",
-            "button_label": "Shop now",
-            "block_link": "shopify:\/\/collections\/serveware",
-            "image_caption": ""
-          }
-        },
-        "a42e289e-4f99-4e08-abd8-9b185fdb269b": {
-          "type": "hero_image",
-          "settings": {
-            "image_fit": "fill",
-            "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/banner_68e89c92-0377-4e79-b59e-bee1f42b8a0d.jpg",
-            "heading": "",
-            "description": "",
-            "button_label": "Shop now",
-            "block_link": "shopify:\/\/collections\/cushions-throws",
-            "image_caption": ""
-          }
-        },
-        "hero_image_rNV9RD": {
-          "type": "hero_image",
-          "settings": {
-            "image_fit": "fill",
-            "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/banner_2_8d9d5118-484e-4d61-8923-48d3572ac4db.jpg",
-            "heading": "",
-            "description": "",
-            "button_label": "Shop now",
-            "block_link": "",
-            "image_caption": ""
-          }
-        },
-        "73f5b899-16eb-4bbe-aada-465dea04f907": {
-          "type": "hero_image",
-          "settings": {
-            "image_fit": "fill",
-            "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/Banner_2.jpg",
-            "heading": "",
-            "description": "",
-            "button_label": "Shop now",
-            "block_link": "shopify:\/\/collections\/homewares",
-            "image_caption": ""
-          }
-        },
-        "5699afe8-c83f-4898-a4b2-0e072974dc69": {
-          "type": "hero_image",
-          "settings": {
-            "image_fit": "fill",
-            "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/gro_urban_oasis_028.jpg",
-            "heading": "",
-            "description": "",
-            "button_label": "Shop now",
-            "block_link": "shopify:\/\/collections\/vases-ceramics",
             "image_caption": ""
           }
         },
@@ -191,12 +150,9 @@
       },
       "block_order": [
         "hero_image_NDcMpL",
-        "hero_image_jj4tD9",
-        "1297218e-abb9-40e4-ad50-e35c313b7c84",
-        "a42e289e-4f99-4e08-abd8-9b185fdb269b",
-        "hero_image_rNV9RD",
-        "73f5b899-16eb-4bbe-aada-465dea04f907",
-        "5699afe8-c83f-4898-a4b2-0e072974dc69",
+        "hero_image_JRX4Lg",
+        "hero_image_ydTTR3",
+        "hero_image_hHYd76",
         "hero_image_mobile_h9CYEG",
         "hero_image_mobile_jHENKc",
         "d91a6a8d-ae9f-49f1-a8ef-b710ee99b2f2",
