@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "f485f585-1257-4163-91f9-da13e9d00bd2": {
@@ -8,11 +17,11 @@
           "settings": {
             "image_fit": "fill",
             "background_colour": "#ff2f13",
-            "hero_image": "shopify:\/\/shop_images\/desktop_d922cc39-f8a4-46ee-90c2-213604be9121.jpg",
+            "hero_image": "shopify://shop_images/desktop_d922cc39-f8a4-46ee-90c2-213604be9121.jpg",
             "heading": "",
             "description": "",
             "button_label": "",
-            "block_link": "shopify:\/\/collections\/dining",
+            "block_link": "shopify://collections/dining",
             "image_caption": ""
           }
         },
@@ -21,11 +30,11 @@
           "settings": {
             "image_fit": "fill",
             "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/banner_22_209f47fb-45f7-4f0d-a094-d02c13cab51f.jpg",
+            "hero_image": "shopify://shop_images/banner_22_209f47fb-45f7-4f0d-a094-d02c13cab51f.jpg",
             "heading": "",
             "description": "",
             "button_label": "",
-            "block_link": "shopify:\/\/collections\/dining",
+            "block_link": "shopify://collections/dining",
             "image_caption": ""
           }
         },
@@ -34,11 +43,11 @@
           "settings": {
             "image_fit": "fill",
             "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/banner_19.jpg",
+            "hero_image": "shopify://shop_images/banner_19.jpg",
             "heading": "",
             "description": "",
             "button_label": "",
-            "block_link": "shopify:\/\/collections\/dining",
+            "block_link": "shopify://collections/dining",
             "image_caption": ""
           }
         },
@@ -47,7 +56,7 @@
           "settings": {
             "image_fit": "fill",
             "background_colour": "#000000",
-            "hero_image": "shopify:\/\/shop_images\/banner_16.jpg",
+            "hero_image": "shopify://shop_images/banner_16.jpg",
             "heading": "",
             "description": "",
             "button_label": "",
@@ -60,7 +69,7 @@
           "settings": {
             "image_fit_m": "fill",
             "background_colour_m": "#ff2f13",
-            "hero_image_m": "shopify:\/\/shop_images\/Instagram_story_-_9_aac8ecd3-0970-4dee-8eb7-faafbc737698.jpg",
+            "hero_image_m": "shopify://shop_images/Instagram_story_-_9_aac8ecd3-0970-4dee-8eb7-faafbc737698.jpg",
             "heading_m": "",
             "description_m": "",
             "button_label_m": "Shop now",
@@ -73,11 +82,11 @@
           "settings": {
             "image_fit_m": "fill",
             "background_colour_m": "#000000",
-            "hero_image_m": "shopify:\/\/shop_images\/mobile_-_14.jpg",
+            "hero_image_m": "shopify://shop_images/mobile_-_14.jpg",
             "heading_m": "",
             "description_m": "",
             "button_label_m": "",
-            "block_link_m": "shopify:\/\/collections\/bed-bath",
+            "block_link_m": "shopify://collections/bed-bath",
             "image_caption_m": ""
           }
         },
@@ -86,11 +95,11 @@
           "settings": {
             "image_fit_m": "fill",
             "background_colour_m": "#000000",
-            "hero_image_m": "shopify:\/\/shop_images\/mobile_-_11.jpg",
+            "hero_image_m": "shopify://shop_images/mobile_-_11.jpg",
             "heading_m": "",
             "description_m": "",
             "button_label_m": "",
-            "block_link_m": "shopify:\/\/collections\/kitchen",
+            "block_link_m": "shopify://collections/home-decor",
             "image_caption_m": ""
           }
         },
@@ -99,11 +108,11 @@
           "settings": {
             "image_fit_m": "fill",
             "background_colour_m": "#000000",
-            "hero_image_m": "shopify:\/\/shop_images\/mobile_-_12.jpg",
+            "hero_image_m": "shopify://shop_images/mobile_-_12.jpg",
             "heading_m": "",
             "description_m": "",
             "button_label_m": "",
-            "block_link_m": "shopify:\/\/collections\/homewares",
+            "block_link_m": "shopify://collections/homewares",
             "image_caption_m": ""
           }
         }
@@ -133,7 +142,7 @@
           "type": "category",
           "settings": {
             "collection": "accessories",
-            "alt_hero_image": "shopify:\/\/shop_images\/1076094NayaPotMatteWhiteLarge2_fb4b464b-0ab5-46d7-b598-a79df44c57e1.jpg"
+            "alt_hero_image": "shopify://shop_images/1076094NayaPotMatteWhiteLarge2_fb4b464b-0ab5-46d7-b598-a79df44c57e1.jpg"
           }
         },
         "category_YU3E73": {
@@ -186,7 +195,7 @@
           "type": "collection_products",
           "settings": {
             "product": "a-good-life-for-all-book-1",
-            "image": "shopify:\/\/shop_images\/Rectangle_13_10a2ff9e-b804-4ddf-873a-c79359ee9bc4.jpg"
+            "image": "shopify://shop_images/Rectangle_13_10a2ff9e-b804-4ddf-873a-c79359ee9bc4.jpg"
           }
         },
         "collection_products_aFFAUc": {
@@ -217,7 +226,7 @@
       "settings": {
         "description": "Lorem ipsum dolor sit amet consectetur. Ultrices congue ante nulla adipiscing varius mattis. Orci nisi ultrices urna ligula suscipit ullamcorper sed dui quis.",
         "collection": "candles",
-        "alt_hero_image": "shopify:\/\/shop_images\/mobile_-_11.jpg"
+        "alt_hero_image": "shopify://shop_images/mobile_-_11.jpg"
       }
     },
     "section_featured_brands_TiTDEd": {
